@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
+@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
+@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/managementScope/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+wastekos:ManagementScope a skos:ConceptScheme ;
+    dct:issued "2026-04-21"^^xsd:date ;
+    dct:modified "2026-04-24"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Esquema de conceptos para los alcances de gestión asociados a centros de gestión de residuos."@es ;
+    rdfs:comment "Concept scheme for the management scope associated with waste management facilities."@en ;
+    rdfs:label "Alcances de gestión"@es ;
+    rdfs:label "Scope of management"@en ;
+    dct:title "Esquema de conceptos agrupando alcances de gestión de residuos"@es ;
+    dct:title "Concept scheme grouping waste management scopes"@en ;
+    skos:note "Valores extraídos del conjunto de datos de centros de gestión de residuos."@es ;
+    skos:note "Data extracted from waste management datasets."@en .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+managementscope:FabricacionProductosQuimicosGestionResiduosDisolventes a skos:Concept ;
+    skos:inScheme wastekos:ManagementScope ;
+    skos:prefLabel "Fabricación de productos químicos y gestión de residuos de disolventes"@es ;
+    skos:prefLabel "Chemical manufacturing and solvent waste management"@en .
+
+managementscope:AlmacenamientoMetalesFerreos a skos:Concept ;
+    skos:inScheme wastekos:ManagementScope ;
+    skos:prefLabel "Almacenamiento de metales férreos"@es ;
+    skos:prefLabel "Storage of ferrous metals"@en .
+
+managementscope:AlmacenamientoResiduosMetalicosPlomo a skos:Concept ;
+    skos:inScheme wastekos:ManagementScope ;
+    skos:prefLabel "Almacenamiento de residuos metálicos de plomo"@es ;
+    skos:prefLabel "Storage of lead-containing metal waste"@en .

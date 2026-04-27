@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
+@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
+@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/wasteType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+wastekos:WasteType a skos:ConceptScheme ;
+    dct:issued "2026-04-21"^^xsd:date ;
+    dct:modified "2026-04-24"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Esquema de conceptos para los tipos de residuos gestionados, aceptados o recogidos."@es ;
+    rdfs:comment "Concept scheme for the types of waste managed, accepted or collected."@en ;
+    rdfs:label "Tipos de residuos"@es ;
+    rdfs:label "Types of waste"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de residuos"@es ;
+    dct:title "Concept scheme grouping waste types"@en ;
+    skos:note "Valores extraídos de los conjuntos de datos de gestión de residuos."@es ;
+    skos:note "Data extracted from waste management datasets."@en .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+wastetype:020107 a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Residuos de la silvicultura"@es ;
+    skos:prefLabel "Forestry waste"@en .
+
+wastetype:160215 a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Componentes peligrosos retirados de equipos desechados"@es ;
+    skos:prefLabel "Hazardous components removed from discarded equipment"@en .
+
+wastetype:100299 a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Residuos no especificados en otra categoría"@es ;
+    skos:prefLabel "Waste not specified in any other category"@en .
+
+wastetype:PapelCarton a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Papel-cartón"@es ;
+    skos:prefLabel "Paper and cardboard"@en .
+
+wastetype:Vidrio a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Vidrio"@es ;
+    skos:prefLabel "Glass"@en .
+
+wastetype:Restos a skos:Concept ;
+    skos:inScheme wastekos:WasteType ;
+    skos:prefLabel "Restos"@es ;
+    skos:prefLabel "Residual waste"@en .
