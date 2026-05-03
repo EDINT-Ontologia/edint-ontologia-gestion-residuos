@@ -4,6 +4,8 @@ Esta ontología describe elementos asociados a la gestión de residuos.
 
 El modelo se ha construido a partir de datos abiertos publicados en datos.gob.es y proporcionados por distintas instituciones en el ámbito del medioambiente y los servicios públicos.
 
+Su desarrollo se enmarca en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
+
 # Propósito y alcance de la ontología (purpose and scope of the ontology)
 
 La ontología tiene como propósito representar información relativa a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización, junto con otros aspectos relevantes.
@@ -35,3 +37,9 @@ El repositorio contiene las siguientes carpetas:
 # Mantenimiento y evolución (maintenance and evolution)
 
 Para gestionar las incidencias o mejoras sugeridas respecto a la ontología, recomendamos seguir las guías proporcionadas en [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) para generar una indicencia (trabajo en progreso).
+
+# Financiación (funding)
+
+Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
+
+![Logos](./resources/EDINT_UE_V-Color.png)
