@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/medioambiente/residuos#">
-        <owl:versionIRI rdf:resource="https://w3id.org/def/medioambiente/residuos/1.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/def/medioambiente/residuos/0.1.0"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</terms:created>
         <terms:creator>Laura Gilgado Romero</terms:creator>
         <terms:description xml:lang="en">Ontology that describes the elements associated with waste management, including facilities, containers and collection points.</terms:description>
@@ -20,7 +20,7 @@
         <terms:title xml:lang="es">Ontología para la representación de la gestión de residuos</terms:title>
         <vann:preferredNamespacePrefix>waste</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/medioambiente/residuos#"/>
-        <owl:versionInfo>1.0</owl:versionInfo>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
