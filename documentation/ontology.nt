@@ -1,5 +1,5 @@
 <https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/medioambiente/residuos/1.0> .
+<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/medioambiente/residuos/0.1.0> .
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/created> "2026-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/creator> "Laura Gilgado Romero" .
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en .
@@ -9,7 +9,7 @@
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/title> "Ontología para la representación de la gestión de residuos"@es .
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "waste" .
 <https://w3id.org/def/medioambiente/residuos#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/medioambiente/residuos#> .
-<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
 <https://w3id.org/def/medioambiente/residuos#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
