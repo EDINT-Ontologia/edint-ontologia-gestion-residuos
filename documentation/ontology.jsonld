@@ -427,10 +427,10 @@
     "@id" : "https://w3id.org/def/medioambiente/residuos#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/def/medioambiente/residuos/1.0"
+    "@id" : "https://w3id.org/def/medioambiente/residuos/0.1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0"
+    "@value" : "0.1.0"
   } ],
   "https://w3id.org/mod#createdWith" : [ {
     "@id" : "https://chowlk.linkeddata.es/"
