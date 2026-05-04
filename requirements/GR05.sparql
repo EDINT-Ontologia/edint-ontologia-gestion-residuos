@@ -1,0 +1,23 @@
+# GR05: ¿A qué barrio, distrito o municipio pertenece cada recurso de gestión de residuos?
+
+PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?resource ?territorialEntity ?territorialType ?displayLabel
+WHERE {
+  ?resource waste:belongsTo ?territorialEntity .
+
+  ?territorialEntity a ?territorialType .
+
+  VALUES ?territorialType {
+    esadm:Barrio
+    esadm:Distrito
+    esadm:Municipio
+  }
+
+  OPTIONAL { ?territorialEntity rdfs:label ?label }
+
+  BIND(COALESCE(STR(?label), STRAFTER(STR(?territorialEntity), "/residuos/")) AS ?displayLabel)
+}
+ORDER BY ?resource ?territorialType ?displayLabel
