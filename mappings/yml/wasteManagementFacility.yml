@@ -1,0 +1,96 @@
+prefixes:
+  waste: "https://w3id.org/def/medioambiente/residuos#"
+  wastekos: "https://w3id.org/kos/medioambiente/residuos/"
+  managementscope: "https://w3id.org/kos/medioambiente/residuos/ManagementScope/"
+  treatmentprocess: "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/"
+  wastetype: "https://w3id.org/kos/medioambiente/residuos/WasteType/"
+  esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
+  esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  schema: "https://schema.org/"
+
+sources:
+  wasteManagementFacility-source: [dataset-enriquecido-1.csv~csv]
+
+mappings:
+  WasteManagementFacility:
+    sources:
+      - wasteManagementFacility-source
+    s: https://w3id.org/medioambiente/recurso/residuos/wasteManagementFacility/$(Número de registro)
+    po:
+      - [a, waste:WasteManagementFacility]
+      - [waste:registrationNumber, $(Número de registro), xsd:string]
+      - [waste:registrationType, $(Tipo de registro), xsd:string]
+      - [schema:legalName, $(Razón social), xsd:string]
+      - [waste:nif, $(NIF), xsd:string]
+      - [waste:nima, $(NIMA), xsd:string]
+      - [waste:isConstructionDemolitionWasteManager, $(Residuos de Construcción y Demolición), xsd:boolean]
+      - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Número de registro)~iri]
+      - [waste:hasManagementScope, managementscope:$(Alcance de la gestión normalizado)~iri]
+      - [waste:hasTreatmentProcess, treatmentprocess:$(Proceso de tratamiento normalizado)~iri]
+      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Número de registro)~iri]
+      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)~iri]
+      - [waste:managesWasteType, wastetype:$(Tipo de residuo normalizado)~iri]
+
+  ContactPoint:
+    sources:
+      - wasteManagementFacility-source
+    s: https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Número de registro)
+    po:
+      - [a, schema:ContactPoint]
+      - [schema:telephone, $(Teléfono), xsd:string]
+      - [schema:faxNumber, $(Fax), xsd:string]
+
+  ManagementScopeConcept:
+    sources:
+      - wasteManagementFacility-source
+    s: managementscope:$(Alcance de la gestión normalizado)
+    po:
+      - [a, skos:Concept]
+      - [skos:inScheme, wastekos:ManagementScope~iri]
+      - [skos:prefLabel, $(Alcance de la gestión), es~lang]
+
+  TreatmentProcessConcept:
+    sources:
+      - wasteManagementFacility-source
+    s: treatmentprocess:$(Proceso de tratamiento normalizado)
+    po:
+      - [a, skos:Concept]
+      - [skos:inScheme, wastekos:TreatmentProcess~iri]
+      - [skos:prefLabel, $(Descripción del proceso), es~lang]
+
+  DireccionPostal:
+    sources:
+      - wasteManagementFacility-source
+    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Número de registro)
+    po:
+      - [a, esdir:DireccionPostal]
+
+  Municipality:
+    sources:
+      - wasteManagementFacility-source
+    s: https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)
+    po:
+      - [a, esadm:Municipio]
+      - [esadm:perteneceAProvincia, https://w3id.org/medioambiente/recurso/residuos/province/$(Provincia)~iri]
+      - [rdfs:label, $(Municipio), es~lang]
+
+  Province:
+    sources:
+      - wasteManagementFacility-source
+    s: https://w3id.org/medioambiente/recurso/residuos/province/$(Provincia)
+    po:
+      - [a, esadm:Provincia]
+      - [rdfs:label, $(Provincia), es~lang]
+
+  WasteTypeConcept:
+    sources:
+      - wasteManagementFacility-source
+    s: wastetype:$(Tipo de residuo normalizado)
+    po:
+      - [a, skos:Concept]
+      - [skos:inScheme, wastekos:WasteType~iri]
+      - [skos:prefLabel, $(Descripción del residuo), es~lang]
+      - [skos:notation, $(Código LER de residuo), xsd:string]
