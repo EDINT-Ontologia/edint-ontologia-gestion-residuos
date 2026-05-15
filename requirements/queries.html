@@ -233,7 +233,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="k">SELECT</span> <span class="nv">?facility</span> <span class="nv">?legalName</span> <span class="nv">?registrationNumber</span> <span class="nv">?wasteType</span> <span class="nv">?wasteTypeLabel</span>
 <span class="k">WHERE</span> <span class="p">{</span>
-  <span class="nv">?facility</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteFacility</span> <span class="p">;</span>
+  <span class="nv">?facility</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteManagementFacility</span> <span class="p">;</span>
             <span class="nn">waste</span><span class="p">:</span><span class="nt">registrationNumber</span> <span class="nv">?registrationNumber</span> <span class="p">.</span>
 
   <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?facility</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">legalName</span> <span class="nv">?legalName</span> <span class="p">}</span>
@@ -314,21 +314,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 <div class="sparql-code"><pre><span></span><span class="c"># GR04: ¿Dónde se localizan los recursos asociados a la gestión de residuos?</span>
 
 <span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
-<span class="k">PREFIX</span> <span class="nn">geo</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
 
 <span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?resourceType</span> <span class="nv">?geometry</span> <span class="nv">?wkt</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="k">VALUES</span> <span class="nv">?resourceType</span> <span class="p">{</span>
-    <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteFacility</span>
+    <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteManagementFacility</span>
     <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteContainer</span>
     <span class="nn">waste</span><span class="p">:</span><span class="nt">PermanentCollectionPoint</span>
     <span class="nn">waste</span><span class="p">:</span><span class="nt">MobileCollectionPoint</span>
   <span class="p">}</span>
 
   <span class="nv">?resource</span> <span class="k">a</span> <span class="nv">?resourceType</span> <span class="p">;</span>
-            <span class="nn">geo</span><span class="p">:</span><span class="nt">hasGeometry</span> <span class="nv">?geometry</span> <span class="p">.</span>
+            <span class="nn">gsp</span><span class="p">:</span><span class="nt">hasGeometry</span> <span class="nv">?geometry</span> <span class="p">.</span>
 
-  <span class="nv">?geometry</span> <span class="nn">geo</span><span class="p">:</span><span class="nt">asWKT</span> <span class="nv">?wkt</span> <span class="p">.</span>
+  <span class="nv">?geometry</span> <span class="nn">gsp</span><span class="p">:</span><span class="nt">asWKT</span> <span class="nv">?wkt</span> <span class="p">.</span>
 <span class="p">}</span>
 <span class="k">ORDER BY</span> <span class="nv">?resourceType</span> <span class="nv">?resource</span>
 </pre></div>

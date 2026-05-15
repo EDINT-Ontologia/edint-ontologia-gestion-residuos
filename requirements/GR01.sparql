@@ -6,7 +6,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?facility ?legalName ?registrationNumber ?wasteType ?wasteTypeLabel
 WHERE {
-  ?facility a waste:WasteFacility ;
+  ?facility a waste:WasteManagementFacility ;
             waste:registrationNumber ?registrationNumber .
 
   OPTIONAL { ?facility schema:legalName ?legalName }
