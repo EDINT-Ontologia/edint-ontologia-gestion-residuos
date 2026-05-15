@@ -7,7 +7,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
 @prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/managementScope/> .
+@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
 
 #################################################################
 #
@@ -34,17 +34,17 @@ wastekos:ManagementScope a skos:ConceptScheme ;
 #
 #################################################################
 
-managementscope:FabricacionProductosQuimicosGestionResiduosDisolventes a skos:Concept ;
+managementscope:ClasificacionDeResiduosNoPeligrososYTrituracionDeMadera a skos:Concept ;
     skos:inScheme wastekos:ManagementScope ;
-    skos:prefLabel "Fabricación de productos químicos y gestión de residuos de disolventes"@es ;
-    skos:prefLabel "Chemical manufacturing and solvent waste management"@en .
+    skos:prefLabel "Clasificación de residuos no peligrosos y trituración de madera"@es ;
+    skos:prefLabel "Sorting of non-hazardous waste and wood chipping"@en .
 
-managementscope:AlmacenamientoMetalesFerreos a skos:Concept ;
+managementscope:AlmacenamientoDeMetalesFerreos a skos:Concept ;
     skos:inScheme wastekos:ManagementScope ;
     skos:prefLabel "Almacenamiento de metales férreos"@es ;
     skos:prefLabel "Storage of ferrous metals"@en .
 
-managementscope:AlmacenamientoResiduosMetalicosPlomo a skos:Concept ;
+managementscope:AlmacenamientoDeResiduosMetalicosDePlomo a skos:Concept ;
     skos:inScheme wastekos:ManagementScope ;
     skos:prefLabel "Almacenamiento de residuos metálicos de plomo"@es ;
     skos:prefLabel "Storage of lead-containing metal waste"@en .

@@ -1,41 +1,26 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
+@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
+@prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
+@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/def/medioambiente/residuos#addressMobileCollectionPointCalleCobre>
-  a esdir:DireccionPostal ;
-  esdir:direccion "Calle Cobre" ;
-  esdir:locatorName "S/N" ;
-  esdir:nombreDeLaVia "Cobre" ;
-  waste:secondaryAddress "Frente al número 5" ;
-  waste:streetNumberType "P" ;
-  waste:streetType "Calle" .
+  a esdir:DireccionPostal .
 
 <https://w3id.org/def/medioambiente/residuos#addressPermanentCollectionPoint2503>
-  a esdir:DireccionPostal ;
-  esdir:codigoPostal "50014" ;
-  esdir:direccion "Polígono de Cogullada, con Calle Nuestra Señora de Lagunas" .
+  a esdir:DireccionPostal .
 
 <https://w3id.org/def/medioambiente/residuos#addressWasteContainer20270>
-  a esdir:DireccionPostal ;
-  esdir:direccion "Calle Atocha, 95" .
+  a esdir:DireccionPostal .
 
-<https://w3id.org/def/medioambiente/residuos#addressWasteFacility13G04A1400037921E>
-  a esdir:DireccionPostal ;
-  esdir:codigoPostal "28946" ;
-  esdir:locatorName "4-6" ;
-  esdir:nombreDeLaVia "Papiro" ;
-  waste:industrialPark "El Campillo" ;
-  waste:streetCode "05810246" ;
-  waste:streetNumberType "P" ;
-  waste:streetType "Calle" .
+<https://w3id.org/def/medioambiente/residuos#addressWasteManagementFacility13G04A1400037921E>
+  a esdir:DireccionPostal .
 
 <https://w3id.org/def/medioambiente/residuos#barrioCortes>
   a esadm:Barrio ;
@@ -46,7 +31,7 @@
   a schema:ContactPoint ;
   schema:telephone "615812503" .
 
-<https://w3id.org/def/medioambiente/residuos#contactPointWasteFacility13G04A1400037921E>
+<https://w3id.org/def/medioambiente/residuos#contactPointWasteManagementFacility13G04A1400037921E>
   a schema:ContactPoint ;
   schema:faxNumber "916423167" ;
   schema:telephone "616925592" .
@@ -65,25 +50,20 @@
   rdfs:label "El Rabal"@es .
 
 <https://w3id.org/def/medioambiente/residuos#geometryMobileCollectionPointCalleCobre>
-  a geo:Geometry ;
-  geo:asWKT "POINT(-3.689229994 40.39373013)"^^geo:wktLiteral .
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-3.689229994 40.39373013)"^^gsp:wktLiteral .
 
 <https://w3id.org/def/medioambiente/residuos#geometryPermanentCollectionPoint2503>
-  a geo:Geometry ;
-  geo:asWKT "POINT(-0.8566459744789225 41.67737429730341)"^^geo:wktLiteral .
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-0.8566459744789225 41.67737429730341)"^^gsp:wktLiteral .
 
 <https://w3id.org/def/medioambiente/residuos#geometryWasteContainer20270>
-  a geo:Geometry ;
-  geo:asWKT "POINT(-3.696217770252 40.410961305501)"^^geo:wktLiteral .
-
-<https://w3id.org/def/medioambiente/residuos#managementScopeClasificacionResiduosNoPeligrososTrituracionMadera>
-  a skos:Concept ;
-  skos:inScheme wastekos:ManagementScope ;
-  skos:prefLabel "Clasificación de residuos no peligrosos y trituración de madera"@es .
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-3.696217770252 40.410961305501)"^^gsp:wktLiteral .
 
 <https://w3id.org/def/medioambiente/residuos#mobileCollectionPointCalleCobre>
   a waste:MobileCollectionPoint ;
-  geo:hasGeometry waste:geometryMobileCollectionPointCalleCobre ;
+  gsp:hasGeometry waste:geometryMobileCollectionPointCalleCobre ;
   schema:address waste:addressMobileCollectionPointCalleCobre ;
   schema:map "https://goo.gl/maps/mJnrT377bHTyQduM7"^^xsd:anyURI ;
   schema:openingHours "Martes. Tarde. 17:30:00. 19:00:00" ;
@@ -103,7 +83,7 @@
 <https://w3id.org/def/medioambiente/residuos#permanentCollectionPoint2503>
   a waste:PermanentCollectionPoint ;
   dcterms:identifier "2503" ;
-  geo:hasGeometry waste:geometryPermanentCollectionPoint2503 ;
+  gsp:hasGeometry waste:geometryPermanentCollectionPoint2503 ;
   schema:address waste:addressPermanentCollectionPoint2503 ;
   schema:contactPoint waste:contactPointPermanentCollectionPoint2503 ;
   schema:dateCreated "2008-01-10T02:00:00Z"^^xsd:dateTime ;
@@ -122,20 +102,14 @@
 
 <https://w3id.org/def/medioambiente/residuos#provinciaMadrid>
   a esadm:Provincia ;
-  rdfs:label "Madrid"@es ;
-  waste:provinceCode "28" .
-
-<https://w3id.org/def/medioambiente/residuos#treatmentProcessClasificacionResiduosNoPeligrosos>
-  a skos:Concept ;
-  skos:inScheme wastekos:TreatmentProcess ;
-  skos:prefLabel "Clasificación de residuos no peligrosos"@es .
+  rdfs:label "Madrid"@es .
 
 <https://w3id.org/def/medioambiente/residuos#wasteContainer20270>
   a waste:WasteContainer ;
-  geo:hasGeometry waste:geometryWasteContainer20270 ;
+  gsp:hasGeometry waste:geometryWasteContainer20270 ;
   schema:address waste:addressWasteContainer20270 ;
   schema:model "E 3100 CS" ;
-  waste:acceptsWasteType waste:wasteTypePMB ;
+  waste:acceptsWasteType wastetype:PlasticosMetalesYBriks ;
   waste:belongsTo waste:barrioCortes ;
   waste:belongsTo waste:distritoCentro ;
   waste:containerBatch 1 ;
@@ -143,36 +117,17 @@
   waste:loadingType "Carga superior" ;
   waste:order 20270 .
 
-<https://w3id.org/def/medioambiente/residuos#wasteFacility13G04A1400037921E>
-  a waste:WasteFacility ;
-  schema:address waste:addressWasteFacility13G04A1400037921E ;
-  schema:contactPoint waste:contactPointWasteFacility13G04A1400037921E ;
+<https://w3id.org/def/medioambiente/residuos#wasteManagementFacility13G04A1400037921E>
+  a waste:WasteManagementFacility ;
+  schema:address waste:addressWasteManagementFacility13G04A1400037921E ;
+  schema:contactPoint waste:contactPointWasteManagementFacility13G04A1400037921E ;
   schema:legalName "Tecnologías del Medio Ambiente, S.A." ;
   waste:belongsTo waste:municipioFuenlabrada ;
-  waste:hasManagementScope waste:managementScopeClasificacionResiduosNoPeligrososTrituracionMadera ;
-  waste:hasTreatmentProcess waste:treatmentProcessClasificacionResiduosNoPeligrosos ;
+  waste:hasManagementScope managementscope:ClasificacionResiduosNoPeligrososTrituracionMadera ;
+  waste:hasTreatmentProcess treatmentprocess:ClasificacionResiduosNoPeligrosos ;
   waste:isConstructionDemolitionWasteManager false ;
-  waste:managesWasteType waste:wasteType200307 ;
+  waste:managesWasteType wastetype:ResiduosVoluminosos ;
   waste:nif "A08948143" ;
   waste:nima "2800023654" ;
   waste:registrationNumber "13G04A1400037921E" ;
   waste:registrationType "Autorización de gestión de residuos no peligrosos" .
-
-<https://w3id.org/def/medioambiente/residuos#wasteType200307>
-  a skos:Concept ;
-  skos:inScheme wastekos:WasteType ;
-  skos:prefLabel "Residuos voluminosos"@es .
-
-<https://w3id.org/def/medioambiente/residuos#wasteTypePMB>
-  a skos:Concept ;
-  skos:inScheme wastekos:WasteType ;
-  skos:prefLabel "PMB"@es .
-
-<https://w3id.org/kos/medioambiente/residuos/ManagementScope>
-  a skos:ConceptScheme .
-
-<https://w3id.org/kos/medioambiente/residuos/TreatmentProcess>
-  a skos:ConceptScheme .
-
-<https://w3id.org/kos/medioambiente/residuos/WasteType>
-  a skos:ConceptScheme .

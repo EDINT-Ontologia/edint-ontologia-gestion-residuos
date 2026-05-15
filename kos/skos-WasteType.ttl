@@ -7,7 +7,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
 @prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/wasteType/> .
+@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
 
 #################################################################
 #
@@ -34,25 +34,28 @@ wastekos:WasteType a skos:ConceptScheme ;
 #
 #################################################################
 
-wastetype:020107 a skos:Concept ;
+wastetype:ResiduosVoluminosos a skos:Concept ;
     skos:inScheme wastekos:WasteType ;
-    skos:prefLabel "Residuos de la silvicultura"@es ;
-    skos:prefLabel "Forestry waste"@en .
+    skos:prefLabel "Residuos voluminosos"@es ;
+    skos:prefLabel "Bulky waste"@en ;
+    skos:notation "200307" .
 
-wastetype:160215 a skos:Concept ;
+wastetype:ComponentesPeligrososRetiradosDeEquiposDesechados a skos:Concept ;
     skos:inScheme wastekos:WasteType ;
     skos:prefLabel "Componentes peligrosos retirados de equipos desechados"@es ;
-    skos:prefLabel "Hazardous components removed from discarded equipment"@en .
+    skos:prefLabel "Hazardous components removed from discarded equipment"@en ;
+    skos:notation "160215" .
 
-wastetype:100299 a skos:Concept ;
+wastetype:ResiduosNoEspecificadosEnOtraCategoria a skos:Concept ;
     skos:inScheme wastekos:WasteType ;
     skos:prefLabel "Residuos no especificados en otra categoría"@es ;
-    skos:prefLabel "Waste not specified in any other category"@en .
+    skos:prefLabel "Waste not specified in any other category"@en ;
+    skos:notation "100299" .
 
-wastetype:PapelCarton a skos:Concept ;
+wastetype:PlasticosMetalesYBriks a skos:Concept ;
     skos:inScheme wastekos:WasteType ;
-    skos:prefLabel "Papel-cartón"@es ;
-    skos:prefLabel "Paper and cardboard"@en .
+    skos:prefLabel "PMB"@es ;
+    skos:prefLabel "Plastics, metals and cartons"@en .
 
 wastetype:Vidrio a skos:Concept ;
     skos:inScheme wastekos:WasteType ;
