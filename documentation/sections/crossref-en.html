@@ -18,6 +18,7 @@ This section provides details for each class and property defined by Ontology fo
   <li><a href="#PermanentCollectionPoint" title="https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint">Permanent Collection Point</a></li>
   <li><a href="#https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia" title="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia">Provincia</a></li>
   <li><a href="#WasteContainer" title="https://w3id.org/def/medioambiente/residuos#WasteContainer">Waste Container</a></li>
+  <li><a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a></li>
   <li><a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a></li>
  </ul>
  <div class="entity" id="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">
@@ -46,7 +47,7 @@ This section provides details for each class and property defined by Ontology fo
     has super-classes
    </dt>
    <dd>
-    <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+    <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
@@ -58,7 +59,7 @@ This section provides details for each class and property defined by Ontology fo
     is in domain of
    </dt>
    <dd>
-    <a href="#acceptsWasteType" title="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">accepts waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#belongsTo" title="https://w3id.org/def/medioambiente/residuos#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/dateCreated" title="https://schema.org/dateCreated">date created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/dateModified" title="https://schema.org/dateModified">date modified</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/description" title="https://schema.org/description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isPubliclyOwned" title="https://w3id.org/def/medioambiente/residuos#isPubliclyOwned">is publicly owned</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/openingHours" title="https://schema.org/openingHours">opening hours</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#acceptsWasteType" title="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">accepts waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/dateCreated" title="https://schema.org/dateCreated">date created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/dateModified" title="https://schema.org/dateModified">date modified</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/description" title="https://schema.org/description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isPubliclyOwned" title="https://w3id.org/def/medioambiente/residuos#isPubliclyOwned">is publicly owned</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/openingHours" title="https://schema.org/openingHours">opening hours</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -154,7 +155,7 @@ This section provides details for each class and property defined by Ontology fo
     has sub-classes
    </dt>
    <dd>
-    <a href="#CollectionPoint" title="https://w3id.org/def/medioambiente/residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+    <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -166,7 +167,7 @@ This section provides details for each class and property defined by Ontology fo
     has sub-classes
    </dt>
    <dd>
-    <a href="#CollectionPoint" title="https://w3id.org/def/medioambiente/residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteContainer" title="https://w3id.org/def/medioambiente/residuos#WasteContainer">Waste Container</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+    <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -262,13 +263,37 @@ This section provides details for each class and property defined by Ontology fo
     has super-classes
    </dt>
    <dd>
-    <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+    <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#acceptsWasteType" title="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">accepts waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#belongsTo" title="https://w3id.org/def/medioambiente/residuos#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#containerBatch" title="https://w3id.org/def/medioambiente/residuos#containerBatch">container batch</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#containerLocationCode" title="https://w3id.org/def/medioambiente/residuos#containerLocationCode">container location code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#containerType" title="https://w3id.org/def/medioambiente/residuos#containerType">container type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#loadingType" title="https://w3id.org/def/medioambiente/residuos#loadingType">loading type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/model" title="https://schema.org/model">model</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#order" title="https://w3id.org/def/medioambiente/residuos#order">order</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#acceptsWasteType" title="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">accepts waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#containerBatch" title="https://w3id.org/def/medioambiente/residuos#containerBatch">container batch</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#containerLocationCode" title="https://w3id.org/def/medioambiente/residuos#containerLocationCode">container location code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#containerType" title="https://w3id.org/def/medioambiente/residuos#containerType">container type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#loadingType" title="https://w3id.org/def/medioambiente/residuos#loadingType">loading type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/model" title="https://schema.org/model">model</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#order" title="https://w3id.org/def/medioambiente/residuos#order">order</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WasteFacility">
+  <h3>Waste Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/medioambiente/residuos#WasteFacility</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CollectionPoint" title="https://w3id.org/def/medioambiente/residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteContainer" title="https://w3id.org/def/medioambiente/residuos#WasteContainer">Waste Container</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#belongsTo" title="https://w3id.org/def/medioambiente/residuos#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -280,13 +305,13 @@ This section provides details for each class and property defined by Ontology fo
     has super-classes
    </dt>
    <dd>
-    <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+    <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#belongsTo" title="https://w3id.org/def/medioambiente/residuos#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManagementScope" title="https://w3id.org/def/medioambiente/residuos#hasManagementScope">has management scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTreatmentProcess" title="https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess">has treatment process</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConstructionDemolitionWasteManager" title="https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager">is construction demolition waste manager</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/legalName" title="https://schema.org/legalName">legal name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#managesWasteType" title="https://w3id.org/def/medioambiente/residuos#managesWasteType">manages waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#nif" title="https://w3id.org/def/medioambiente/residuos#nif">nif</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#nima" title="https://w3id.org/def/medioambiente/residuos#nima">nima</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationNumber" title="https://w3id.org/def/medioambiente/residuos#registrationNumber">registration number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationType" title="https://w3id.org/def/medioambiente/residuos#registrationType">registration type</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManagementScope" title="https://w3id.org/def/medioambiente/residuos#hasManagementScope">has management scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTreatmentProcess" title="https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess">has treatment process</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConstructionDemolitionWasteManager" title="https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager">is construction demolition waste manager</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/legalName" title="https://schema.org/legalName">legal name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#managesWasteType" title="https://w3id.org/def/medioambiente/residuos#managesWasteType">manages waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#nif" title="https://w3id.org/def/medioambiente/residuos#nif">nif</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#nima" title="https://w3id.org/def/medioambiente/residuos#nima">nima</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationNumber" title="https://w3id.org/def/medioambiente/residuos#registrationNumber">registration number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationType" title="https://w3id.org/def/medioambiente/residuos#registrationType">registration type</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -334,7 +359,7 @@ This section provides details for each class and property defined by Ontology fo
      has domain
     </dt>
     <dd>
-     <a href="#CollectionPoint" title="https://w3id.org/def/medioambiente/residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#WasteContainer" title="https://w3id.org/def/medioambiente/residuos#WasteContainer">Waste Container</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -354,7 +379,7 @@ This section provides details for each class and property defined by Ontology fo
      has domain
     </dt>
     <dd>
-     <a href="#CollectionPoint" title="https://w3id.org/def/medioambiente/residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#WasteContainer" title="https://w3id.org/def/medioambiente/residuos#WasteContainer">Waste Container</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#WasteManagementFacility" title="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#WasteFacility" title="https://w3id.org/def/medioambiente/residuos#WasteFacility">Waste Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

@@ -11,6 +11,14 @@
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://astrea.linkeddata.es/shapes#15be8b0224bb6e477ceff0f6a0ffde11> a sh:NodeShape ;
+    rdfs:label "Waste Facility" ;
+    sh:name "Waste Facility" ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183>,
+        <https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> ;
+    sh:targetClass waste:WasteFacility .
+
 <https://astrea.linkeddata.es/shapes#1a65b4abbe87c8aae8fac84bc9696cbc> a sh:NodeShape ;
     rdfs:label "Municipio" ;
     sh:name "Municipio" ;
@@ -30,6 +38,13 @@
     sh:name "Provincia" ;
     sh:nodeKind sh:IRI ;
     sh:targetClass esadm:Provincia .
+
+<https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> a sh:PropertyShape ;
+    rdfs:label "belongs to" ;
+    sh:name "belongs to" ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path waste:belongsTo ;
+    sh:or ( [ sh:class esadm:Barrio ] [ sh:class esadm:Distrito ] [ sh:class esadm:Municipio ] ) .
 
 <https://astrea.linkeddata.es/shapes#5737d77d36e1661caabe06256eedc2f0> a sh:NodeShape ;
     rdfs:label "Contact Point" ;
@@ -80,14 +95,12 @@
     sh:name "Waste Container" ;
     sh:nodeKind sh:IRI ;
     sh:property <https://astrea.linkeddata.es/shapes#00c6f94cc088ad47ff3f4856326a92af>,
-        <https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183>,
         <https://astrea.linkeddata.es/shapes#3c658388b479bc5ea4391d327ae68c9e>,
         <https://astrea.linkeddata.es/shapes#488e01e920599bc7514601eac919e2b6>,
         <https://astrea.linkeddata.es/shapes#67ba8d6d9104b0d8f386c2db49001871>,
         <https://astrea.linkeddata.es/shapes#6c73d0ba1e1761195760bdc181aa3b29>,
         <https://astrea.linkeddata.es/shapes#746a3ce91f47b1aab6d32ec78af94526>,
-        <https://astrea.linkeddata.es/shapes#8f76dcc46572257c24855eec4d318063>,
-        <https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> ;
+        <https://astrea.linkeddata.es/shapes#8f76dcc46572257c24855eec4d318063> ;
     sh:targetClass waste:WasteContainer .
 
 <https://astrea.linkeddata.es/shapes#aee6d1ae38b15dcf3b340395888e35de> a sh:NodeShape ;
@@ -114,7 +127,6 @@
     sh:name "Collection Point" ;
     sh:nodeKind sh:IRI ;
     sh:property <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4>,
-        <https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183>,
         <https://astrea.linkeddata.es/shapes#3656dcca35a5b9fa21916c55198c7c1c>,
         <https://astrea.linkeddata.es/shapes#5af1640770826f8acfa8cb19ba25f896>,
         <https://astrea.linkeddata.es/shapes#5cb62b06dd4d51f3ab120439f5a2eac3>,
@@ -122,16 +134,14 @@
         <https://astrea.linkeddata.es/shapes#8f76dcc46572257c24855eec4d318063>,
         <https://astrea.linkeddata.es/shapes#92e95415bf1321d7449ab3ccaf2914b5>,
         <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>,
-        <https://astrea.linkeddata.es/shapes#e9481819f7c81734f96ec4c5e74d6d94>,
-        <https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> ;
+        <https://astrea.linkeddata.es/shapes#e9481819f7c81734f96ec4c5e74d6d94> ;
     sh:targetClass waste:CollectionPoint .
 
 <https://astrea.linkeddata.es/shapes#f80c3e37f3c1f0ba8ef99b73e720708e> a sh:NodeShape ;
     rdfs:label "Waste Management Facility" ;
     sh:name "Waste Management Facility" ;
     sh:nodeKind sh:IRI ;
-    sh:property <https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183>,
-        <https://astrea.linkeddata.es/shapes#374eba29ff035bf07bc4b1418916a9b6>,
+    sh:property <https://astrea.linkeddata.es/shapes#374eba29ff035bf07bc4b1418916a9b6>,
         <https://astrea.linkeddata.es/shapes#4365e57de0d101ea50972393922369ba>,
         <https://astrea.linkeddata.es/shapes#5484ac342cf92c326a479518bd4f01f7>,
         <https://astrea.linkeddata.es/shapes#58352ed28f0536eec762b0f1c5d9e66b>,
@@ -140,8 +150,7 @@
         <https://astrea.linkeddata.es/shapes#d63f6974f1dcaaccec01c97dc4b5891c>,
         <https://astrea.linkeddata.es/shapes#db351a7380e1b8481c476c145d52677e>,
         <https://astrea.linkeddata.es/shapes#e49cb92b7a68f8c25dc068422825e8ea>,
-        <https://astrea.linkeddata.es/shapes#e9481819f7c81734f96ec4c5e74d6d94>,
-        <https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> ;
+        <https://astrea.linkeddata.es/shapes#e9481819f7c81734f96ec4c5e74d6d94> ;
     sh:targetClass waste:WasteManagementFacility .
 
 <https://astrea.linkeddata.es/shapes#ffeaf0d3664c31215f614a64f5bb45a5> a sh:NodeShape ;
@@ -159,13 +168,6 @@
     sh:path waste:containerLocationCode ;
     sh:pattern ".*" .
 
-<https://astrea.linkeddata.es/shapes#5727dc5063a6d1dc7c7d3718d8e5bf73> a sh:PropertyShape ;
-    rdfs:label "belongs to" ;
-    sh:name "belongs to" ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path waste:belongsTo ;
-    sh:or ( [ sh:class esadm:Barrio ] [ sh:class esadm:Distrito ] [ sh:class esadm:Municipio ] ) .
-
 <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> a sh:PropertyShape ;
     rdfs:label "name" ;
     sh:datatype xsd:string ;
@@ -181,6 +183,13 @@
     sh:nodeKind sh:Literal ;
     sh:path schema:map ;
     sh:pattern "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
+
+<https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183> a sh:PropertyShape ;
+    rdfs:label "address" ;
+    sh:class esdir:DireccionPostal ;
+    sh:name "address" ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path schema:address .
 
 <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> a sh:PropertyShape ;
     rdfs:label "has geometry" ;
@@ -415,11 +424,4 @@
     sh:name "contact point" ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path schema:contactPoint .
-
-<https://astrea.linkeddata.es/shapes#2b4c42a8fdc57680b9b1d1b7241f2183> a sh:PropertyShape ;
-    rdfs:label "address" ;
-    sh:class esdir:DireccionPostal ;
-    sh:name "address" ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path schema:address .
 

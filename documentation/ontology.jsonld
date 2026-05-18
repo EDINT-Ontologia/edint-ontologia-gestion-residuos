@@ -5,35 +5,11 @@
     "@list" : [ {
       "@id" : "https://w3id.org/def/medioambiente/residuos#CollectionPoint"
     }, {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteContainer"
-    }, {
       "@id" : "https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"
     } ]
   } ]
 }, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#CollectionPoint"
-    }, {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteContainer"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#CollectionPoint"
-    }, {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteContainer"
-    }, {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -45,23 +21,23 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#CollectionPoint"
-    }, {
-      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
     }, {
       "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/def/medioambiente/residuos#CollectionPoint"
+    }, {
+      "@id" : "https://w3id.org/def/medioambiente/residuos#WasteContainer"
     } ]
   } ]
 }, {
@@ -185,7 +161,7 @@
   "@id" : "https://schema.org/address",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
+    "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "address"
@@ -197,7 +173,7 @@
   "@id" : "https://schema.org/contactPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contact point"
@@ -365,7 +341,7 @@
   "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "pertenece al municipio"
@@ -428,9 +404,7 @@
     "@value" : "Collection Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  }, {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility"
   } ]
 }, {
   "@id" : "https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint",
@@ -457,6 +431,17 @@
     "@value" : "Waste Container"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Waste Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
+  }, {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
@@ -466,15 +451,13 @@
     "@value" : "Waste Management Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  }, {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility"
   } ]
 }, {
   "@id" : "https://w3id.org/def/medioambiente/residuos#acceptsWasteType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "accepts waste type"
@@ -498,13 +481,13 @@
   "@id" : "https://w3id.org/def/medioambiente/residuos#belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
+    "@id" : "https://w3id.org/def/medioambiente/residuos#WasteFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "belongs to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/def/medioambiente/residuos#containerBatch",

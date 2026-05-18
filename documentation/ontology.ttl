@@ -96,12 +96,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://schema.org/address
 <https://schema.org/address> rdf:type owl:ObjectProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( :CollectionPoint
-                                                         :WasteContainer
-                                                         :WasteManagementFacility
-                                                       )
-                                         ] ;
+                             rdfs:domain :WasteFacility ;
                              rdfs:range <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
                              rdfs:label "address" .
 
@@ -148,12 +143,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/medioambiente/residuos#belongsTo
 :belongsTo rdf:type owl:ObjectProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :CollectionPoint
-                                       :WasteContainer
-                                       :WasteManagementFacility
-                                     )
-                       ] ;
+           rdfs:domain :WasteFacility ;
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio>
                                       <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito>
@@ -417,8 +407,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/medioambiente/residuos#CollectionPoint
 :CollectionPoint rdf:type owl:Class ;
-                 rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
-                                 <http://www.opengis.net/ont/geosparql#Feature> ;
+                 rdfs:subClassOf :WasteFacility ;
                  rdfs:label "Collection Point" .
 
 
@@ -436,14 +425,20 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/medioambiente/residuos#WasteContainer
 :WasteContainer rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                rdfs:subClassOf :WasteFacility ;
                 rdfs:label "Waste Container" .
+
+
+###  https://w3id.org/def/medioambiente/residuos#WasteFacility
+:WasteFacility rdf:type owl:Class ;
+               rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
+                               <http://www.opengis.net/ont/geosparql#Feature> ;
+               rdfs:label "Waste Facility" .
 
 
 ###  https://w3id.org/def/medioambiente/residuos#WasteManagementFacility
 :WasteManagementFacility rdf:type owl:Class ;
-                         rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
-                                         <http://www.opengis.net/ont/geosparql#Feature> ;
+                         rdfs:subClassOf :WasteFacility ;
                          rdfs:label "Waste Management Facility" .
 
 
