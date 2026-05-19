@@ -1,0 +1,22 @@
+# GR03: ¿Cuáles son los puntos limpios disponibles y cuáles son fijos o móviles?
+
+PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?collectionPoint ?displayName ?type
+WHERE {
+  {
+    ?collectionPoint a waste:PermanentCollectionPoint .
+    BIND("Punto limpio fijo" AS ?type)
+  }
+  UNION
+  {
+    ?collectionPoint a waste:MobileCollectionPoint .
+    BIND("Punto limpio móvil" AS ?type)
+  }
+
+  OPTIONAL { ?collectionPoint schema:name ?name }
+
+  BIND(COALESCE(STR(?name), STRAFTER(STR(?collectionPoint), "/residuos/")) AS ?displayName)
+}
+ORDER BY LCASE(STR(?displayName)) ?collectionPoint

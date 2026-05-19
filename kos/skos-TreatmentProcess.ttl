@@ -7,7 +7,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
 @prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/treatmentProcess/> .
+@prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
 
 #################################################################
 #
@@ -34,17 +34,17 @@ wastekos:TreatmentProcess a skos:ConceptScheme ;
 #
 #################################################################
 
-treatmentprocess:ResiduosHierroAcero a skos:Concept ;
+treatmentprocess:ClasificacionDeResiduosNoPeligrosos a skos:Concept ;
     skos:inScheme wastekos:TreatmentProcess ;
-    skos:prefLabel "Residuos de hierro y acero"@es ;
-    skos:prefLabel "Iron and steel scrap"@en .
+    skos:prefLabel "Clasificación de residuos no peligrosos"@es ;
+    skos:prefLabel "Classification of non-hazardous waste"@en .
 
-treatmentprocess:HidrocarburosAcidos a skos:Concept ;
+treatmentprocess:HidrocarburosQueContienenAcidos a skos:Concept ;
     skos:inScheme wastekos:TreatmentProcess ;
     skos:prefLabel "Hidrocarburos que contienen ácidos"@es ;
     skos:prefLabel "Hydrocarbons containing acids"@en .
 
-treatmentprocess:ArcillasFiltracionUsadas a skos:Concept ;
+treatmentprocess:ArcillasDeFiltracionUsadas a skos:Concept ;
     skos:inScheme wastekos:TreatmentProcess ;
     skos:prefLabel "Arcillas de filtración usadas"@es ;
     skos:prefLabel "Used filtration clays"@en .

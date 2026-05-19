@@ -1,9 +1,11 @@
 prefixes:
   waste: "https://w3id.org/def/medioambiente/residuos#"
   wastekos: "https://w3id.org/kos/medioambiente/residuos/"
+  wastetype: "https://w3id.org/kos/medioambiente/residuos/WasteType/"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
   skos: "http://www.w3.org/2004/02/skos/core#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
   gsp: "http://www.opengis.net/ont/geosparql#"
   xsd: "http://www.w3.org/2001/XMLSchema#"
   schema: "https://schema.org/"
@@ -27,7 +29,7 @@ mappings:
       - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)~iri]
       - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
       - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/container/$(Código de localización)~iri]
-      - [waste:acceptsWasteType, https://w3id.org/kos/medioambiente/residuos/wasteType/$(Tipo de contenedor)~iri]
+      - [waste:acceptsWasteType, wastetype:$(Tipo de contenedor normalizado)~iri]
 
   DireccionPostal:
     sources:
@@ -35,7 +37,6 @@ mappings:
     s: https://w3id.org/medioambiente/recurso/residuos/address/$(Código de localización)
     po:
       - [a, esdir:DireccionPostal]
-      - [esdir:direccion, $(Dirección), xsd:string]
 
   Neighborhood:
     sources:
@@ -43,7 +44,7 @@ mappings:
     s: https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)
     po:
       - [a, esadm:Barrio]
-      - [schema:name, $(Barrio), xsd:string]
+      - [rdfs:label, $(Barrio), es~lang]
 
   District:
     sources:
@@ -51,7 +52,7 @@ mappings:
     s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
     po:
       - [a, esadm:Distrito]
-      - [schema:name, $(Distrito), xsd:string]
+      - [rdfs:label, $(Distrito), es~lang]
 
   Geometry:
     sources:
@@ -59,13 +60,13 @@ mappings:
     s: https://w3id.org/medioambiente/recurso/residuos/geometry/container/$(Código de localización)
     po:
       - [a, gsp:Geometry]
-      - [gsp:asWKT, POINT($(Longitud (geo)) $(Latitud (geo))), gsp:wktLiteral]
+      - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]
 
   WasteTypeConcept:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/kos/medioambiente/residuos/wasteType/$(Tipo de contenedor)
+    s: wastetype:$(Tipo de contenedor normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, https://w3id.org/kos/medioambiente/residuos/wasteType~iri]
-      - [skos:prefLabel, $(Tipo de contenedor), xsd:string]
+      - [skos:inScheme, wastekos:WasteType~iri]
+      - [skos:prefLabel, $(Tipo de contenedor), es~lang]

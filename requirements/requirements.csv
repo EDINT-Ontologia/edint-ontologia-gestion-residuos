@@ -1,0 +1,6 @@
+Identifier,Responsible partner,"Version (optional)","Competency Question / Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority (High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
+GR01,UPM,v0.1.0,"¿Cuáles son los centros de gestión de residuos registrados y qué tipo de residuo gestionan?",,Proposed,"Consulta implementada en GR01.sparql",,,,,
+GR02,UPM,v0.1.0,"¿Qué contenedores existen y qué tipo de residuo aceptan?",,Proposed,"Consulta implementada en GR02.sparql",,,,,
+GR03,UPM,v0.1.0,"¿Cuáles son los puntos limpios disponibles y cuáles son fijos o móviles?",,Proposed,"Consulta implementada en GR03.sparql",,,,,
+GR04,UPM,v0.1.0,"¿Dónde se localizan los recursos asociados a la gestión de residuos?",,Proposed,"Consulta implementada en GR04.sparql",,,,,
+GR05,UPM,v0.1.0,"¿A qué barrio, distrito o municipio pertenece cada recurso de gestión de residuos?",,Proposed,"Consulta implementada en GR05.sparql",,,,,

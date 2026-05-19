@@ -5,214 +5,189 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix map: <http://mapping.example.com/> .
 @prefix ma: <http://www.w3.org/ns/ma-ont#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema: <https://schema.org/> .
 @prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 
 map:language_000 rr:constant "es" .
 
-map:language_001 rr:constant "es" .
-
-map:language_002 rr:constant "es" .
+map:map_ContactPoint_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "ContactPoint" ;
+	rr:predicateObjectMap map:pom_012, map:pom_013 ;
+	rr:subjectMap map:s_001 .
 
 map:map_DireccionPostal_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "DireccionPostal" ;
-	rr:predicateObjectMap map:pom_011 ;
-	rr:subjectMap map:s_001 .
+	rr:predicateObjectMap map:pom_014 ;
+	rr:subjectMap map:s_002 .
 
 map:map_District_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "District" ;
-	rr:predicateObjectMap map:pom_014, map:pom_015 ;
+	rr:predicateObjectMap map:pom_015, map:pom_016 ;
 	rr:subjectMap map:s_003 .
 
 map:map_Geometry_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "Geometry" ;
-	rr:predicateObjectMap map:pom_016, map:pom_017 ;
+	rr:predicateObjectMap map:pom_017, map:pom_018 ;
 	rr:subjectMap map:s_004 .
 
-map:map_Neighborhood_000 rml:logicalSource map:source_000 ;
+map:map_MobileCollectionPoint_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
-	rdfs:label "Neighborhood" ;
-	rr:predicateObjectMap map:pom_012, map:pom_013 ;
-	rr:subjectMap map:s_002 .
-
-map:map_WasteContainer_000 rml:logicalSource map:source_000 ;
-	rdf:type rr:TriplesMap ;
-	rdfs:label "WasteContainer" ;
-	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005, map:pom_006, map:pom_007, map:pom_008, map:pom_009, map:pom_010 ;
+	rdfs:label "MobileCollectionPoint" ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005, map:pom_006, map:pom_007, map:pom_008, map:pom_009, map:pom_010, map:pom_011 ;
 	rr:subjectMap map:s_000 .
 
-map:map_WasteTypeConcept_000 rml:logicalSource map:source_000 ;
-	rdf:type rr:TriplesMap ;
-	rdfs:label "WasteTypeConcept" ;
-	rr:predicateObjectMap map:pom_018, map:pom_019, map:pom_020 ;
-	rr:subjectMap map:s_005 .
-
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant waste:WasteContainer ;
+	rr:constant waste:MobileCollectionPoint ;
 	rr:termType rr:IRI .
 
-map:om_001 rml:reference "Orden" ;
-	rdf:type rr:ObjectMap ;
-	rr:datatype xsd:int ;
-	rr:termType rr:Literal .
-
-map:om_002 rml:reference "Modelo" ;
+map:om_001 rml:reference "Identificador" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_003 rml:reference "Lote" ;
-	rdf:type rr:ObjectMap ;
-	rr:datatype xsd:int ;
-	rr:termType rr:Literal .
-
-map:om_004 rml:reference "Carga" ;
+map:om_002 rml:reference "Nombre" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_005 rml:reference "Código de localización" ;
+map:om_003 rml:reference "Titularidad pública" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:boolean ;
+	rr:termType rr:Literal .
+
+map:om_004 rml:reference "Horas de apertura" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_006 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Código de localización}" ;
-	rr:termType rr:IRI .
+map:om_005 rml:reference "Descripción" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
 
-map:om_007 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/neighborhood/{Barrio}" ;
-	rr:termType rr:IRI .
+map:om_006 rml:reference "Fecha de creación" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:dateTime ;
+	rr:termType rr:Literal .
+
+map:om_007 rml:reference "Fecha de última actualización" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:dateTime ;
+	rr:termType rr:Literal .
 
 map:om_008 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" ;
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_009 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/container/{Código de localización}" ;
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de contenedor normalizado}" ;
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
-	rr:constant esdir:DireccionPostal ;
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_012 rdf:type rr:ObjectMap ;
-	rr:constant esadm:Barrio ;
+	rr:constant schema:ContactPoint ;
 	rr:termType rr:IRI .
 
-map:om_013 rml:languageMap map:language_000 ;
-	rml:reference "Barrio" ;
+map:om_013 rml:reference "Teléfono" ;
 	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
 map:om_014 rdf:type rr:ObjectMap ;
+	rr:constant esdir:DireccionPostal ;
+	rr:termType rr:IRI .
+
+map:om_015 rdf:type rr:ObjectMap ;
 	rr:constant esadm:Distrito ;
 	rr:termType rr:IRI .
 
-map:om_015 rml:languageMap map:language_001 ;
+map:om_016 rml:languageMap map:language_000 ;
 	rml:reference "Distrito" ;
 	rdf:type rr:ObjectMap ;
 	rr:termType rr:Literal .
 
-map:om_016 rdf:type rr:ObjectMap ;
+map:om_017 rdf:type rr:ObjectMap ;
 	rr:constant gsp:Geometry ;
 	rr:termType rr:IRI .
 
-map:om_017 rdf:type rr:ObjectMap ;
+map:om_018 rdf:type rr:ObjectMap ;
 	rr:datatype gsp:wktLiteral ;
 	rr:template "POINT({Longitud} {Latitud})" ;
-	rr:termType rr:Literal .
-
-map:om_018 rdf:type rr:ObjectMap ;
-	rr:constant skos:Concept ;
-	rr:termType rr:IRI .
-
-map:om_019 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteType ;
-	rr:termType rr:IRI .
-
-map:om_020 rml:languageMap map:language_002 ;
-	rml:reference "Tipo de contenedor" ;
-	rdf:type rr:ObjectMap ;
 	rr:termType rr:Literal .
 
 map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant waste:order .
+	rr:constant dcterms:identifier .
 
 map:pm_002 rdf:type rr:PredicateMap ;
-	rr:constant schema:model .
+	rr:constant schema:name .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant waste:containerBatch .
+	rr:constant waste:isPubliclyOwned .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant waste:loadingType .
+	rr:constant schema:openingHours .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant waste:containerLocationCode .
+	rr:constant schema:description .
 
 map:pm_006 rdf:type rr:PredicateMap ;
-	rr:constant schema:address .
+	rr:constant schema:dateCreated .
 
 map:pm_007 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant schema:dateModified .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant schema:contactPoint .
 
 map:pm_009 rdf:type rr:PredicateMap ;
-	rr:constant gsp:hasGeometry .
+	rr:constant schema:address .
 
 map:pm_010 rdf:type rr:PredicateMap ;
-	rr:constant waste:acceptsWasteType .
+	rr:constant waste:belongsTo .
 
 map:pm_011 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant gsp:hasGeometry .
 
 map:pm_012 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_013 rdf:type rr:PredicateMap ;
-	rr:constant rdfs:label .
+	rr:constant schema:telephone .
 
 map:pm_014 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_015 rdf:type rr:PredicateMap ;
-	rr:constant rdfs:label .
+	rr:constant rdf:type .
 
 map:pm_016 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant rdfs:label .
 
 map:pm_017 rdf:type rr:PredicateMap ;
-	rr:constant gsp:asWKT .
-
-map:pm_018 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
-map:pm_019 rdf:type rr:PredicateMap ;
-	rr:constant skos:inScheme .
-
-map:pm_020 rdf:type rr:PredicateMap ;
-	rr:constant skos:prefLabel .
+map:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant gsp:asWKT .
 
 map:pom_000 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_000 ;
@@ -290,37 +265,26 @@ map:pom_018 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_018 ;
 	rr:predicateMap map:pm_018 .
 
-map:pom_019 rdf:type rr:PredicateObjectMap ;
-	rr:objectMap map:om_019 ;
-	rr:predicateMap map:pm_019 .
-
-map:pom_020 rdf:type rr:PredicateObjectMap ;
-	rr:objectMap map:om_020 ;
-	rr:predicateMap map:pm_020 .
-
-map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_DireccionPostal_000, map:map_District_000, map:map_Geometry_000, map:map_Neighborhood_000, map:map_WasteContainer_000, map:map_WasteTypeConcept_000 ;
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_ContactPoint_000, map:map_DireccionPostal_000, map:map_District_000, map:map_Geometry_000, map:map_MobileCollectionPoint_000 ;
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/wasteContainer/{Orden}" .
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/{Identificador}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Código de localización}" .
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Identificador}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/neighborhood/{Barrio}" .
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Identificador}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
 	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/container/{Código de localización}" .
-
-map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de contenedor normalizado}" .
+	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/{Identificador}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
-	rml:source "dataset-enriquecido-4.csv" ;
+	rml:source "dataset-enriquecido-3-m.csv" ;
 	rdf:type rml:LogicalSource ;
-	rdfs:label "wasteContainer-source" .
+	rdfs:label "mobileCollectionPoint-source" .
 

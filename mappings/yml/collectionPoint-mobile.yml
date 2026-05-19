@@ -2,6 +2,7 @@ prefixes:
   waste: "https://w3id.org/def/medioambiente/residuos#"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
   gsp: "http://www.opengis.net/ont/geosparql#"
   xsd: "http://www.w3.org/2001/XMLSchema#"
   schema: "https://schema.org/"
@@ -13,28 +14,22 @@ mappings:
   MobileCollectionPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/$(Código de distrito)-$(Tipo de vía)-$(Nombre de la vía)-$(Tipo de número)-$(Número)-$(Día de la semana)-$(Turno)-$(Hora de inicio)
+    s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/$(Identificador normalizado)
     po:
       - [a, waste:MobileCollectionPoint]
       - [schema:openingHours, $(Día de la semana) $(Turno) $(Hora de inicio)-$(Hora de fin), xsd:string]
       - [waste:admissibleWasteURL, $(Residuos admisibles), xsd:anyURI]
       - [schema:map, $(Google Maps), xsd:anyURI]
-      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Código de distrito)-$(Tipo de vía)-$(Nombre de la vía)-$(Tipo de número)-$(Número)~iri]
+      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Ubicación normalizada)~iri]
       - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
-      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Código de distrito)-$(Tipo de vía)-$(Nombre de la vía)-$(Tipo de número)-$(Número)~iri]
+      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Ubicación normalizada)~iri]
 
   DireccionPostal:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Código de distrito)-$(Tipo de vía)-$(Nombre de la vía)-$(Tipo de número)-$(Número)
+    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Ubicación normalizada)
     po:
       - [a, esdir:DireccionPostal]
-      - [esdir:direccion, $(Dirección), xsd:string]
-      - [waste:secondaryAddress, $(Dirección auxiliar), xsd:string]
-      - [waste:streetType, $(Tipo de vía), xsd:string]
-      - [esdir:nombreDeLaVia, $(Nombre de la vía), xsd:string]
-      - [waste:streetNumberType, $(Tipo de número), xsd:string]
-      - [esdir:locatorName, $(Número), xsd:string]
 
   District:
     sources:
@@ -42,12 +37,12 @@ mappings:
     s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
     po:
       - [a, esadm:Distrito]
-      - [schema:name, $(Distrito), xsd:string]
+      - [rdfs:label, $(Distrito), es~lang]
 
   GeometryMobileCollectionPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Código de distrito)-$(Tipo de vía)-$(Nombre de la vía)-$(Tipo de número)-$(Número)
+    s: https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Ubicación normalizada)
     po:
       - [a, gsp:Geometry]
-      - [gsp:asWKT, POINT($(Longitud (geo)) $(Latitud (geo))), gsp:wktLiteral]
+      - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]

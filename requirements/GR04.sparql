@@ -1,0 +1,20 @@
+# GR04: ¿Dónde se localizan los recursos asociados a la gestión de residuos?
+
+PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+
+SELECT ?resource ?resourceType ?geometry ?wkt
+WHERE {
+  VALUES ?resourceType {
+    waste:WasteManagementFacility
+    waste:WasteContainer
+    waste:PermanentCollectionPoint
+    waste:MobileCollectionPoint
+  }
+
+  ?resource a ?resourceType ;
+            gsp:hasGeometry ?geometry .
+
+  ?geometry gsp:asWKT ?wkt .
+}
+ORDER BY ?resourceType ?resource

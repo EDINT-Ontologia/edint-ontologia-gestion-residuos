@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentación SPARQL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: #004a99;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 25px 20px;
+            border-bottom: 1px solid #0056b3;
+            text-align: center;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e0f0ff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            border-bottom: 1px solid #0056b3;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            color: #add8e6;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .sidebar a:hover {
+            background-color: #003366;
+            color: white;
+            padding-left: 25px;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .file-card {
+            background: white;
+            border: 1px solid #d1d9e0;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .file-header {
+            background-color: #f0f7ff;
+            padding: 15px 25px;
+            border-bottom: 2px solid #004a99;
+            color: #004a99;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .query-block {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .query-title {
+            color: #004a99;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            display: block;
+            border-left: 3px solid #004a99;
+            padding-left: 10px;
+        }
+
+        pre {
+            background-color: #f8f9fa !important;
+            border: 1px solid #e1e4e8;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.sparql-code .hll { background-color: #ffffcc }
+.sparql-code { background: #f8f8f8; }
+.sparql-code .c { color: #3D7B7B; font-style: italic } /* Comment */
+.sparql-code .err { border: 1px solid #F00 } /* Error */
+.sparql-code .k { color: #008000; font-weight: bold } /* Keyword */
+.sparql-code .o { color: #666 } /* Operator */
+.sparql-code .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.sparql-code .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.sparql-code .cp { color: #9C6500 } /* Comment.Preproc */
+.sparql-code .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.sparql-code .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.sparql-code .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.sparql-code .gd { color: #A00000 } /* Generic.Deleted */
+.sparql-code .ge { font-style: italic } /* Generic.Emph */
+.sparql-code .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.sparql-code .gr { color: #E40000 } /* Generic.Error */
+.sparql-code .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.sparql-code .gi { color: #008400 } /* Generic.Inserted */
+.sparql-code .go { color: #717171 } /* Generic.Output */
+.sparql-code .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.sparql-code .gs { font-weight: bold } /* Generic.Strong */
+.sparql-code .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.sparql-code .gt { color: #04D } /* Generic.Traceback */
+.sparql-code .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.sparql-code .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.sparql-code .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.sparql-code .kp { color: #008000 } /* Keyword.Pseudo */
+.sparql-code .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.sparql-code .kt { color: #B00040 } /* Keyword.Type */
+.sparql-code .m { color: #666 } /* Literal.Number */
+.sparql-code .s { color: #BA2121 } /* Literal.String */
+.sparql-code .na { color: #687822 } /* Name.Attribute */
+.sparql-code .nb { color: #008000 } /* Name.Builtin */
+.sparql-code .nc { color: #00F; font-weight: bold } /* Name.Class */
+.sparql-code .no { color: #800 } /* Name.Constant */
+.sparql-code .nd { color: #A2F } /* Name.Decorator */
+.sparql-code .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.sparql-code .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.sparql-code .nf { color: #00F } /* Name.Function */
+.sparql-code .nl { color: #767600 } /* Name.Label */
+.sparql-code .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.sparql-code .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.sparql-code .nv { color: #19177C } /* Name.Variable */
+.sparql-code .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.sparql-code .w { color: #BBB } /* Text.Whitespace */
+.sparql-code .mb { color: #666 } /* Literal.Number.Bin */
+.sparql-code .mf { color: #666 } /* Literal.Number.Float */
+.sparql-code .mh { color: #666 } /* Literal.Number.Hex */
+.sparql-code .mi { color: #666 } /* Literal.Number.Integer */
+.sparql-code .mo { color: #666 } /* Literal.Number.Oct */
+.sparql-code .sa { color: #BA2121 } /* Literal.String.Affix */
+.sparql-code .sb { color: #BA2121 } /* Literal.String.Backtick */
+.sparql-code .sc { color: #BA2121 } /* Literal.String.Char */
+.sparql-code .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sparql-code .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.sparql-code .s2 { color: #BA2121 } /* Literal.String.Double */
+.sparql-code .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.sparql-code .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.sparql-code .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.sparql-code .sx { color: #008000 } /* Literal.String.Other */
+.sparql-code .sr { color: #A45A77 } /* Literal.String.Regex */
+.sparql-code .s1 { color: #BA2121 } /* Literal.String.Single */
+.sparql-code .ss { color: #19177C } /* Literal.String.Symbol */
+.sparql-code .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.sparql-code .fm { color: #00F } /* Name.Function.Magic */
+.sparql-code .vc { color: #19177C } /* Name.Variable.Class */
+.sparql-code .vg { color: #19177C } /* Name.Variable.Global */
+.sparql-code .vi { color: #19177C } /* Name.Variable.Instance */
+.sparql-code .vm { color: #19177C } /* Name.Variable.Magic */
+.sparql-code .il { color: #666 } /* Literal.Number.Integer.Long */
+
+        .sparql-code .err {
+            border: none !important;
+            color: inherit;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Consultas</h2>
+        </div>
+        <ul>
+            <li><a href="#GR01_sparql">GR01.sparql</a></li>
+            <li><a href="#GR02_sparql">GR02.sparql</a></li>
+            <li><a href="#GR03_sparql">GR03.sparql</a></li>
+            <li><a href="#GR04_sparql">GR04.sparql</a></li>
+            <li><a href="#GR05_sparql">GR05.sparql</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <section class="file-card" id="GR01_sparql">
+            <div class="file-header">Fichero: GR01.sparql</div>
+            <div class="query-block">
+                <span class="query-title">GR01: ¿Cuáles son los centros de gestión de residuos registrados y qué tipo de residuo gestionan?</span>
+                <div class="sparql-code"><pre><span></span><span class="c"># GR01: ¿Cuáles son los centros de gestión de residuos registrados y qué tipo de residuo gestionan?</span>
+
+<span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
+
+<span class="k">SELECT</span> <span class="nv">?facility</span> <span class="nv">?legalName</span> <span class="nv">?registrationNumber</span> <span class="nv">?wasteType</span> <span class="nv">?wasteTypeLabel</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?facility</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteManagementFacility</span> <span class="p">;</span>
+            <span class="nn">waste</span><span class="p">:</span><span class="nt">registrationNumber</span> <span class="nv">?registrationNumber</span> <span class="p">.</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?facility</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">legalName</span> <span class="nv">?legalName</span> <span class="p">}</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span>
+    <span class="nv">?facility</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">managesWasteType</span> <span class="nv">?wasteType</span> <span class="p">.</span>
+    <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?wasteType</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="nv">?wasteTypeLabel</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">ORDER BY</span> <span class="nv">?facility</span>
+</pre></div>
+
+            </div>
+        </section>
+
+        <section class="file-card" id="GR02_sparql">
+            <div class="file-header">Fichero: GR02.sparql</div>
+            <div class="query-block">
+                <span class="query-title">GR02: ¿Qué contenedores existen y qué tipo de residuo aceptan?</span>
+                <div class="sparql-code"><pre><span></span><span class="c"># GR02: ¿Qué contenedores existen y qué tipo de residuo aceptan?</span>
+
+<span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">skos</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span>
+
+<span class="k">SELECT</span> <span class="nv">?container</span> <span class="nv">?model</span> <span class="nv">?wasteType</span> <span class="nv">?wasteTypeLabel</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?container</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteContainer</span> <span class="p">.</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?container</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">model</span> <span class="nv">?model</span> <span class="p">}</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span>
+    <span class="nv">?container</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">acceptsWasteType</span> <span class="nv">?wasteType</span> <span class="p">.</span>
+    <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?wasteType</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="nv">?wasteTypeLabel</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">ORDER BY</span> <span class="nv">?container</span>
+</pre></div>
+
+            </div>
+        </section>
+
+        <section class="file-card" id="GR03_sparql">
+            <div class="file-header">Fichero: GR03.sparql</div>
+            <div class="query-block">
+                <span class="query-title">GR03: ¿Cuáles son los puntos limpios disponibles y cuáles son fijos o móviles?</span>
+                <div class="sparql-code"><pre><span></span><span class="c"># GR03: ¿Cuáles son los puntos limpios disponibles y cuáles son fijos o móviles?</span>
+
+<span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;https://schema.org/&gt;</span>
+
+<span class="k">SELECT</span> <span class="nv">?collectionPoint</span> <span class="nv">?displayName</span> <span class="nv">?type</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="p">{</span>
+    <span class="nv">?collectionPoint</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">PermanentCollectionPoint</span> <span class="p">.</span>
+    <span class="k">BIND</span><span class="p">(</span><span class="s">&quot;Punto limpio fijo&quot;</span> <span class="k">AS</span> <span class="nv">?type</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">UNION</span>
+  <span class="p">{</span>
+    <span class="nv">?collectionPoint</span> <span class="k">a</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">MobileCollectionPoint</span> <span class="p">.</span>
+    <span class="k">BIND</span><span class="p">(</span><span class="s">&quot;Punto limpio móvil&quot;</span> <span class="k">AS</span> <span class="nv">?type</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?collectionPoint</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?name</span> <span class="p">}</span>
+
+  <span class="k">BIND</span><span class="p">(</span><span class="nf">COALESCE</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?name</span><span class="p">),</span> <span class="nf">STRAFTER</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?collectionPoint</span><span class="p">),</span> <span class="s">&quot;/residuos/&quot;</span><span class="p">))</span> <span class="k">AS</span> <span class="nv">?displayName</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">ORDER BY</span> <span class="nf">LCASE</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?displayName</span><span class="p">))</span> <span class="nv">?collectionPoint</span>
+</pre></div>
+
+            </div>
+        </section>
+
+        <section class="file-card" id="GR04_sparql">
+            <div class="file-header">Fichero: GR04.sparql</div>
+            <div class="query-block">
+                <span class="query-title">GR04: ¿Dónde se localizan los recursos asociados a la gestión de residuos?</span>
+                <div class="sparql-code"><pre><span></span><span class="c"># GR04: ¿Dónde se localizan los recursos asociados a la gestión de residuos?</span>
+
+<span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">gsp</span><span class="p">:</span> <span class="nl">&lt;http://www.opengis.net/ont/geosparql#&gt;</span>
+
+<span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?resourceType</span> <span class="nv">?geometry</span> <span class="nv">?wkt</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="k">VALUES</span> <span class="nv">?resourceType</span> <span class="p">{</span>
+    <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteManagementFacility</span>
+    <span class="nn">waste</span><span class="p">:</span><span class="nt">WasteContainer</span>
+    <span class="nn">waste</span><span class="p">:</span><span class="nt">PermanentCollectionPoint</span>
+    <span class="nn">waste</span><span class="p">:</span><span class="nt">MobileCollectionPoint</span>
+  <span class="p">}</span>
+
+  <span class="nv">?resource</span> <span class="k">a</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+            <span class="nn">gsp</span><span class="p">:</span><span class="nt">hasGeometry</span> <span class="nv">?geometry</span> <span class="p">.</span>
+
+  <span class="nv">?geometry</span> <span class="nn">gsp</span><span class="p">:</span><span class="nt">asWKT</span> <span class="nv">?wkt</span> <span class="p">.</span>
+<span class="p">}</span>
+<span class="k">ORDER BY</span> <span class="nv">?resourceType</span> <span class="nv">?resource</span>
+</pre></div>
+
+            </div>
+        </section>
+
+        <section class="file-card" id="GR05_sparql">
+            <div class="file-header">Fichero: GR05.sparql</div>
+            <div class="query-block">
+                <span class="query-title">GR05: ¿A qué barrio, distrito o municipio pertenece cada recurso de gestión de residuos?</span>
+                <div class="sparql-code"><pre><span></span><span class="c"># GR05: ¿A qué barrio, distrito o municipio pertenece cada recurso de gestión de residuos?</span>
+
+<span class="k">PREFIX</span> <span class="nn">waste</span><span class="p">:</span> <span class="nl">&lt;https://w3id.org/def/medioambiente/residuos#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">esadm</span><span class="p">:</span> <span class="nl">&lt;https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+
+<span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?territorialEntity</span> <span class="nv">?territorialType</span> <span class="nv">?displayLabel</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?resource</span> <span class="nn">waste</span><span class="p">:</span><span class="nt">belongsTo</span> <span class="nv">?territorialEntity</span> <span class="p">.</span>
+
+  <span class="nv">?territorialEntity</span> <span class="k">a</span> <span class="nv">?territorialType</span> <span class="p">.</span>
+
+  <span class="k">VALUES</span> <span class="nv">?territorialType</span> <span class="p">{</span>
+    <span class="nn">esadm</span><span class="p">:</span><span class="nt">Barrio</span>
+    <span class="nn">esadm</span><span class="p">:</span><span class="nt">Distrito</span>
+    <span class="nn">esadm</span><span class="p">:</span><span class="nt">Municipio</span>
+  <span class="p">}</span>
+
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?territorialEntity</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">}</span>
+
+  <span class="k">BIND</span><span class="p">(</span><span class="nf">COALESCE</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?label</span><span class="p">),</span> <span class="nf">STRAFTER</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?territorialEntity</span><span class="p">),</span> <span class="s">&quot;/residuos/&quot;</span><span class="p">))</span> <span class="k">AS</span> <span class="nv">?displayLabel</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">ORDER BY</span> <span class="nv">?resource</span> <span class="nv">?territorialType</span> <span class="nv">?displayLabel</span>
+</pre></div>
+
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

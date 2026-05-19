@@ -1,0 +1,62 @@
+prefixes:
+  waste: "https://w3id.org/def/medioambiente/residuos#"
+  esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
+  esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  gsp: "http://www.opengis.net/ont/geosparql#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  dcterms: "http://purl.org/dc/terms/"
+  schema: "https://schema.org/"
+
+sources:
+  permanentCollectionPoint-source: [dataset-enriquecido-3-p.csv~csv]
+
+mappings:
+  PermanentCollectionPoint:
+    sources:
+      - permanentCollectionPoint-source
+    s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/permanent/$(Identificador)
+    po:
+      - [a, waste:PermanentCollectionPoint]
+      - [dcterms:identifier, $(Identificador), xsd:string]
+      - [schema:name, $(Nombre), xsd:string]
+      - [waste:isPubliclyOwned, $(Titularidad pública), xsd:boolean]
+      - [schema:openingHours, $(Horas de apertura), xsd:string]
+      - [schema:description, $(Descripción), xsd:string]
+      - [schema:dateCreated, $(Fecha de creación), xsd:dateTime]
+      - [schema:dateModified, $(Fecha de última actualización), xsd:dateTime]
+      - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Identificador)~iri]
+      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Identificador)~iri]
+      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
+      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/permanent/$(Identificador)~iri]
+
+  ContactPoint:
+    sources:
+      - permanentCollectionPoint-source
+    s: https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Identificador)
+    po:
+      - [a, schema:ContactPoint]
+      - [schema:telephone, $(Teléfono), xsd:string]
+
+  DireccionPostal:
+    sources:
+      - permanentCollectionPoint-source
+    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Identificador)
+    po:
+      - [a, esdir:DireccionPostal]
+
+  District:
+    sources:
+      - permanentCollectionPoint-source
+    s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
+    po:
+      - [a, esadm:Distrito]
+      - [rdfs:label, $(Distrito), es~lang]
+
+  Geometry:
+    sources:
+      - permanentCollectionPoint-source
+    s: https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/permanent/$(Identificador)
+    po:
+      - [a, gsp:Geometry]
+      - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]

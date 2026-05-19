@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/medioambiente/residuos#">
-        <owl:versionIRI rdf:resource="https://w3id.org/def/medioambiente/residuos/1.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/def/medioambiente/residuos/0.1.0"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</terms:created>
         <terms:creator>Laura Gilgado Romero</terms:creator>
         <terms:description xml:lang="en">Ontology that describes the elements associated with waste management, including facilities, containers and collection points.</terms:description>
@@ -20,7 +20,7 @@
         <terms:title xml:lang="es">Ontología para la representación de la gestión de residuos</terms:title>
         <vann:preferredNamespacePrefix>waste</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/medioambiente/residuos#"/>
-        <owl:versionInfo>1.0</owl:versionInfo>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -172,8 +172,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://schema.org/address">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
         <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
         <rdfs:range rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
         <rdfs:label>address</rdfs:label>
@@ -185,8 +183,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://schema.org/contactPoint">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://schema.org/ContactPoint"/>
         <rdfs:label>contact point</rdfs:label>
     </owl:ObjectProperty>
@@ -208,8 +212,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"/>
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"/>
+                    <rdf:Description rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"/>
         <rdfs:label>pertenece al municipio</rdfs:label>
     </owl:ObjectProperty>
@@ -220,8 +230,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>accepts waste type</rdfs:label>
     </owl:ObjectProperty>
@@ -232,8 +248,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#belongsTo">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
         <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
         <rdfs:range>
             <owl:Class>
@@ -253,7 +267,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#hasManagementScope">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>has management scope</rdfs:label>
     </owl:ObjectProperty>
@@ -264,7 +278,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>has treatment process</rdfs:label>
     </owl:ObjectProperty>
@@ -275,7 +289,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#managesWasteType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>manages waste type</rdfs:label>
     </owl:ObjectProperty>
@@ -311,7 +325,7 @@
     <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
-        <rdfs:label>as w k t</rdfs:label>
+        <rdfs:label>as wkt</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -364,7 +378,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/legalName">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>legal name</rdfs:label>
     </owl:DatatypeProperty>
@@ -426,57 +440,13 @@
     
 
 
-    <!-- https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#codigoPostal -->
-
-
-    <owl:DatatypeProperty rdf:about="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#codigoPostal">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>codigo postal</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#direccion -->
-
-
-    <owl:DatatypeProperty rdf:about="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#direccion">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>direccion</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#locatorName -->
-
-
-    <owl:DatatypeProperty rdf:about="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#locatorName">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>locator name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#nombreDeLaVia -->
-
-
-    <owl:DatatypeProperty rdf:about="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#nombreDeLaVia">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>nombre de la via</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/medioambiente/residuos#admissibleWasteURL -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#admissibleWasteURL">
         <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:label>admissible waste u r l</rdfs:label>
+        <rdfs:label>admissible waste url</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -514,44 +484,11 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#door -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#door">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>door</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#floor -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#floor">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>floor</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#industrialPark -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#industrialPark">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>industrial park</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label>is construction demolition waste manager</rdfs:label>
     </owl:DatatypeProperty>
@@ -584,7 +521,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#nif">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>nif</rdfs:label>
     </owl:DatatypeProperty>
@@ -595,7 +532,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#nima">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>nima</rdfs:label>
     </owl:DatatypeProperty>
@@ -613,22 +550,11 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#provinceCode -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#provinceCode">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>province code</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/medioambiente/residuos#registrationNumber -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#registrationNumber">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>registration number</rdfs:label>
     </owl:DatatypeProperty>
@@ -639,64 +565,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#registrationType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>registration type</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#secondaryAddress -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#secondaryAddress">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>secondary address</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#staircase -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#staircase">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>staircase</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#streetCode -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#streetCode">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>street code</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#streetNumberType -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#streetNumberType">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>street number type</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/medioambiente/residuos#streetType -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#streetType">
-        <rdfs:domain rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>street type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -771,7 +642,6 @@
 
 
     <owl:Class rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Barrio</rdfs:label>
     </owl:Class>
     
@@ -781,7 +651,6 @@
 
 
     <owl:Class rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Distrito</rdfs:label>
     </owl:Class>
     
@@ -791,7 +660,6 @@
 
 
     <owl:Class rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Municipio</rdfs:label>
     </owl:Class>
     
@@ -801,7 +669,6 @@
 
 
     <owl:Class rdf:about="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Provincia</rdfs:label>
     </owl:Class>
     
@@ -820,8 +687,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"/>
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
         <rdfs:label>Collection Point</rdfs:label>
     </owl:Class>
     
@@ -851,7 +717,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#WasteContainer">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
         <rdfs:label>Waste Container</rdfs:label>
     </owl:Class>
     
@@ -864,6 +730,16 @@
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Waste Facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/medioambiente/residuos#WasteManagementFacility -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:label>Waste Management Facility</rdfs:label>
     </owl:Class>
     
 
