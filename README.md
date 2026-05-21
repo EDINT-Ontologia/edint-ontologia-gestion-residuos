@@ -36,7 +36,7 @@ El repositorio contiene las siguientes carpetas:
 
 # Mantenimiento y evolución (maintenance and evolution)
 
-Para gestionar las incidencias o mejoras sugeridas respecto a la ontología, recomendamos seguir las guías proporcionadas en [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) para generar una indicencia (trabajo en progreso).
+Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
 # Financiación (funding)
 
