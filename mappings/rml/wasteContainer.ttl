@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
-@prefix waste: <https://edint.es/def/gestion-residuos#> .
+@prefix edintres: <https://edint.es/def/gestion-residuos#> .
 @prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
 @prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
@@ -59,7 +59,7 @@ map:map_WasteTypeConcept_000 rml:logicalSource map:source_000 ;
 	rr:subjectMap map:s_005 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant waste:WasteContainer ;
+	rr:constant edintres:WasteContainer ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "Orden" ;
@@ -155,34 +155,34 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant waste:order .
+	rr:constant edintres:order .
 
 map:pm_002 rdf:type rr:PredicateMap ;
 	rr:constant schema:model .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant waste:containerBatch .
+	rr:constant edintres:containerBatch .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant waste:loadingType .
+	rr:constant edintres:loadingType .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant waste:containerLocationCode .
+	rr:constant edintres:containerLocationCode .
 
 map:pm_006 rdf:type rr:PredicateMap ;
 	rr:constant schema:address .
 
 map:pm_007 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant edintres:belongsTo .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant edintres:belongsTo .
 
 map:pm_009 rdf:type rr:PredicateMap ;
 	rr:constant gsp:hasGeometry .
 
 map:pm_010 rdf:type rr:PredicateMap ;
-	rr:constant waste:acceptsWasteType .
+	rr:constant edintres:acceptsWasteType .
 
 map:pm_011 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .

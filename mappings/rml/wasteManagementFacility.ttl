@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
-@prefix waste: <https://edint.es/def/gestion-residuos#> .
+@prefix edintres: <https://edint.es/def/gestion-residuos#> .
 @prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
 @prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
 @prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
@@ -76,7 +76,7 @@ map:map_WasteTypeConcept_000 rml:logicalSource map:source_000 ;
 	rr:subjectMap map:s_007 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant waste:WasteManagementFacility ;
+	rr:constant edintres:WasteManagementFacility ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "Número de registro" ;
@@ -221,40 +221,40 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant waste:registrationNumber .
+	rr:constant edintres:registrationNumber .
 
 map:pm_002 rdf:type rr:PredicateMap ;
-	rr:constant waste:registrationType .
+	rr:constant edintres:registrationType .
 
 map:pm_003 rdf:type rr:PredicateMap ;
 	rr:constant schema:legalName .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant waste:nif .
+	rr:constant edintres:nif .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant waste:nima .
+	rr:constant edintres:nima .
 
 map:pm_006 rdf:type rr:PredicateMap ;
-	rr:constant waste:isConstructionDemolitionWasteManager .
+	rr:constant edintres:isConstructionDemolitionWasteManager .
 
 map:pm_007 rdf:type rr:PredicateMap ;
 	rr:constant schema:contactPoint .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant waste:hasManagementScope .
+	rr:constant edintres:hasManagementScope .
 
 map:pm_009 rdf:type rr:PredicateMap ;
-	rr:constant waste:hasTreatmentProcess .
+	rr:constant edintres:hasTreatmentProcess .
 
 map:pm_010 rdf:type rr:PredicateMap ;
 	rr:constant schema:address .
 
 map:pm_011 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant edintres:belongsTo .
 
 map:pm_012 rdf:type rr:PredicateMap ;
-	rr:constant waste:managesWasteType .
+	rr:constant edintres:managesWasteType .
 
 map:pm_013 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .

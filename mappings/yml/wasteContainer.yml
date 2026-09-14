@@ -1,5 +1,5 @@
 prefixes:
-  waste: "https://edint.es/def/gestion-residuos#"
+  edintres: "https://edint.es/def/gestion-residuos#"
   wastekos: "https://w3id.org/kos/medioambiente/residuos/"
   wastetype: "https://w3id.org/kos/medioambiente/residuos/WasteType/"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
@@ -19,17 +19,17 @@ mappings:
       - wasteContainer-source
     s: https://w3id.org/medioambiente/recurso/residuos/wasteContainer/$(Orden)
     po:
-      - [a, waste:WasteContainer]
-      - [waste:order, $(Orden), xsd:int]
+      - [a, edintres:WasteContainer]
+      - [edintres:order, $(Orden), xsd:int]
       - [schema:model, $(Modelo), xsd:string]
-      - [waste:containerBatch, $(Lote), xsd:int]
-      - [waste:loadingType, $(Carga), xsd:string]
-      - [waste:containerLocationCode, $(Código de localización), xsd:string]
+      - [edintres:containerBatch, $(Lote), xsd:int]
+      - [edintres:loadingType, $(Carga), xsd:string]
+      - [edintres:containerLocationCode, $(Código de localización), xsd:string]
       - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Código de localización)~iri]
-      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)~iri]
-      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
+      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)~iri]
+      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
       - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/container/$(Código de localización)~iri]
-      - [waste:acceptsWasteType, wastetype:$(Tipo de contenedor normalizado)~iri]
+      - [edintres:acceptsWasteType, wastetype:$(Tipo de contenedor normalizado)~iri]
 
   DireccionPostal:
     sources:
