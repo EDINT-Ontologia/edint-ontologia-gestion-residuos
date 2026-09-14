@@ -1,5 +1,5 @@
 prefixes:
-  waste: "https://w3id.org/def/medioambiente/residuos#"
+  waste: "https://edint.es/def/gestion-residuos#"
   wastekos: "https://w3id.org/kos/medioambiente/residuos/"
   managementscope: "https://w3id.org/kos/medioambiente/residuos/ManagementScope/"
   treatmentprocess: "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/"

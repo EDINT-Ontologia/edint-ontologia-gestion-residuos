@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/def/medioambiente/residuos#"
+<rdf:RDF xmlns="https://edint.es/def/gestion-residuos#"
      xml:base="https://w3id.org/def/medioambiente/residuos"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/def/medioambiente/residuos#">
+    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
         <owl:versionIRI rdf:resource="https://w3id.org/def/medioambiente/residuos/0.1.0"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</dcterms:created>
         <dcterms:creator>Laura Gilgado Romero</dcterms:creator>
@@ -20,7 +20,7 @@
         <dcterms:title xml:lang="en">Ontology for the representation of waste management</dcterms:title>
         <dcterms:title xml:lang="es">Ontología para la representación de la gestión de residuos</dcterms:title>
         <vann:preferredNamespacePrefix>waste</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/medioambiente/residuos#"/>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
@@ -173,7 +173,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://schema.org/address">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteFacility"/>
         <rdfs:range rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
         <rdfs:label>address</rdfs:label>
     </owl:ObjectProperty>
@@ -187,8 +187,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+                    <rdf:Description rdf:about="https://edint.es/def/gestion-residuos#CollectionPoint"/>
+                    <rdf:Description rdf:about="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -227,15 +227,15 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#acceptsWasteType -->
+    <!-- https://edint.es/def/gestion-residuos#acceptsWasteType -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#acceptsWasteType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/gestion-residuos#acceptsWasteType">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+                    <rdf:Description rdf:about="https://edint.es/def/gestion-residuos#CollectionPoint"/>
+                    <rdf:Description rdf:about="https://edint.es/def/gestion-residuos#WasteContainer"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -245,11 +245,11 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#belongsTo -->
+    <!-- https://edint.es/def/gestion-residuos#belongsTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#belongsTo">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+    <owl:ObjectProperty rdf:about="https://edint.es/def/gestion-residuos#belongsTo">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteFacility"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -264,33 +264,33 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#hasManagementScope -->
+    <!-- https://edint.es/def/gestion-residuos#hasManagementScope -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#hasManagementScope">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:ObjectProperty rdf:about="https://edint.es/def/gestion-residuos#hasManagementScope">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>has management scope</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess -->
+    <!-- https://edint.es/def/gestion-residuos#hasTreatmentProcess -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:ObjectProperty rdf:about="https://edint.es/def/gestion-residuos#hasTreatmentProcess">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>has treatment process</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#managesWasteType -->
+    <!-- https://edint.es/def/gestion-residuos#managesWasteType -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/medioambiente/residuos#managesWasteType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:ObjectProperty rdf:about="https://edint.es/def/gestion-residuos#managesWasteType">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>manages waste type</rdfs:label>
     </owl:ObjectProperty>
@@ -313,7 +313,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>identifier</rdfs:label>
     </owl:DatatypeProperty>
@@ -335,7 +335,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/dateCreated">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>date created</rdfs:label>
     </owl:DatatypeProperty>
@@ -346,7 +346,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/dateModified">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>date modified</rdfs:label>
     </owl:DatatypeProperty>
@@ -357,7 +357,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/description">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>description</rdfs:label>
     </owl:DatatypeProperty>
@@ -379,7 +379,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/legalName">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>legal name</rdfs:label>
     </owl:DatatypeProperty>
@@ -390,7 +390,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/map">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#MobileCollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label>map</rdfs:label>
     </owl:DatatypeProperty>
@@ -401,7 +401,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/model">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>model</rdfs:label>
     </owl:DatatypeProperty>
@@ -412,7 +412,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/name">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>name</rdfs:label>
     </owl:DatatypeProperty>
@@ -423,7 +423,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/openingHours">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>opening hours</rdfs:label>
     </owl:DatatypeProperty>
@@ -441,132 +441,132 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#admissibleWasteURL -->
+    <!-- https://edint.es/def/gestion-residuos#admissibleWasteURL -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#admissibleWasteURL">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#admissibleWasteURL">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#MobileCollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label>admissible waste url</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#containerBatch -->
+    <!-- https://edint.es/def/gestion-residuos#containerBatch -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#containerBatch">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#containerBatch">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>container batch</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#containerLocationCode -->
+    <!-- https://edint.es/def/gestion-residuos#containerLocationCode -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#containerLocationCode">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#containerLocationCode">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>container location code</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#containerType -->
+    <!-- https://edint.es/def/gestion-residuos#containerType -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#containerType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#containerType">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>container type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager -->
+    <!-- https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label>is construction demolition waste manager</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#isPubliclyOwned -->
+    <!-- https://edint.es/def/gestion-residuos#isPubliclyOwned -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#isPubliclyOwned">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#isPubliclyOwned">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label>is publicly owned</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#loadingType -->
+    <!-- https://edint.es/def/gestion-residuos#loadingType -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#loadingType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#loadingType">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>loading type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#nif -->
+    <!-- https://edint.es/def/gestion-residuos#nif -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#nif">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#nif">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>nif</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#nima -->
+    <!-- https://edint.es/def/gestion-residuos#nima -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#nima">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#nima">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>nima</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#order -->
+    <!-- https://edint.es/def/gestion-residuos#order -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#order">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteContainer"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#order">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteContainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>order</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#registrationNumber -->
+    <!-- https://edint.es/def/gestion-residuos#registrationNumber -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#registrationNumber">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#registrationNumber">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>registration number</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#registrationType -->
+    <!-- https://edint.es/def/gestion-residuos#registrationType -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/medioambiente/residuos#registrationType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/gestion-residuos#registrationType">
+        <rdfs:domain rdf:resource="https://edint.es/def/gestion-residuos#WasteManagementFacility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>registration type</rdfs:label>
     </owl:DatatypeProperty>
@@ -684,50 +684,50 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#CollectionPoint -->
+    <!-- https://edint.es/def/gestion-residuos#CollectionPoint -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#CollectionPoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#CollectionPoint">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/gestion-residuos#WasteFacility"/>
         <rdfs:label>Collection Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint -->
+    <!-- https://edint.es/def/gestion-residuos#MobileCollectionPoint -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#MobileCollectionPoint">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:label>Mobile Collection Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint -->
+    <!-- https://edint.es/def/gestion-residuos#PermanentCollectionPoint -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#CollectionPoint"/>
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#PermanentCollectionPoint">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/gestion-residuos#CollectionPoint"/>
         <rdfs:label>Permanent Collection Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#WasteContainer -->
+    <!-- https://edint.es/def/gestion-residuos#WasteContainer -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#WasteContainer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#WasteContainer">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/gestion-residuos#WasteFacility"/>
         <rdfs:label>Waste Container</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#WasteFacility -->
+    <!-- https://edint.es/def/gestion-residuos#WasteFacility -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#WasteFacility">
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#WasteFacility">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Waste Facility</rdfs:label>
@@ -735,11 +735,11 @@
     
 
 
-    <!-- https://w3id.org/def/medioambiente/residuos#WasteManagementFacility -->
+    <!-- https://edint.es/def/gestion-residuos#WasteManagementFacility -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/medioambiente/residuos#WasteManagementFacility">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/medioambiente/residuos#WasteFacility"/>
+    <owl:Class rdf:about="https://edint.es/def/gestion-residuos#WasteManagementFacility">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/gestion-residuos#WasteFacility"/>
         <rdfs:label>Waste Management Facility</rdfs:label>
     </owl:Class>
     

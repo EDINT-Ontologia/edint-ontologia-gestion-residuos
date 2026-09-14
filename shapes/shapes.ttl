@@ -8,7 +8,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
+@prefix waste: <https://edint.es/def/gestion-residuos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://astrea.linkeddata.es/shapes#15be8b0224bb6e477ceff0f6a0ffde11> a sh:NodeShape ;

@@ -1,6 +1,6 @@
 # GR03: ¿Cuáles son los puntos limpios disponibles y cuáles son fijos o móviles?
 
-PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX waste: <https://edint.es/def/gestion-residuos#>
 PREFIX schema: <https://schema.org/>
 
 SELECT ?collectionPoint ?displayName ?type

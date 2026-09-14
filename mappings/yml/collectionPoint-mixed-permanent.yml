@@ -1,5 +1,5 @@
 prefixes:
-  waste: "https://w3id.org/def/medioambiente/residuos#"
+  waste: "https://edint.es/def/gestion-residuos#"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
   rdfs: "http://www.w3.org/2000/01/rdf-schema#"

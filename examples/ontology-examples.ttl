@@ -4,64 +4,64 @@
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
+@prefix waste: <https://edint.es/def/gestion-residuos#> .
 @prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
 @prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
 @prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/def/medioambiente/residuos#addressMobileCollectionPointCalleCobre>
+<https://edint.es/def/gestion-residuos#addressMobileCollectionPointCalleCobre>
   a esdir:DireccionPostal .
 
-<https://w3id.org/def/medioambiente/residuos#addressPermanentCollectionPoint2503>
+<https://edint.es/def/gestion-residuos#addressPermanentCollectionPoint2503>
   a esdir:DireccionPostal .
 
-<https://w3id.org/def/medioambiente/residuos#addressWasteContainer20270>
+<https://edint.es/def/gestion-residuos#addressWasteContainer20270>
   a esdir:DireccionPostal .
 
-<https://w3id.org/def/medioambiente/residuos#addressWasteManagementFacility13G04A1400037921E>
+<https://edint.es/def/gestion-residuos#addressWasteManagementFacility13G04A1400037921E>
   a esdir:DireccionPostal .
 
-<https://w3id.org/def/medioambiente/residuos#barrioCortes>
+<https://edint.es/def/gestion-residuos#barrioCortes>
   a esadm:Barrio ;
   rdfs:label "Cortes"@es ;
   esadm:perteneceAlMunicipio waste:municipioMadrid .
 
-<https://w3id.org/def/medioambiente/residuos#contactPointPermanentCollectionPoint2503>
+<https://edint.es/def/gestion-residuos#contactPointPermanentCollectionPoint2503>
   a schema:ContactPoint ;
   schema:telephone "615812503" .
 
-<https://w3id.org/def/medioambiente/residuos#contactPointWasteManagementFacility13G04A1400037921E>
+<https://edint.es/def/gestion-residuos#contactPointWasteManagementFacility13G04A1400037921E>
   a schema:ContactPoint ;
   schema:faxNumber "916423167" ;
   schema:telephone "616925592" .
 
-<https://w3id.org/def/medioambiente/residuos#distritoArganzuela>
+<https://edint.es/def/gestion-residuos#distritoArganzuela>
   a esadm:Distrito ;
   rdfs:label "Arganzuela"@es .
 
-<https://w3id.org/def/medioambiente/residuos#distritoCentro>
+<https://edint.es/def/gestion-residuos#distritoCentro>
   a esadm:Distrito ;
   rdfs:label "Centro"@es ;
   esadm:perteneceAlMunicipio waste:municipioMadrid .
 
-<https://w3id.org/def/medioambiente/residuos#distritoElRabal>
+<https://edint.es/def/gestion-residuos#distritoElRabal>
   a esadm:Distrito ;
   rdfs:label "El Rabal"@es .
 
-<https://w3id.org/def/medioambiente/residuos#geometryMobileCollectionPointCalleCobre>
+<https://edint.es/def/gestion-residuos#geometryMobileCollectionPointCalleCobre>
   a gsp:Geometry ;
   gsp:asWKT "POINT(-3.689229994 40.39373013)"^^gsp:wktLiteral .
 
-<https://w3id.org/def/medioambiente/residuos#geometryPermanentCollectionPoint2503>
+<https://edint.es/def/gestion-residuos#geometryPermanentCollectionPoint2503>
   a gsp:Geometry ;
   gsp:asWKT "POINT(-0.8566459744789225 41.67737429730341)"^^gsp:wktLiteral .
 
-<https://w3id.org/def/medioambiente/residuos#geometryWasteContainer20270>
+<https://edint.es/def/gestion-residuos#geometryWasteContainer20270>
   a gsp:Geometry ;
   gsp:asWKT "POINT(-3.696217770252 40.410961305501)"^^gsp:wktLiteral .
 
-<https://w3id.org/def/medioambiente/residuos#mobileCollectionPointCalleCobre>
+<https://edint.es/def/gestion-residuos#mobileCollectionPointCalleCobre>
   a waste:MobileCollectionPoint ;
   gsp:hasGeometry waste:geometryMobileCollectionPointCalleCobre ;
   schema:address waste:addressMobileCollectionPointCalleCobre ;
@@ -70,17 +70,17 @@
   waste:admissibleWasteURL "http://run.gob.es/PuntoMOVILResiduos"^^xsd:anyURI ;
   waste:belongsTo waste:distritoArganzuela .
 
-<https://w3id.org/def/medioambiente/residuos#municipioFuenlabrada>
+<https://edint.es/def/gestion-residuos#municipioFuenlabrada>
   a esadm:Municipio ;
   rdfs:label "Fuenlabrada"@es ;
   esadm:perteneceAProvincia waste:provinciaMadrid .
 
-<https://w3id.org/def/medioambiente/residuos#municipioMadrid>
+<https://edint.es/def/gestion-residuos#municipioMadrid>
   a esadm:Municipio ;
   rdfs:label "Madrid"@es ;
   esadm:perteneceAProvincia waste:provinciaMadrid .
 
-<https://w3id.org/def/medioambiente/residuos#permanentCollectionPoint2503>
+<https://edint.es/def/gestion-residuos#permanentCollectionPoint2503>
   a waste:PermanentCollectionPoint ;
   dcterms:identifier "2503" ;
   gsp:hasGeometry waste:geometryPermanentCollectionPoint2503 ;
@@ -100,11 +100,11 @@
   waste:belongsTo waste:distritoElRabal ;
   waste:isPubliclyOwned true .
 
-<https://w3id.org/def/medioambiente/residuos#provinciaMadrid>
+<https://edint.es/def/gestion-residuos#provinciaMadrid>
   a esadm:Provincia ;
   rdfs:label "Madrid"@es .
 
-<https://w3id.org/def/medioambiente/residuos#wasteContainer20270>
+<https://edint.es/def/gestion-residuos#wasteContainer20270>
   a waste:WasteContainer ;
   gsp:hasGeometry waste:geometryWasteContainer20270 ;
   schema:address waste:addressWasteContainer20270 ;
@@ -117,7 +117,7 @@
   waste:loadingType "Carga superior" ;
   waste:order 20270 .
 
-<https://w3id.org/def/medioambiente/residuos#wasteManagementFacility13G04A1400037921E>
+<https://edint.es/def/gestion-residuos#wasteManagementFacility13G04A1400037921E>
   a waste:WasteManagementFacility ;
   schema:address waste:addressWasteManagementFacility13G04A1400037921E ;
   schema:contactPoint waste:contactPointWasteManagementFacility13G04A1400037921E ;

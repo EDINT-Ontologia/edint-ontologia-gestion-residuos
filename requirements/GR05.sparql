@@ -1,6 +1,6 @@
 # GR05: ¿A qué barrio, distrito o municipio pertenece cada recurso de gestión de residuos?
 
-PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX waste: <https://edint.es/def/gestion-residuos#>
 PREFIX esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
