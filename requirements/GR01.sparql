@@ -1,6 +1,6 @@
 # GR01: ¿Cuáles son los centros de gestión de residuos registrados y qué tipo de residuo gestionan?
 
-PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX waste: <https://edint.es/def/gestion-residuos#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 

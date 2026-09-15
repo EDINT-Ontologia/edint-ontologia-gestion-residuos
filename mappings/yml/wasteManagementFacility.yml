@@ -1,5 +1,5 @@
 prefixes:
-  waste: "https://w3id.org/def/medioambiente/residuos#"
+  edintres: "https://edint.es/def/gestion-residuos#"
   wastekos: "https://w3id.org/kos/medioambiente/residuos/"
   managementscope: "https://w3id.org/kos/medioambiente/residuos/ManagementScope/"
   treatmentprocess: "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/"
@@ -20,19 +20,19 @@ mappings:
       - wasteManagementFacility-source
     s: https://w3id.org/medioambiente/recurso/residuos/wasteManagementFacility/$(Número de registro)
     po:
-      - [a, waste:WasteManagementFacility]
-      - [waste:registrationNumber, $(Número de registro), xsd:string]
-      - [waste:registrationType, $(Tipo de registro), xsd:string]
+      - [a, edintres:WasteManagementFacility]
+      - [edintres:registrationNumber, $(Número de registro), xsd:string]
+      - [edintres:registrationType, $(Tipo de registro), xsd:string]
       - [schema:legalName, $(Razón social), xsd:string]
-      - [waste:nif, $(NIF), xsd:string]
-      - [waste:nima, $(NIMA), xsd:string]
-      - [waste:isConstructionDemolitionWasteManager, $(Residuos de Construcción y Demolición), xsd:boolean]
+      - [edintres:nif, $(NIF), xsd:string]
+      - [edintres:nima, $(NIMA), xsd:string]
+      - [edintres:isConstructionDemolitionWasteManager, $(Residuos de Construcción y Demolición), xsd:boolean]
       - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Número de registro)~iri]
-      - [waste:hasManagementScope, managementscope:$(Alcance de la gestión normalizado)~iri]
-      - [waste:hasTreatmentProcess, treatmentprocess:$(Proceso de tratamiento normalizado)~iri]
+      - [edintres:hasManagementScope, managementscope:$(Alcance de la gestión normalizado)~iri]
+      - [edintres:hasTreatmentProcess, treatmentprocess:$(Proceso de tratamiento normalizado)~iri]
       - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Número de registro)~iri]
-      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)~iri]
-      - [waste:managesWasteType, wastetype:$(Tipo de residuo normalizado)~iri]
+      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)~iri]
+      - [edintres:managesWasteType, wastetype:$(Tipo de residuo normalizado)~iri]
 
   ContactPoint:
     sources:

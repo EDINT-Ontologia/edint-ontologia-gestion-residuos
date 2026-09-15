@@ -9,7 +9,7 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema: <https://schema.org/> .
-@prefix waste: <https://w3id.org/def/medioambiente/residuos#> .
+@prefix edintres: <https://edint.es/def/gestion-residuos#> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
@@ -47,7 +47,7 @@ map:map_MobileCollectionPoint_000 rml:logicalSource map:source_000 ;
 	rr:subjectMap map:s_000 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant waste:MobileCollectionPoint ;
+	rr:constant edintres:MobileCollectionPoint ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "Identificador" ;
@@ -142,7 +142,7 @@ map:pm_002 rdf:type rr:PredicateMap ;
 	rr:constant schema:name .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant waste:isPubliclyOwned .
+	rr:constant edintres:isPubliclyOwned .
 
 map:pm_004 rdf:type rr:PredicateMap ;
 	rr:constant schema:openingHours .
@@ -163,7 +163,7 @@ map:pm_009 rdf:type rr:PredicateMap ;
 	rr:constant schema:address .
 
 map:pm_010 rdf:type rr:PredicateMap ;
-	rr:constant waste:belongsTo .
+	rr:constant edintres:belongsTo .
 
 map:pm_011 rdf:type rr:PredicateMap ;
 	rr:constant gsp:hasGeometry .

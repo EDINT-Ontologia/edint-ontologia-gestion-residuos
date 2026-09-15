@@ -1,6 +1,6 @@
 # GR04: ¿Dónde se localizan los recursos asociados a la gestión de residuos?
 
-PREFIX waste: <https://w3id.org/def/medioambiente/residuos#>
+PREFIX waste: <https://edint.es/def/gestion-residuos#>
 PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
 
 SELECT ?resource ?resourceType ?geometry ?wkt

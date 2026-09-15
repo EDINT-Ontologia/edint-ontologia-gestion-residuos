@@ -1,5 +1,5 @@
 prefixes:
-  waste: "https://w3id.org/def/medioambiente/residuos#"
+  edintres: "https://edint.es/def/gestion-residuos#"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
   rdfs: "http://www.w3.org/2000/01/rdf-schema#"
@@ -17,17 +17,17 @@ mappings:
       - mobileCollectionPoint-source
     s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/$(Identificador)
     po:
-      - [a, waste:MobileCollectionPoint]
+      - [a, edintres:MobileCollectionPoint]
       - [dcterms:identifier, $(Identificador), xsd:string]
       - [schema:name, $(Nombre), xsd:string]
-      - [waste:isPubliclyOwned, $(Titularidad pública), xsd:boolean]
+      - [edintres:isPubliclyOwned, $(Titularidad pública), xsd:boolean]
       - [schema:openingHours, $(Horas de apertura), xsd:string]
       - [schema:description, $(Descripción), xsd:string]
       - [schema:dateCreated, $(Fecha de creación), xsd:dateTime]
       - [schema:dateModified, $(Fecha de última actualización), xsd:dateTime]
       - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Identificador)~iri]
       - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Identificador)~iri]
-      - [waste:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
+      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
       - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Identificador)~iri]
 
   ContactPoint:
