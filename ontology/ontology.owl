@@ -26,6 +26,7 @@
         <vann:preferredNamespacePrefix>edintres</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0"/>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
         <dcterms:publisher rdf:resource="https://www.femp.es/"/>
     <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Gestión de Residuos. EDINT.</dcterms:bibliographicCitation>
