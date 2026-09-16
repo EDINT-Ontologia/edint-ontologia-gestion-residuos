@@ -8,7 +8,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:bibo="http://purl.org/ontology/bibo/">
     <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
         <owl:versionIRI rdf:resource="https://edint.es/def/gestion-residuos/0.1.0"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</dcterms:created>
@@ -23,7 +25,12 @@
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
-    </owl:Ontology>
+        <dcterms:publisher rdf:resource="https://www.femp.es/"/>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología de Gestión de Residuos. EDINT.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">Este es el lugar donde escribir un resumen de la ontolog&amp;iacute;a. Un par de frases bastan para resumir su prop&amp;oacute;sito.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</dcterms:abstract>
+</owl:Ontology>
     
 
 
