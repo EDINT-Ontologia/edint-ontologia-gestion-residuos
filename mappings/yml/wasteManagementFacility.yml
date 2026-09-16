@@ -1,9 +1,9 @@
 prefixes:
   edintres: "https://edint.es/def/gestion-residuos#"
-  wastekos: "https://w3id.org/kos/medioambiente/residuos/"
-  managementscope: "https://w3id.org/kos/medioambiente/residuos/ManagementScope/"
-  treatmentprocess: "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/"
-  wastetype: "https://w3id.org/kos/medioambiente/residuos/WasteType/"
+  wastekos: "https://edint.es/kos/"
+  managementscope: "https://edint.es/kos/WasteManagementScope/"
+  treatmentprocess: "https://edint.es/kos/WasteTreatmentProcess/"
+  wastetype: "https://edint.es/kos/WasteType/"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
   skos: "http://www.w3.org/2004/02/skos/core#"
@@ -49,7 +49,7 @@ mappings:
     s: managementscope:$(Alcance de la gestión normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:ManagementScope~iri]
+      - [skos:inScheme, wastekos:WasteManagementScope~iri]
       - [skos:prefLabel, $(Alcance de la gestión), es~lang]
 
   TreatmentProcessConcept:
@@ -58,7 +58,7 @@ mappings:
     s: treatmentprocess:$(Proceso de tratamiento normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:TreatmentProcess~iri]
+      - [skos:inScheme, wastekos:WasteTreatmentProcess~iri]
       - [skos:prefLabel, $(Descripción del proceso), es~lang]
 
   DireccionPostal:

@@ -10,10 +10,10 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
-@prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
+@prefix wastekos: <https://edint.es/kos/> .
+@prefix managementscope: <https://edint.es/kos/WasteManagementScope/> .
+@prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
+@prefix wastetype: <https://edint.es/kos/WasteType/> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 
@@ -114,11 +114,11 @@ map:om_007 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_008 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/ManagementScope/{Alcance de la gestión normalizado}" ;
+	rr:template "https://edint.es/kos/WasteManagementScope/{Alcance de la gestión normalizado}" ;
 	rr:termType rr:IRI .
 
 map:om_009 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/{Proceso de tratamiento normalizado}" ;
+	rr:template "https://edint.es/kos/WasteTreatmentProcess/{Proceso de tratamiento normalizado}" ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
@@ -130,7 +130,7 @@ map:om_011 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_012 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de residuo normalizado}" ;
+	rr:template "https://edint.es/kos/WasteType/{Tipo de residuo normalizado}" ;
 	rr:termType rr:IRI .
 
 map:om_013 rdf:type rr:ObjectMap ;
@@ -152,7 +152,7 @@ map:om_016 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_017 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:ManagementScope ;
+	rr:constant wastekos:WasteManagementScope ;
 	rr:termType rr:IRI .
 
 map:om_018 rml:languageMap map:language_000 ;
@@ -165,7 +165,7 @@ map:om_019 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_020 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:TreatmentProcess ;
+	rr:constant wastekos:WasteTreatmentProcess ;
 	rr:termType rr:IRI .
 
 map:om_021 rml:languageMap map:language_001 ;
@@ -451,10 +451,10 @@ map:s_001 rdf:type rr:SubjectMap ;
 	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Número de registro}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/ManagementScope/{Alcance de la gestión normalizado}" .
+	rr:template "https://edint.es/kos/WasteManagementScope/{Alcance de la gestión normalizado}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/{Proceso de tratamiento normalizado}" .
+	rr:template "https://edint.es/kos/WasteTreatmentProcess/{Proceso de tratamiento normalizado}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
 	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Número de registro}" .
@@ -466,7 +466,7 @@ map:s_006 rdf:type rr:SubjectMap ;
 	rr:template "https://w3id.org/medioambiente/recurso/residuos/province/{Provincia}" .
 
 map:s_007 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de residuo normalizado}" .
+	rr:template "https://edint.es/kos/WasteType/{Tipo de residuo normalizado}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "dataset-enriquecido-1.csv" ;

@@ -6,8 +6,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
+@prefix wastekos: <https://edint.es/kos/> .
+@prefix wastetype: <https://edint.es/kos/WasteType/> .
 
 #################################################################
 #

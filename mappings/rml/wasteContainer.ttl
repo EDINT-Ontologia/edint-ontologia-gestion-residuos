@@ -10,8 +10,8 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
+@prefix wastekos: <https://edint.es/kos/> .
+@prefix wastetype: <https://edint.es/kos/WasteType/> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
@@ -104,7 +104,7 @@ map:om_009 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de contenedor normalizado}" ;
+	rr:template "https://edint.es/kos/WasteType/{Tipo de contenedor normalizado}" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
@@ -317,7 +317,7 @@ map:s_004 rdf:type rr:SubjectMap ;
 	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/container/{Código de localización}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/kos/medioambiente/residuos/WasteType/{Tipo de contenedor normalizado}" .
+	rr:template "https://edint.es/kos/WasteType/{Tipo de contenedor normalizado}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "dataset-enriquecido-4.csv" ;

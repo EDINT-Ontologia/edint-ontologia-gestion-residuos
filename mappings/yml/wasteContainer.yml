@@ -1,7 +1,7 @@
 prefixes:
   edintres: "https://edint.es/def/gestion-residuos#"
-  wastekos: "https://w3id.org/kos/medioambiente/residuos/"
-  wastetype: "https://w3id.org/kos/medioambiente/residuos/WasteType/"
+  wastekos: "https://edint.es/kos/"
+  wastetype: "https://edint.es/kos/WasteType/"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
   skos: "http://www.w3.org/2004/02/skos/core#"

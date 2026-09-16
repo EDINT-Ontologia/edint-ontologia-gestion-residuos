@@ -6,8 +6,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://w3id.org/kos/medioambiente/residuos/> .
-@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
+@prefix wastekos: <https://edint.es/kos/> .
+@prefix managementscope: <https://edint.es/kos/WasteManagementScope/> .
 
 #################################################################
 #
@@ -15,7 +15,7 @@
 #
 #################################################################
 
-wastekos:ManagementScope a skos:ConceptScheme ;
+wastekos:WasteManagementScope a skos:ConceptScheme ;
     dct:issued "2026-04-21"^^xsd:date ;
     dct:modified "2026-04-24"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -35,16 +35,16 @@ wastekos:ManagementScope a skos:ConceptScheme ;
 #################################################################
 
 managementscope:ClasificacionDeResiduosNoPeligrososYTrituracionDeMadera a skos:Concept ;
-    skos:inScheme wastekos:ManagementScope ;
+    skos:inScheme wastekos:WasteManagementScope ;
     skos:prefLabel "Clasificación de residuos no peligrosos y trituración de madera"@es ;
     skos:prefLabel "Sorting of non-hazardous waste and wood chipping"@en .
 
 managementscope:AlmacenamientoDeMetalesFerreos a skos:Concept ;
-    skos:inScheme wastekos:ManagementScope ;
+    skos:inScheme wastekos:WasteManagementScope ;
     skos:prefLabel "Almacenamiento de metales férreos"@es ;
     skos:prefLabel "Storage of ferrous metals"@en .
 
 managementscope:AlmacenamientoDeResiduosMetalicosDePlomo a skos:Concept ;
-    skos:inScheme wastekos:ManagementScope ;
+    skos:inScheme wastekos:WasteManagementScope ;
     skos:prefLabel "Almacenamiento de residuos metálicos de plomo"@es ;
     skos:prefLabel "Storage of lead-containing metal waste"@en .
