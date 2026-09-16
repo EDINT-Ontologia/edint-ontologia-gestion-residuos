@@ -1,4 +1,4 @@
-# Ontología para la representación de la gestión de residuos
+# Ontología EDINT de Gestión de Residuos
 
 Esta ontología describe elementos asociados a la gestión de residuos.
 
