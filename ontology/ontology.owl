@@ -757,28 +757,28 @@
     
 
 
-    <!-- https://w3id.org/kos/medioambiente/residuos/ManagementScope -->
+    <!-- https://edint.es/kos/WasteManagementScope -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kos/medioambiente/residuos/ManagementScope">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/WasteManagementScope">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/kos/medioambiente/residuos/TreatmentProcess -->
+    <!-- https://edint.es/kos/WasteTreatmentProcess -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kos/medioambiente/residuos/TreatmentProcess">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/WasteTreatmentProcess">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/kos/medioambiente/residuos/WasteType -->
+    <!-- https://edint.es/kos/WasteType -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kos/medioambiente/residuos/WasteType">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/WasteType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
 </rdf:RDF>

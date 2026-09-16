@@ -5,9 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix managementscope: <https://w3id.org/kos/medioambiente/residuos/ManagementScope/> .
-@prefix treatmentprocess: <https://w3id.org/kos/medioambiente/residuos/TreatmentProcess/> .
-@prefix wastetype: <https://w3id.org/kos/medioambiente/residuos/WasteType/> .
+@prefix managementscope: <https://edint.es/kos/WasteManagementScope/> .
+@prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
+@prefix wastetype: <https://edint.es/kos/WasteType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://edint.es/def/gestion-residuos#addressMobileCollectionPointCalleCobre>
