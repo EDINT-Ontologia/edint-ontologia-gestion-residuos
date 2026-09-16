@@ -585,10 +585,10 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility -->
+    <!-- https://edint.es/def/infraestructura#Facility -->
 
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">
+    <owl:Class rdf:about="https://edint.es/def/infraestructura#Facility">
         <rdfs:label>Facility</rdfs:label>
     </owl:Class>
     
@@ -728,7 +728,7 @@
 
 
     <owl:Class rdf:about="https://edint.es/def/gestion-residuos#WasteFacility">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/infraestructura#Facility"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label>Waste Facility</rdfs:label>
     </owl:Class>
