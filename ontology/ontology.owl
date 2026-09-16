@@ -26,7 +26,7 @@
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
         <dcterms:publisher rdf:resource="https://www.femp.es/"/>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología de Gestión de Residuos. EDINT.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Gestión de Residuos. EDINT.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">Este es el lugar donde escribir un resumen de la ontolog&amp;iacute;a. Un par de frases bastan para resumir su prop&amp;oacute;sito.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</dcterms:abstract>
