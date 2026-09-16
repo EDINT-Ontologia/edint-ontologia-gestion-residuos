@@ -10,11 +10,13 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
-     xmlns:bibo="http://purl.org/ontology/bibo/">
-    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
+     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
         <owl:versionIRI rdf:resource="https://edint.es/def/gestion-residuos/0.1.0"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</dcterms:created>
-        <dcterms:creator>Laura Gilgado Romero</dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Laura Gilgado Romero</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
         <dcterms:description xml:lang="en">Ontology that describes the elements associated with waste management, including facilities, containers and collection points.</dcterms:description>
         <dcterms:description xml:lang="es">Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
@@ -31,6 +33,9 @@
     <dcterms:abstract xml:lang="es">Este es el lugar donde escribir un resumen de la ontolog&amp;iacute;a. Un par de frases bastan para resumir su prop&amp;oacute;sito.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</dcterms:abstract>
 </owl:Ontology>
+    <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
+        <foaf:name>Ontology Engineering Group, UPM</foaf:name>
+    </foaf:Organization>
     
 
 
