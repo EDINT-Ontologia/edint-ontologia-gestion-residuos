@@ -36,7 +36,8 @@
             <foaf:homepage rdf:resource="https://www.femp.es/"/>
             <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         </dcterms:publisher>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Gestión de Residuos. EDINT.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Gestión de Residuos. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="en">EDINT Waste Management Ontology. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
     <dcterms:abstract xml:lang="es">Este es el lugar donde escribir un resumen de la ontolog&amp;iacute;a. Un par de frases bastan para resumir su prop&amp;oacute;sito.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</dcterms:abstract>
