@@ -1,5 +1,6 @@
 # Ontología para la representación de la gestión de residuos
 
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/gestion-residuos)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintres-informational)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
