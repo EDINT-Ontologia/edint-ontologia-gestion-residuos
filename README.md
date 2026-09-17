@@ -20,7 +20,7 @@ El prefijo de esta ontología es edintres. Se publica en el espacio de nombres: 
 
 ![Ontology Conceptualization Diagram](diagrams/diagram.png)
 
-# Estructura del repositorio (reposity structure)
+# Estructura del repositorio (repository structure)
 
 El repositorio contiene las siguientes carpetas:
 
