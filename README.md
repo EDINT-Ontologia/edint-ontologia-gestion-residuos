@@ -1,5 +1,8 @@
 # Ontología para la representación de la gestión de residuos
 
+![Prefijo](https://img.shields.io/badge/prefijo-edintres-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
+
 Esta ontología describe elementos asociados a la gestión de residuos.
 
 El modelo se ha construido a partir de datos abiertos publicados en datos.gob.es y proporcionados por distintas instituciones en el ámbito del medioambiente y los servicios públicos.
