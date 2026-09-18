@@ -21,6 +21,8 @@
         <dcterms:description xml:lang="es">Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="en">EDINT Waste Management Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Gestión de Residuos</rdfs:label>
+        <rdfs:label xml:lang="en">Waste Management</rdfs:label>
         <dcterms:title xml:lang="es">Ontología EDINT de Gestión de Residuos</dcterms:title>
         <vann:preferredNamespacePrefix>edintres</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
