@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/"
+     xmlns:schema="https://schema.org/"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
         <owl:versionIRI rdf:resource="https://edint.es/def/gestion-residuos/0.1.1"/>
