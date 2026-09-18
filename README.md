@@ -1,4 +1,8 @@
-# Ontología para la representación de la gestión de residuos
+# Ontología EDINT de Gestión de Residuos
+
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/gestion-residuos)
+![Prefijo](https://img.shields.io/badge/prefijo-edintres-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
 Esta ontología describe elementos asociados a la gestión de residuos.
 
@@ -6,21 +10,21 @@ El modelo se ha construido a partir de datos abiertos publicados en datos.gob.es
 
 Su desarrollo se enmarca en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
 
-# Propósito y alcance de la ontología (purpose and scope of the ontology)
+## Propósito y alcance de la ontología (purpose and scope of the ontology)
 
 La ontología tiene como propósito representar información relativa a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización, junto con otros aspectos relevantes.
 
 El alcance de esta ontología se limita a la representación de datos de carácter administrativo y estructural. Quedan fuera del modelo, entre otros, elementos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología.
 
-# Prefijo y espacio de nombres (prefix and namespace)
+## Prefijo y espacio de nombres (prefix and namespace)
 
-El prefijo de esta ontología es edintres. Se publica en el espacio de nombres: https://edint.es/def/gestion-residuos#. 
+El prefijo de esta ontología es `edintres` y se publica bajo el espacio de nombres https://edint.es/def/gestion-residuos#
 
-# Modelo conceptual (ontology conceptualization)
+## Modelo conceptual (ontology conceptualization)
 
 ![Ontology Conceptualization Diagram](diagrams/diagram.png)
 
-# Estructura del repositorio (reposity structure)
+## Estructura del repositorio (repository structure)
 
 El repositorio contiene las siguientes carpetas:
 
@@ -34,11 +38,11 @@ El repositorio contiene las siguientes carpetas:
 | **requirements/** | Contains all documents used to define the ontology’s requirements: data example, competency questions, functional requirements, use cases, etc. |
 | **shapes/** | Contains the SHACL shapes used to define and validate ontology constraints. |
 
-# Mantenimiento y evolución (maintenance and evolution)
+## Mantenimiento y evolución (maintenance and evolution)
 
 Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
-# Financiación (funding)
+## Financiación (funding)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
 
