@@ -30,6 +30,7 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
         <dcterms:publisher rdf:parseType="Resource">
             <foaf:name>FEMP</foaf:name>
