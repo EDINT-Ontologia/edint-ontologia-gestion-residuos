@@ -1,33 +1,33 @@
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/gestion-residuos/0.1.1> .
-<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "Este es el lugar donde escribir un resumen de la ontolog&iacute;a. Un par de frases bastan para resumir su prop&oacute;sito."@es .
-<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose."@en .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de los elementos asociados a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización. Su alcance se limita a los datos de carácter administrativo y estructural: quedan fuera del modelo los aspectos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología."@es .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "The purpose of this ontology is to provide a common vocabulary for representing the elements associated with waste management, including waste types, their deposit in containers and collection points, their treatment in facilities and their location. Its scope is limited to administrative and structural data; aspects related to operational management or the detailed operation of the services fall outside the model, although they could be addressed through future extensions of the ontology."@en .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Waste Management Ontology. EDINT. Revision: v0.1.1."@en .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Gestión de Residuos. EDINT. Revisión: v0.1.1."@es .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/created> "2026-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Laura Gilgado Romero" .
-_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/description> "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."@es .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/publisher> _:genid2 .
+_:genid2 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "FEMP" .
 _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
-_:genid2 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/title> "EDINT Waste Management Ontology"@en .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/title> "Ontología EDINT de Gestión de Residuos"@es .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintres" .
 <https://edint.es/def/gestion-residuos#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/gestion-residuos#> .
-<https://edint.es/def/gestion-residuos#> <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos> .
-<https://edint.es/def/gestion-residuos#> <http://schema.org/creativeWorkStatus> "Ontology Specification"@en .
-<https://edint.es/def/gestion-residuos#> <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/2000/01/rdf-schema#label> "Gestión de Residuos"@es .
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Management"@en .
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0> .
 <https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos> .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
 <https://edint.es/def/gestion-residuos#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 <https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
 <https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
@@ -94,18 +94,6 @@ _:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://schema.org/affiliation
-<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/codeRepository
-<http://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/creativeWorkStatus
-<http://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/funding
-<http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://www.w3.org/2002/07/owl#versionIRI
 <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -117,6 +105,18 @@ _:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

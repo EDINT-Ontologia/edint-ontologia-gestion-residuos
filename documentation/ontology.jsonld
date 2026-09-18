@@ -1,10 +1,10 @@
 [ {
   "@id" : "_:genid1",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Laura Gilgado Romero"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -40,14 +40,14 @@
   } ]
 }, {
   "@id" : "_:genid2",
-  "http://schema.org/affiliation" : [ {
-    "@value" : "Federación Española de Municipios y Provincias"
-  } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://www.femp.es/"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "FEMP"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@value" : "Federación Española de Municipios y Provincias"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -156,18 +156,6 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://schema.org/affiliation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/codeRepository",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/creativeWorkStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/funding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -256,10 +244,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "es",
-    "@value" : "Este es el lugar donde escribir un resumen de la ontolog&iacute;a. Un par de frases bastan para resumir su prop&oacute;sito."
+    "@value" : "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de los elementos asociados a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización. Su alcance se limita a los datos de carácter administrativo y estructural: quedan fuera del modelo los aspectos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología."
   }, {
     "@language" : "en",
-    "@value" : "This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose."
+    "@value" : "The purpose of this ontology is to provide a common vocabulary for representing the elements associated with waste management, including waste types, their deposit in containers and collection points, their treatment in facilities and their location. Its scope is limited to administrative and structural data; aspects related to operational management or the detailed operation of the services fall outside the model, although they could be addressed through future extensions of the ontology."
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
@@ -309,16 +297,6 @@
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#"
   } ],
-  "http://schema.org/codeRepository" : [ {
-    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos"
-  } ],
-  "http://schema.org/creativeWorkStatus" : [ {
-    "@language" : "en",
-    "@value" : "Ontology Specification"
-  } ],
-  "http://schema.org/funding" : [ {
-    "@value" : "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Gestión de Residuos"
@@ -334,6 +312,16 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.1.1"
+  } ],
+  "https://schema.org/codeRepository" : [ {
+    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos"
+  } ],
+  "https://schema.org/creativeWorkStatus" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Specification"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@value" : "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)"
   } ],
   "https://w3id.org/mod#createdWith" : [ {
     "@id" : "https://chowlk.linkeddata.es/"
@@ -661,6 +649,12 @@
     "@id" : "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
   } ]
 }, {
+  "@id" : "https://schema.org/affiliation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://schema.org/contactPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -672,6 +666,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://schema.org/ContactPoint"
   } ]
+}, {
+  "@id" : "https://schema.org/creativeWorkStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/dateCreated",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -720,6 +717,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "https://schema.org/funding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/legalName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],

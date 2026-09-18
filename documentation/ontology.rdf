@@ -11,11 +11,11 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
         <owl:versionIRI rdf:resource="https://edint.es/def/gestion-residuos/0.1.1"/>
-        <terms:abstract xml:lang="es">Este es el lugar donde escribir un resumen de la ontolog&amp;iacute;a. Un par de frases bastan para resumir su prop&amp;oacute;sito.</terms:abstract>
-        <terms:abstract xml:lang="en">This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</terms:abstract>
+        <terms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de los elementos asociados a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización. Su alcance se limita a los datos de carácter administrativo y estructural: quedan fuera del modelo los aspectos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología.</terms:abstract>
+        <terms:abstract xml:lang="en">The purpose of this ontology is to provide a common vocabulary for representing the elements associated with waste management, including waste types, their deposit in containers and collection points, their treatment in facilities and their location. Its scope is limited to administrative and structural data; aspects related to operational management or the detailed operation of the services fall outside the model, although they could be addressed through future extensions of the ontology.</terms:abstract>
         <terms:bibliographicCitation xml:lang="en">EDINT Waste Management Ontology. EDINT. Revision: v0.1.1.</terms:bibliographicCitation>
         <terms:bibliographicCitation xml:lang="es">Ontología EDINT de Gestión de Residuos. EDINT. Revisión: v0.1.1.</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-01</terms:created>
@@ -30,13 +30,13 @@
         <terms:title xml:lang="es">Ontología EDINT de Gestión de Residuos</terms:title>
         <vann:preferredNamespacePrefix>edintres</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
-        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos"/>
-        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
-        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <rdfs:label xml:lang="es">Gestión de Residuos</rdfs:label>
         <rdfs:label xml:lang="en">Waste Management</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos"/>
+        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
         <vocab:jsonldSerialization>ontology.jsonld</vocab:jsonldSerialization>
         <vocab:ntSerialization>ontology.nt</vocab:ntSerialization>
@@ -48,13 +48,13 @@
         <vocab:vocabularyLabel rdf:nodeID="genid6"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Laura Gilgado Romero</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid2">
-        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         <foaf:homepage rdf:resource="https://www.femp.es/"/>
         <foaf:name>FEMP</foaf:name>
+        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
         <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
@@ -175,34 +175,6 @@
     
 
 
-    <!-- http://schema.org/affiliation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
-    
-
-
-    <!-- http://schema.org/codeRepository -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
-    
-
-
-    <!-- http://schema.org/creativeWorkStatus -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/creativeWorkStatus"/>
-    
-
-
-    <!-- http://schema.org/funding -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
-    
-
-
     <!-- http://www.w3.org/2002/07/owl#versionIRI -->
 
 
@@ -228,6 +200,34 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creativeWorkStatus"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
     
 
 
