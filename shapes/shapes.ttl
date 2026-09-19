@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
 @prefix esadm: <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix esdir: <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
