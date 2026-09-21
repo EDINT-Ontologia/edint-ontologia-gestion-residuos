@@ -6,7 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://edint.es/kos/> .
+@prefix edintkos: <https://edint.es/kos/> .
 @prefix wastetype: <https://edint.es/kos/WasteType/> .
 
 #################################################################
@@ -15,7 +15,7 @@
 #
 #################################################################
 
-wastekos:WasteType a skos:ConceptScheme ;
+edintkos:WasteType a skos:ConceptScheme ;
     dct:issued "2026-04-21"^^xsd:date ;
     dct:modified "2026-04-24"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -35,34 +35,34 @@ wastekos:WasteType a skos:ConceptScheme ;
 #################################################################
 
 wastetype:ResiduosVoluminosos a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "Residuos voluminosos"@es ;
     skos:prefLabel "Bulky waste"@en ;
     skos:notation "200307" .
 
 wastetype:ComponentesPeligrososRetiradosDeEquiposDesechados a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "Componentes peligrosos retirados de equipos desechados"@es ;
     skos:prefLabel "Hazardous components removed from discarded equipment"@en ;
     skos:notation "160215" .
 
 wastetype:ResiduosNoEspecificadosEnOtraCategoria a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "Residuos no especificados en otra categoría"@es ;
     skos:prefLabel "Waste not specified in any other category"@en ;
     skos:notation "100299" .
 
 wastetype:PlasticosMetalesYBriks a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "PMB"@es ;
     skos:prefLabel "Plastics, metals and cartons"@en .
 
 wastetype:Vidrio a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "Vidrio"@es ;
     skos:prefLabel "Glass"@en .
 
 wastetype:Restos a skos:Concept ;
-    skos:inScheme wastekos:WasteType ;
+    skos:inScheme edintkos:WasteType ;
     skos:prefLabel "Restos"@es ;
     skos:prefLabel "Residual waste"@en .

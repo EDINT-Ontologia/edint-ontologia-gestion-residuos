@@ -6,7 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://edint.es/kos/> .
+@prefix edintkos: <https://edint.es/kos/> .
 @prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
 
 #################################################################
@@ -15,7 +15,7 @@
 #
 #################################################################
 
-wastekos:WasteTreatmentProcess a skos:ConceptScheme ;
+edintkos:WasteTreatmentProcess a skos:ConceptScheme ;
     dct:issued "2026-04-21"^^xsd:date ;
     dct:modified "2026-04-24"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -35,16 +35,16 @@ wastekos:WasteTreatmentProcess a skos:ConceptScheme ;
 #################################################################
 
 treatmentprocess:ClasificacionDeResiduosNoPeligrosos a skos:Concept ;
-    skos:inScheme wastekos:WasteTreatmentProcess ;
+    skos:inScheme edintkos:WasteTreatmentProcess ;
     skos:prefLabel "Clasificación de residuos no peligrosos"@es ;
     skos:prefLabel "Classification of non-hazardous waste"@en .
 
 treatmentprocess:HidrocarburosQueContienenAcidos a skos:Concept ;
-    skos:inScheme wastekos:WasteTreatmentProcess ;
+    skos:inScheme edintkos:WasteTreatmentProcess ;
     skos:prefLabel "Hidrocarburos que contienen ácidos"@es ;
     skos:prefLabel "Hydrocarbons containing acids"@en .
 
 treatmentprocess:ArcillasDeFiltracionUsadas a skos:Concept ;
-    skos:inScheme wastekos:WasteTreatmentProcess ;
+    skos:inScheme edintkos:WasteTreatmentProcess ;
     skos:prefLabel "Arcillas de filtración usadas"@es ;
     skos:prefLabel "Used filtration clays"@en .
