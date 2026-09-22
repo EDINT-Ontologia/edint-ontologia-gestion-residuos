@@ -1,3 +1,154 @@
 <h2 id="desc" class="list">Gestión de Residuos: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 
 <span class="markdown">Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios.</span>
+
+<div><p>En la Figura 1 se muestra el modelo conceptual de la ontología con sus clases y relaciones (propiedades de objeto).</p>
+<p><center><img src="images/diagram.png"/><figcaption>
+Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
+
+<p>Uno de los conceptos principales de la ontología es el de una <a href="#WasteManagementFacility">Instalación de Gestión de Residuos</a>. Esta instalación es un tipo de <a href="#WasteFacility">Equipamiento de residuos</a> y <a href="#acceptsWasteType">acepta</a> y <a href="#managesWasteType">gestiona</a> ciertos tipos de residuos que están representados mediante una taxonomía de conceptos <a href="#https://edint.es/kos/WasteType">Tipo de Residuo</a>. Las clases que son equipamientos de residuos son el <a href="#CollectionPoint">Punto limpio</a> y el <a href="#WasteContainer">Contenedor</a>. Los puntos limpios pueden ser a su vez ''fijos'' o ''moviles''.</p>
+
+<p>Las instalaciones de gestión de residuos tienen un <a href="#hasTreatmentProcess">proceso de tratamiento</a>. Además tienen un <a href="#hasManagementScope">ámbito de gestión</a> que se refiere a la clasificación y almacenamiento de tipos especiales de residuos. Los equipamientos de residuos pertenecen a una cierta entidad tal como un distrito dentro de una ciudad. Se puede especificar su dirección postal y sus coordenadas geográficas mediante la reutilización del vocabulario de  <a href="http://www.opengis.net/ont/geosparql#">geosparql</a>.</p>
+
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+@prefix dcterms: &lt;://purl.org/dc/terms/&gt; .
+@prefix gsp: &lt;://www.opengis.net/ont/geosparql#&gt; .
+@prefix esdir: &lt;s://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
+@prefix esadm: &lt;s://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&gt; .
+@prefix rdfs: &lt;://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;s://schema.org/&gt; .
+@prefix edintres: &lt;s://edint.es/def/gestion-residuos#&gt; .
+@prefix managementscope: &lt;s://edint.es/kos/WasteManagementScope/&gt; .
+@prefix treatmentprocess: &lt;s://edint.es/kos/WasteTreatmentProcess/&gt; .
+@prefix wastetype: &lt;s://edint.es/kos/WasteType/&gt; .
+@prefix xsd: &lt;://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;s://example.org/recurso/direccion-postal/addressMobileCollectionPointCalleCobre&gt;
+  a esdir:DireccionPostal .
+
+&lt;s://example.org/recurso/direccion-postal/addressPermanentCollectionPoint2503&gt;
+  a esdir:DireccionPostal .
+
+&lt;s://example.org/recurso/direccion-postal/addressWasteContainer20270&gt;
+  a esdir:DireccionPostal .
+
+&lt;s://example.org/recurso/direccion-postal/addressWasteManagementFacility13G04A1400037921E&gt;
+  a esdir:DireccionPostal .
+
+&lt;s://example.org/recurso/barrio/barrioCortes&gt;
+  a esadm:Barrio ;
+  rdfs:label "Cortes"@es ;
+  esadm:perteneceAlMunicipio edintres:municipioMadrid .
+
+&lt;s://example.org/recurso/punto-de-contacto/contactPointPermanentCollectionPoint2503&gt;
+  a schema:ContactPoint ;
+  schema:telephone "615812503" .
+
+&lt;s://example.org/recurso/punto-de-contacto/contactPointWasteManagementFacility13G04A1400037921E&gt;
+  a schema:ContactPoint ;
+  schema:faxNumber "916423167" ;
+  schema:telephone "616925592" .
+
+&lt;s://example.org/recurso/distrito/distritoArganzuela&gt;
+  a esadm:Distrito ;
+  rdfs:label "Arganzuela"@es .
+
+&lt;s://example.org/recurso/distrito/distritoCentro&gt;
+  a esadm:Distrito ;
+  rdfs:label "Centro"@es ;
+  esadm:perteneceAlMunicipio edintres:municipioMadrid .
+
+&lt;s://example.org/recurso/distrito/distritoElRabal&gt;
+  a esadm:Distrito ;
+  rdfs:label "El Rabal"@es .
+
+&lt;s://example.org/recurso/geometria/geometryMobileCollectionPointCalleCobre&gt;
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-3.689229994 40.39373013)"^^gsp:wktLiteral .
+
+&lt;s://example.org/recurso/geometria/geometryPermanentCollectionPoint2503&gt;
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-0.8566459744789225 41.67737429730341)"^^gsp:wktLiteral .
+
+&lt;s://example.org/recurso/geometria/geometryWasteContainer20270&gt;
+  a gsp:Geometry ;
+  gsp:asWKT "POINT(-3.696217770252 40.410961305501)"^^gsp:wktLiteral .
+
+&lt;s://example.org/recurso/punto-limpio-movil/mobileCollectionPointCalleCobre&gt;
+  a edintres:MobileCollectionPoint ;
+  gsp:hasGeometry edintres:geometryMobileCollectionPointCalleCobre ;
+  schema:address edintres:addressMobileCollectionPointCalleCobre ;
+  schema:map "https://goo.gl/maps/mJnrT377bHTyQduM7"^^xsd:anyURI ;
+  schema:openingHours "Martes. Tarde. 17:30:00. 19:00:00" ;
+  edintres:admissibleWasteURL "http://run.gob.es/PuntoMOVILResiduos"^^xsd:anyURI ;
+  edintres:belongsTo edintres:distritoArganzuela .
+
+&lt;s://example.org/recurso/municipio/municipioFuenlabrada&gt;
+  a esadm:Municipio ;
+  rdfs:label "Fuenlabrada"@es ;
+  esadm:perteneceAProvincia edintres:provinciaMadrid .
+
+&lt;s://example.org/recurso/municipio/municipioMadrid&gt;
+  a esadm:Municipio ;
+  rdfs:label "Madrid"@es ;
+  esadm:perteneceAProvincia edintres:provinciaMadrid .
+
+&lt;s://example.org/recurso/punto-limpio-fijo/permanentCollectionPoint2503&gt;
+  a edintres:PermanentCollectionPoint ;
+  dcterms:identifier "2503" ;
+  gsp:hasGeometry edintres:geometryPermanentCollectionPoint2503 ;
+  schema:address edintres:addressPermanentCollectionPoint2503 ;
+  schema:contactPoint edintres:contactPointPermanentCollectionPoint2503 ;
+  schema:dateCreated "2008-01-10T02:00:00Z"^^xsd:dateTime ;
+  schema:dateModified "2023-09-26T14:48:30Z"^^xsd:dateTime ;
+  schema:description """¿CÓMO UTILIZAREMOS EL PUNTO LIMPIO? 
+    												  Para poder utilizar el punto limpio habrá que tener en cuenta varios aspectos:
+													  • Solo se admitirán residuos generados por particulares.
+												      • No se podrán verter residuos peligrosos. Solo se recogerán las pilas usadas.
+													  • El usuario si va a depositar más de un residuo lo deberá hacer por separado para poder depositarlo en su contenedor correspondiente.
+													  • Se deberá cumplimentar el documento que nos facilitará el operario.
+												      Una vez se haya llegado al punto limpio un operario informará en que contenedor se debe depositar los residuos. Se puede acceder tanto a pie como en el vehículo particular (que no debe exceder de 3500 kg. de tara) y cómodamente situarse junto al contenedor marcado con el nombre del residuo a verter.""" ;
+  schema:name "Punto limpio fijo Cogullada" ;
+  schema:openingHours "De lunes a sábado (incluso festivos) de 7:30 a 20:30 h. Domingos de 8:00 a 14:30 h." ;
+  edintres:belongsTo edintres:distritoElRabal ;
+  edintres:isPubliclyOwned true .
+
+&lt;s://example.org/recurso/provincia/provinciaMadrid&gt;
+  a esadm:Provincia ;
+  rdfs:label "Madrid"@es .
+
+&lt;s://example.org/recurso/contenedor/wasteContainer20270&gt;
+  a edintres:WasteContainer ;
+  gsp:hasGeometry edintres:geometryWasteContainer20270 ;
+  schema:address edintres:addressWasteContainer20270 ;
+  schema:model "E 3100 CS" ;
+  edintres:acceptsWasteType wastetype:PlasticosMetalesYBriks ;
+  edintres:belongsTo edintres:barrioCortes ;
+  edintres:belongsTo edintres:distritoCentro ;
+  edintres:containerBatch 1 ;
+  edintres:containerLocationCode "CS_013_016" ;
+  edintres:loadingType "Carga superior" ;
+  edintres:order 20270 .
+
+&lt;s://example.org/recurso/instalacion-gestion-residuos/wasteManagementFacility13G04A1400037921E&gt;
+  a edintres:WasteManagementFacility ;
+  schema:address edintres:addressWasteManagementFacility13G04A1400037921E ;
+  schema:contactPoint edintres:contactPointWasteManagementFacility13G04A1400037921E ;
+  schema:legalName "Tecnologías del Medio Ambiente, S.A." ;
+  edintres:belongsTo edintres:municipioFuenlabrada ;
+  edintres:hasManagementScope managementscope:ClasificacionResiduosNoPeligrososTrituracionMadera ;
+  edintres:hasTreatmentProcess treatmentprocess:ClasificacionResiduosNoPeligrosos ;
+  edintres:isConstructionDemolitionWasteManager false ;
+  edintres:managesWasteType wastetype:ResiduosVoluminosos ;
+  edintres:nif "A08948143" ;
+  edintres:nima "2800023654" ;
+  edintres:registrationNumber "13G04A1400037921E" ;
+  edintres:registrationType "Autorización de gestión de residuos no peligrosos" .
+</textarea>;</pre>;
+<script>;
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
+</div>
