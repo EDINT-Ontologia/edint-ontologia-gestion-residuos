@@ -9,120 +9,120 @@
 @prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
 @prefix wastetype: <https://edint.es/kos/WasteType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/recurso/> .
 
-<https://edint.es/def/gestion-residuos#addressMobileCollectionPointCalleCobre>
+ex:addressMobileCollectionPointCalleCobre
   a esdir:DireccionPostal .
 
-<https://edint.es/def/gestion-residuos#addressPermanentCollectionPoint2503>
+ex:addressPermanentCollectionPoint2503
   a esdir:DireccionPostal .
 
-<https://edint.es/def/gestion-residuos#addressWasteContainer20270>
+ex:addressWasteContainer20270
   a esdir:DireccionPostal .
 
-<https://edint.es/def/gestion-residuos#addressWasteManagementFacility13G04A1400037921E>
+ex:addressWasteManagementFacility13G04A1400037921E
   a esdir:DireccionPostal .
 
-<https://edint.es/def/gestion-residuos#barrioCortes>
+ex:barrioCortes
   a esadm:Barrio ;
   rdfs:label "Cortes"@es ;
-  esadm:perteneceAlMunicipio edintres:municipioMadrid .
+  esadm:perteneceAlMunicipio ex:municipioMadrid .
 
-<https://edint.es/def/gestion-residuos#contactPointPermanentCollectionPoint2503>
+ex:contactPointPermanentCollectionPoint2503
   a schema:ContactPoint ;
   schema:telephone "615812503" .
 
-<https://edint.es/def/gestion-residuos#contactPointWasteManagementFacility13G04A1400037921E>
+ex:contactPointWasteManagementFacility13G04A1400037921E
   a schema:ContactPoint ;
   schema:faxNumber "916423167" ;
   schema:telephone "616925592" .
 
-<https://edint.es/def/gestion-residuos#distritoArganzuela>
+ex:distritoArganzuela
   a esadm:Distrito ;
   rdfs:label "Arganzuela"@es .
 
-<https://edint.es/def/gestion-residuos#distritoCentro>
+ex:distritoCentro
   a esadm:Distrito ;
   rdfs:label "Centro"@es ;
-  esadm:perteneceAlMunicipio edintres:municipioMadrid .
+  esadm:perteneceAlMunicipio ex:municipioMadrid .
 
-<https://edint.es/def/gestion-residuos#distritoElRabal>
+ex:distritoElRabal
   a esadm:Distrito ;
   rdfs:label "El Rabal"@es .
 
-<https://edint.es/def/gestion-residuos#geometryMobileCollectionPointCalleCobre>
+ex:geometryMobileCollectionPointCalleCobre
   a gsp:Geometry ;
   gsp:asWKT "POINT(-3.689229994 40.39373013)"^^gsp:wktLiteral .
 
-<https://edint.es/def/gestion-residuos#geometryPermanentCollectionPoint2503>
+ex:geometryPermanentCollectionPoint2503
   a gsp:Geometry ;
   gsp:asWKT "POINT(-0.8566459744789225 41.67737429730341)"^^gsp:wktLiteral .
 
-<https://edint.es/def/gestion-residuos#geometryWasteContainer20270>
+ex:geometryWasteContainer20270
   a gsp:Geometry ;
   gsp:asWKT "POINT(-3.696217770252 40.410961305501)"^^gsp:wktLiteral .
 
-<https://edint.es/def/gestion-residuos#mobileCollectionPointCalleCobre>
+ex:mobileCollectionPointCalleCobre
   a edintres:MobileCollectionPoint ;
-  gsp:hasGeometry edintres:geometryMobileCollectionPointCalleCobre ;
-  schema:address edintres:addressMobileCollectionPointCalleCobre ;
+  gsp:hasGeometry ex:geometryMobileCollectionPointCalleCobre ;
+  schema:address ex:addressMobileCollectionPointCalleCobre ;
   schema:map "https://goo.gl/maps/mJnrT377bHTyQduM7"^^xsd:anyURI ;
   schema:openingHours "Martes. Tarde. 17:30:00. 19:00:00" ;
   edintres:admissibleWasteURL "http://run.gob.es/PuntoMOVILResiduos"^^xsd:anyURI ;
-  edintres:belongsTo edintres:distritoArganzuela .
+  edintres:belongsTo ex:distritoArganzuela .
 
-<https://edint.es/def/gestion-residuos#municipioFuenlabrada>
+ex:municipioFuenlabrada
   a esadm:Municipio ;
   rdfs:label "Fuenlabrada"@es ;
-  esadm:perteneceAProvincia edintres:provinciaMadrid .
+  esadm:perteneceAProvincia ex:provinciaMadrid .
 
-<https://edint.es/def/gestion-residuos#municipioMadrid>
+ex:municipioMadrid
   a esadm:Municipio ;
   rdfs:label "Madrid"@es ;
-  esadm:perteneceAProvincia edintres:provinciaMadrid .
+  esadm:perteneceAProvincia ex:provinciaMadrid .
 
-<https://edint.es/def/gestion-residuos#permanentCollectionPoint2503>
+ex:permanentCollectionPoint2503
   a edintres:PermanentCollectionPoint ;
   dcterms:identifier "2503" ;
-  gsp:hasGeometry edintres:geometryPermanentCollectionPoint2503 ;
-  schema:address edintres:addressPermanentCollectionPoint2503 ;
-  schema:contactPoint edintres:contactPointPermanentCollectionPoint2503 ;
+  gsp:hasGeometry ex:geometryPermanentCollectionPoint2503 ;
+  schema:address ex:addressPermanentCollectionPoint2503 ;
+  schema:contactPoint ex:contactPointPermanentCollectionPoint2503 ;
   schema:dateCreated "2008-01-10T02:00:00Z"^^xsd:dateTime ;
   schema:dateModified "2023-09-26T14:48:30Z"^^xsd:dateTime ;
-  schema:description """¿CÓMO UTILIZAREMOS EL PUNTO LIMPIO? 
-    												  Para poder utilizar el punto limpio habrá que tener en cuenta varios aspectos:
-													  • Solo se admitirán residuos generados por particulares.
-												      • No se podrán verter residuos peligrosos. Solo se recogerán las pilas usadas.
-													  • El usuario si va a depositar más de un residuo lo deberá hacer por separado para poder depositarlo en su contenedor correspondiente.
-													  • Se deberá cumplimentar el documento que nos facilitará el operario.
-												      Una vez se haya llegado al punto limpio un operario informará en que contenedor se debe depositar los residuos. Se puede acceder tanto a pie como en el vehículo particular (que no debe exceder de 3500 kg. de tara) y cómodamente situarse junto al contenedor marcado con el nombre del residuo a verter.""" ;
+  schema:description """¿CÓMO UTILIZAREMOS EL PUNTO LIMPIO? Para poder utilizar el punto limpio habrá que tener en cuenta varios aspectos:
+• Solo se admitirán residuos generados por particulares.
+• No se podrán verter residuos peligrosos. Solo se recogerán las pilas usadas.
+• El usuario si va a depositar más de un residuo lo deberá hacer por separado para poder depositarlo en su contenedor correspondiente.
+• Se deberá cumplimentar el documento que nos facilitará el operario.
+Una vez se haya llegado al punto limpio un operario informará en que contenedor se debe depositar los residuos. Se puede acceder tanto a pie como en el vehículo particular (que no debe exceder de 3500 kg. de tara) y cómodamente situarse junto al contenedor marcado con el nombre del residuo a verter.""" ;
   schema:name "Punto limpio fijo Cogullada" ;
   schema:openingHours "De lunes a sábado (incluso festivos) de 7:30 a 20:30 h. Domingos de 8:00 a 14:30 h." ;
-  edintres:belongsTo edintres:distritoElRabal ;
+  edintres:belongsTo ex:distritoElRabal ;
   edintres:isPubliclyOwned true .
 
-<https://edint.es/def/gestion-residuos#provinciaMadrid>
+ex:provinciaMadrid
   a esadm:Provincia ;
   rdfs:label "Madrid"@es .
 
-<https://edint.es/def/gestion-residuos#wasteContainer20270>
+ex:wasteContainer20270
   a edintres:WasteContainer ;
   gsp:hasGeometry edintres:geometryWasteContainer20270 ;
   schema:address edintres:addressWasteContainer20270 ;
   schema:model "E 3100 CS" ;
   edintres:acceptsWasteType wastetype:PlasticosMetalesYBriks ;
-  edintres:belongsTo edintres:barrioCortes ;
-  edintres:belongsTo edintres:distritoCentro ;
+  edintres:belongsTo ex:barrioCortes ;
+  edintres:belongsTo ex:distritoCentro ;
   edintres:containerBatch 1 ;
   edintres:containerLocationCode "CS_013_016" ;
   edintres:loadingType "Carga superior" ;
   edintres:order 20270 .
 
-<https://edint.es/def/gestion-residuos#wasteManagementFacility13G04A1400037921E>
+ex:wasteManagementFacility13G04A1400037921E
   a edintres:WasteManagementFacility ;
-  schema:address edintres:addressWasteManagementFacility13G04A1400037921E ;
-  schema:contactPoint edintres:contactPointWasteManagementFacility13G04A1400037921E ;
+  schema:address ex:addressWasteManagementFacility13G04A1400037921E ;
+  schema:contactPoint ex:contactPointWasteManagementFacility13G04A1400037921E ;
   schema:legalName "Tecnologías del Medio Ambiente, S.A." ;
-  edintres:belongsTo edintres:municipioFuenlabrada ;
+  edintres:belongsTo ex:municipioFuenlabrada ;
   edintres:hasManagementScope managementscope:ClasificacionResiduosNoPeligrososTrituracionMadera ;
   edintres:hasTreatmentProcess treatmentprocess:ClasificacionResiduosNoPeligrosos ;
   edintres:isConstructionDemolitionWasteManager false ;
