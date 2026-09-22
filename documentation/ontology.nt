@@ -1,16 +1,54 @@
-<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/medioambiente/residuos/0.1.0> .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/created> "2026-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/creator> "Laura Gilgado Romero" .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/description> "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."@es .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/title> "Ontology for the representation of waste management"@en .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/dc/terms/title> "Ontología para la representación de la gestión de residuos"@es .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "waste" .
-<https://w3id.org/def/medioambiente/residuos#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/medioambiente/residuos#> .
-<https://w3id.org/def/medioambiente/residuos#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
-<https://w3id.org/def/medioambiente/residuos#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/gestion-residuos/0.1.1> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de los elementos asociados a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización. Su alcance se limita a los datos de carácter administrativo y estructural: quedan fuera del modelo los aspectos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología."@es .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/abstract> "The purpose of this ontology is to provide a common vocabulary for representing the elements associated with waste management, including waste types, their deposit in containers and collection points, their treatment in facilities and their location. Its scope is limited to administrative and structural data; aspects related to operational management or the detailed operation of the services fall outside the model, although they could be addressed through future extensions of the ontology."@en .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Waste Management Ontology. EDINT. Revision: v0.1.1."@en .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Gestión de Residuos. EDINT. Revisión: v0.1.1."@es .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/created> "2026-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Laura Gilgado Romero" .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/description> "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."@es .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/publisher> _:genid2 .
+_:genid2 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "FEMP" .
+_:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/title> "EDINT Waste Management Ontology"@en .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/dc/terms/title> "Ontología EDINT de Gestión de Residuos"@es .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintres" .
+<https://edint.es/def/gestion-residuos#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/gestion-residuos#> .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/2000/01/rdf-schema#label> "Gestión de Residuos"@es .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Management"@en .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0> .
+<https://edint.es/def/gestion-residuos#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos> .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/gestion-residuos#> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid3 .
+_:genid3 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure (edintinf)"@en .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura (edintinf)"@es .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid4 .
+_:genid4 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@es .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@en .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid5 .
+_:genid5 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+_:genid5 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
+_:genid5 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
+<https://edint.es/def/gestion-residuos#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid6 .
+_:genid6 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address (esdir)"@en .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)"@es .
 # 
 # 
 # #################################################################
@@ -19,6 +57,12 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -29,8 +73,17 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -47,8 +100,44 @@
 # http://www.w3.org/2002/07/owl#versionInfo
 <http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#jsonldSerialization
+<https://w3id.org/widoco/vocab#jsonldSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#ntSerialization
+<https://w3id.org/widoco/vocab#ntSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#rdfxmlSerialization
+<https://w3id.org/widoco/vocab#rdfxmlSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#turtleSerialization
+<https://w3id.org/widoco/vocab#turtleSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyIRI
+<https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyLabel
+<https://w3id.org/widoco/vocab#vocabularyLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -86,64 +175,24 @@
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#label> "in scheme" .
 # 
-# https://schema.org/address
-<https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteFacility> .
-<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
-<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
-# 
-# https://schema.org/contactPoint
-<https://schema.org/contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/ContactPoint> .
-<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#label> "contact point" .
-# 
-# https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a provincia" .
-# 
-# https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
-<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece al municipio" .
-# 
-# https://w3id.org/def/medioambiente/residuos#acceptsWasteType
-<https://w3id.org/def/medioambiente/residuos#acceptsWasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/medioambiente/residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+# https://edint.es/def/gestion-residuos#acceptsWasteType
+<https://edint.es/def/gestion-residuos#acceptsWasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/gestion-residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
 _:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/gestion-residuos#WasteContainer> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/def/medioambiente/residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#label> "accepts waste type" .
+<https://edint.es/def/gestion-residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://edint.es/def/gestion-residuos#acceptsWasteType> <http://www.w3.org/2000/01/rdf-schema#label> "accepts waste type" .
 # 
-# https://w3id.org/def/medioambiente/residuos#belongsTo
-<https://w3id.org/def/medioambiente/residuos#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/medioambiente/residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteFacility> .
-<https://w3id.org/def/medioambiente/residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+# https://edint.es/def/gestion-residuos#belongsTo
+<https://edint.es/def/gestion-residuos#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/gestion-residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteFacility> .
+<https://edint.es/def/gestion-residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
 _:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
@@ -155,25 +204,65 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
+<https://edint.es/def/gestion-residuos#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
 # 
-# https://w3id.org/def/medioambiente/residuos#hasManagementScope
-<https://w3id.org/def/medioambiente/residuos#hasManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/medioambiente/residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/def/medioambiente/residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#label> "has management scope" .
+# https://edint.es/def/gestion-residuos#hasManagementScope
+<https://edint.es/def/gestion-residuos#hasManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/gestion-residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://edint.es/def/gestion-residuos#hasManagementScope> <http://www.w3.org/2000/01/rdf-schema#label> "has management scope" .
 # 
-# https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess
-<https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/def/medioambiente/residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has treatment process" .
+# https://edint.es/def/gestion-residuos#hasTreatmentProcess
+<https://edint.es/def/gestion-residuos#hasTreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/gestion-residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://edint.es/def/gestion-residuos#hasTreatmentProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has treatment process" .
 # 
-# https://w3id.org/def/medioambiente/residuos#managesWasteType
-<https://w3id.org/def/medioambiente/residuos#managesWasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/medioambiente/residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/def/medioambiente/residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#label> "manages waste type" .
+# https://edint.es/def/gestion-residuos#managesWasteType
+<https://edint.es/def/gestion-residuos#managesWasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/gestion-residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://edint.es/def/gestion-residuos#managesWasteType> <http://www.w3.org/2000/01/rdf-schema#label> "manages waste type" .
+# 
+# https://schema.org/address
+<https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteFacility> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
+# 
+# https://schema.org/contactPoint
+<https://schema.org/contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/gestion-residuos#CollectionPoint> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/ContactPoint> .
+<https://schema.org/contactPoint> <http://www.w3.org/2000/01/rdf-schema#label> "contact point" .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAProvincia> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a provincia" .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+<https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece al municipio" .
 # 
 # 
 # 
@@ -186,7 +275,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
 # 
@@ -196,21 +285,93 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#wktLiteral> .
 <http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#label> "as wkt" .
 # 
+# https://edint.es/def/gestion-residuos#admissibleWasteURL
+<https://edint.es/def/gestion-residuos#admissibleWasteURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#MobileCollectionPoint> .
+<https://edint.es/def/gestion-residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://edint.es/def/gestion-residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#label> "admissible waste url" .
+# 
+# https://edint.es/def/gestion-residuos#containerBatch
+<https://edint.es/def/gestion-residuos#containerBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
+<https://edint.es/def/gestion-residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://edint.es/def/gestion-residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#label> "container batch" .
+# 
+# https://edint.es/def/gestion-residuos#containerLocationCode
+<https://edint.es/def/gestion-residuos#containerLocationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
+<https://edint.es/def/gestion-residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#label> "container location code" .
+# 
+# https://edint.es/def/gestion-residuos#containerType
+<https://edint.es/def/gestion-residuos#containerType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
+<https://edint.es/def/gestion-residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#label> "container type" .
+# 
+# https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager
+<https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#label> "is construction demolition waste manager" .
+# 
+# https://edint.es/def/gestion-residuos#isPubliclyOwned
+<https://edint.es/def/gestion-residuos#isPubliclyOwned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
+<https://edint.es/def/gestion-residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://edint.es/def/gestion-residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#label> "is publicly owned" .
+# 
+# https://edint.es/def/gestion-residuos#loadingType
+<https://edint.es/def/gestion-residuos#loadingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
+<https://edint.es/def/gestion-residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#label> "loading type" .
+# 
+# https://edint.es/def/gestion-residuos#nif
+<https://edint.es/def/gestion-residuos#nif> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#nif> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#nif> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#nif> <http://www.w3.org/2000/01/rdf-schema#label> "nif" .
+# 
+# https://edint.es/def/gestion-residuos#nima
+<https://edint.es/def/gestion-residuos#nima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#nima> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#nima> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#nima> <http://www.w3.org/2000/01/rdf-schema#label> "nima" .
+# 
+# https://edint.es/def/gestion-residuos#order
+<https://edint.es/def/gestion-residuos#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
+<https://edint.es/def/gestion-residuos#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://edint.es/def/gestion-residuos#order> <http://www.w3.org/2000/01/rdf-schema#label> "order" .
+# 
+# https://edint.es/def/gestion-residuos#registrationNumber
+<https://edint.es/def/gestion-residuos#registrationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "registration number" .
+# 
+# https://edint.es/def/gestion-residuos#registrationType
+<https://edint.es/def/gestion-residuos#registrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/gestion-residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
+<https://edint.es/def/gestion-residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://edint.es/def/gestion-residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#label> "registration type" .
+# 
 # https://schema.org/dateCreated
 <https://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "date created" .
 # 
 # https://schema.org/dateModified
 <https://schema.org/dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/dateModified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<https://schema.org/dateModified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <https://schema.org/dateModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://schema.org/dateModified> <http://www.w3.org/2000/01/rdf-schema#label> "date modified" .
 # 
 # https://schema.org/description
 <https://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
 # 
@@ -222,31 +383,31 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://schema.org/legalName
 <https://schema.org/legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/legalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
+<https://schema.org/legalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteManagementFacility> .
 <https://schema.org/legalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/legalName> <http://www.w3.org/2000/01/rdf-schema#label> "legal name" .
 # 
 # https://schema.org/map
 <https://schema.org/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/map> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint> .
+<https://schema.org/map> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#MobileCollectionPoint> .
 <https://schema.org/map> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://schema.org/map> <http://www.w3.org/2000/01/rdf-schema#label> "map" .
 # 
 # https://schema.org/model
 <https://schema.org/model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/model> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
+<https://schema.org/model> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#WasteContainer> .
 <https://schema.org/model> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/model> <http://www.w3.org/2000/01/rdf-schema#label> "model" .
 # 
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
 # 
 # https://schema.org/openingHours
 <https://schema.org/openingHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
+<https://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/gestion-residuos#CollectionPoint> .
 <https://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#label> "opening hours" .
 # 
@@ -255,78 +416,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/ContactPoint> .
 <https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
-# 
-# https://w3id.org/def/medioambiente/residuos#admissibleWasteURL
-<https://w3id.org/def/medioambiente/residuos#admissibleWasteURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint> .
-<https://w3id.org/def/medioambiente/residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/medioambiente/residuos#admissibleWasteURL> <http://www.w3.org/2000/01/rdf-schema#label> "admissible waste url" .
-# 
-# https://w3id.org/def/medioambiente/residuos#containerBatch
-<https://w3id.org/def/medioambiente/residuos#containerBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
-<https://w3id.org/def/medioambiente/residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<https://w3id.org/def/medioambiente/residuos#containerBatch> <http://www.w3.org/2000/01/rdf-schema#label> "container batch" .
-# 
-# https://w3id.org/def/medioambiente/residuos#containerLocationCode
-<https://w3id.org/def/medioambiente/residuos#containerLocationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
-<https://w3id.org/def/medioambiente/residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#containerLocationCode> <http://www.w3.org/2000/01/rdf-schema#label> "container location code" .
-# 
-# https://w3id.org/def/medioambiente/residuos#containerType
-<https://w3id.org/def/medioambiente/residuos#containerType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
-<https://w3id.org/def/medioambiente/residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#containerType> <http://www.w3.org/2000/01/rdf-schema#label> "container type" .
-# 
-# https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager
-<https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/def/medioambiente/residuos#isConstructionDemolitionWasteManager> <http://www.w3.org/2000/01/rdf-schema#label> "is construction demolition waste manager" .
-# 
-# https://w3id.org/def/medioambiente/residuos#isPubliclyOwned
-<https://w3id.org/def/medioambiente/residuos#isPubliclyOwned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
-<https://w3id.org/def/medioambiente/residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/def/medioambiente/residuos#isPubliclyOwned> <http://www.w3.org/2000/01/rdf-schema#label> "is publicly owned" .
-# 
-# https://w3id.org/def/medioambiente/residuos#loadingType
-<https://w3id.org/def/medioambiente/residuos#loadingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
-<https://w3id.org/def/medioambiente/residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#loadingType> <http://www.w3.org/2000/01/rdf-schema#label> "loading type" .
-# 
-# https://w3id.org/def/medioambiente/residuos#nif
-<https://w3id.org/def/medioambiente/residuos#nif> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#nif> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#nif> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#nif> <http://www.w3.org/2000/01/rdf-schema#label> "nif" .
-# 
-# https://w3id.org/def/medioambiente/residuos#nima
-<https://w3id.org/def/medioambiente/residuos#nima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#nima> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#nima> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#nima> <http://www.w3.org/2000/01/rdf-schema#label> "nima" .
-# 
-# https://w3id.org/def/medioambiente/residuos#order
-<https://w3id.org/def/medioambiente/residuos#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteContainer> .
-<https://w3id.org/def/medioambiente/residuos#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<https://w3id.org/def/medioambiente/residuos#order> <http://www.w3.org/2000/01/rdf-schema#label> "order" .
-# 
-# https://w3id.org/def/medioambiente/residuos#registrationNumber
-<https://w3id.org/def/medioambiente/residuos#registrationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "registration number" .
-# 
-# https://w3id.org/def/medioambiente/residuos#registrationType
-<https://w3id.org/def/medioambiente/residuos#registrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/medioambiente/residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> .
-<https://w3id.org/def/medioambiente/residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/medioambiente/residuos#registrationType> <http://www.w3.org/2000/01/rdf-schema#label> "registration type" .
 # 
 # 
 # 
@@ -357,6 +446,37 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme" .
 # 
+# https://edint.es/def/gestion-residuos#CollectionPoint
+<https://edint.es/def/gestion-residuos#CollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#CollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://edint.es/def/gestion-residuos#WasteFacility> .
+<https://edint.es/def/gestion-residuos#CollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Point" .
+# 
+# https://edint.es/def/gestion-residuos#MobileCollectionPoint
+<https://edint.es/def/gestion-residuos#MobileCollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#MobileCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://edint.es/def/gestion-residuos#CollectionPoint> .
+<https://edint.es/def/gestion-residuos#MobileCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Mobile Collection Point" .
+# 
+# https://edint.es/def/gestion-residuos#PermanentCollectionPoint
+<https://edint.es/def/gestion-residuos#PermanentCollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#PermanentCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://edint.es/def/gestion-residuos#CollectionPoint> .
+<https://edint.es/def/gestion-residuos#PermanentCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Permanent Collection Point" .
+# 
+# https://edint.es/def/gestion-residuos#WasteContainer
+<https://edint.es/def/gestion-residuos#WasteContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#WasteContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://edint.es/def/gestion-residuos#WasteFacility> .
+<https://edint.es/def/gestion-residuos#WasteContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Container" .
+# 
+# https://edint.es/def/gestion-residuos#WasteFacility
+<https://edint.es/def/gestion-residuos#WasteFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
+<https://edint.es/def/gestion-residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://edint.es/def/gestion-residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Facility" .
+# 
+# https://edint.es/def/gestion-residuos#WasteManagementFacility
+<https://edint.es/def/gestion-residuos#WasteManagementFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/gestion-residuos#WasteManagementFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://edint.es/def/gestion-residuos#WasteFacility> .
+<https://edint.es/def/gestion-residuos#WasteManagementFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Management Facility" .
+# 
 # https://schema.org/ContactPoint
 <https://schema.org/ContactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/ContactPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Contact Point" .
@@ -381,37 +501,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#label> "Direccion Postal" .
 # 
-# https://w3id.org/def/medioambiente/residuos#CollectionPoint
-<https://w3id.org/def/medioambiente/residuos#CollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#CollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/medioambiente/residuos#WasteFacility> .
-<https://w3id.org/def/medioambiente/residuos#CollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Point" .
-# 
-# https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint
-<https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
-<https://w3id.org/def/medioambiente/residuos#MobileCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Mobile Collection Point" .
-# 
-# https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint
-<https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/medioambiente/residuos#CollectionPoint> .
-<https://w3id.org/def/medioambiente/residuos#PermanentCollectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Permanent Collection Point" .
-# 
-# https://w3id.org/def/medioambiente/residuos#WasteContainer
-<https://w3id.org/def/medioambiente/residuos#WasteContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#WasteContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/medioambiente/residuos#WasteFacility> .
-<https://w3id.org/def/medioambiente/residuos#WasteContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Container" .
-# 
-# https://w3id.org/def/medioambiente/residuos#WasteFacility
-<https://w3id.org/def/medioambiente/residuos#WasteFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
-<https://w3id.org/def/medioambiente/residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
-<https://w3id.org/def/medioambiente/residuos#WasteFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Facility" .
-# 
-# https://w3id.org/def/medioambiente/residuos#WasteManagementFacility
-<https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/medioambiente/residuos#WasteFacility> .
-<https://w3id.org/def/medioambiente/residuos#WasteManagementFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Management Facility" .
-# 
 # 
 # 
 # #################################################################
@@ -421,16 +510,27 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# https://w3id.org/kos/medioambiente/residuos/ManagementScope
-<https://w3id.org/kos/medioambiente/residuos/ManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/kos/medioambiente/residuos/ManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# https://edint.es/kos/WasteManagementScope
+<https://edint.es/kos/WasteManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://edint.es/kos/WasteManagementScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-# https://w3id.org/kos/medioambiente/residuos/TreatmentProcess
-<https://w3id.org/kos/medioambiente/residuos/TreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/kos/medioambiente/residuos/TreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# https://edint.es/kos/WasteTreatmentProcess
+<https://edint.es/kos/WasteTreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://edint.es/kos/WasteTreatmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-# https://w3id.org/kos/medioambiente/residuos/WasteType
-<https://w3id.org/kos/medioambiente/residuos/WasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/kos/medioambiente/residuos/WasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# https://edint.es/kos/WasteType
+<https://edint.es/kos/WasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://edint.es/kos/WasteType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
