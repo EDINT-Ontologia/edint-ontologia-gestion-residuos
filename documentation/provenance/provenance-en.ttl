@@ -2,10 +2,12 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/def/medioambiente/residuos/0.1.0> a prov:Entity;
-	 dc:title "Ontology for the representation of waste management";
+<https://edint.es/def/gestion-residuos/0.1.1> a prov:Entity;
+	 dc:title "EDINT Waste Management Ontology";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://edint.es/def/gestion-residuos>;
+	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0>;
 	 prov:wasGeneratedAt "2026-04-01";
 .
 :agent0 a prov:Agent; foaf:name "Laura Gilgado Romero".
