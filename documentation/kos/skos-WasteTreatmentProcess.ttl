@@ -18,7 +18,7 @@
 wastekos:WasteTreatmentProcess a skos:ConceptScheme ;
     dct:issued "2026-04-21"^^xsd:date ;
     dct:modified "2026-04-24"^^xsd:date ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    cc:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     rdfs:comment "Esquema de conceptos para los procesos de tratamiento aplicados en centros de gestión de residuos."@es ;
     rdfs:comment "Concept scheme for the treatment processes used in waste management facilities."@en ;
     rdfs:label "Procesos de tratamiento"@es ;
