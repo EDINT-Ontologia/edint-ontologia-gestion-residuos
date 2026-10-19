@@ -1,6 +1,6 @@
 prefixes:
   edintres: "https://edint.es/def/gestion-residuos#"
-  wastekos: "https://edint.es/kos/"
+  edintkos: "https://edint.es/kos/"
   wastetype: "https://edint.es/kos/WasteType/"
   esdir: "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#"
   esadm: "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
@@ -68,5 +68,5 @@ mappings:
     s: wastetype:$(Tipo de contenedor normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:WasteType~iri]
+      - [skos:inScheme, edintkos:WasteType~iri]
       - [skos:prefLabel, $(Tipo de contenedor), es~lang]

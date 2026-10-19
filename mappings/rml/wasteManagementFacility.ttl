@@ -10,7 +10,7 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://edint.es/kos/> .
+@prefix edintkos: <https://edint.es/kos/> .
 @prefix managementscope: <https://edint.es/kos/WasteManagementScope/> .
 @prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
 @prefix wastetype: <https://edint.es/kos/WasteType/> .
@@ -152,7 +152,7 @@ map:om_016 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_017 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteManagementScope ;
+	rr:constant edintkos:WasteManagementScope ;
 	rr:termType rr:IRI .
 
 map:om_018 rml:languageMap map:language_000 ;
@@ -165,7 +165,7 @@ map:om_019 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_020 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteTreatmentProcess ;
+	rr:constant edintkos:WasteTreatmentProcess ;
 	rr:termType rr:IRI .
 
 map:om_021 rml:languageMap map:language_001 ;
@@ -204,7 +204,7 @@ map:om_028 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_029 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteType ;
+	rr:constant edintkos:WasteType ;
 	rr:termType rr:IRI .
 
 map:om_030 rml:languageMap map:language_004 ;
