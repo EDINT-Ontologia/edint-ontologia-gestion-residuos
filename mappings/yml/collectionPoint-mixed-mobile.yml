@@ -15,7 +15,7 @@ mappings:
   MobileCollectionPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/$(Identificador)
+    s: https://example.org/recurso/collectionPoint/mobile/$(Identificador)
     po:
       - [a, edintres:MobileCollectionPoint]
       - [dcterms:identifier, $(Identificador), xsd:string]
@@ -25,15 +25,15 @@ mappings:
       - [schema:description, $(Descripción), xsd:string]
       - [schema:dateCreated, $(Fecha de creación), xsd:dateTime]
       - [schema:dateModified, $(Fecha de última actualización), xsd:dateTime]
-      - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Identificador)~iri]
-      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Identificador)~iri]
-      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
-      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Identificador)~iri]
+      - [schema:contactPoint, https://example.org/recurso/contactPoint/$(Identificador)~iri]
+      - [schema:address, https://example.org/recurso/address/$(Identificador)~iri]
+      - [edintres:belongsTo, https://example.org/recurso/district/$(Distrito)~iri]
+      - [gsp:hasGeometry, https://example.org/recurso/geometry/collectionPoint/mobile/$(Identificador)~iri]
 
   ContactPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Identificador)
+    s: https://example.org/recurso/contactPoint/$(Identificador)
     po:
       - [a, schema:ContactPoint]
       - [schema:telephone, $(Teléfono), xsd:string]
@@ -41,14 +41,14 @@ mappings:
   DireccionPostal:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Identificador)
+    s: https://example.org/recurso/address/$(Identificador)
     po:
       - [a, esdir:DireccionPostal]
 
   District:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
+    s: https://example.org/recurso/district/$(Distrito)
     po:
       - [a, esadm:Distrito]
       - [rdfs:label, $(Distrito), es~lang]
@@ -56,7 +56,7 @@ mappings:
   Geometry:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Identificador)
+    s: https://example.org/recurso/geometry/collectionPoint/mobile/$(Identificador)
     po:
       - [a, gsp:Geometry]
       - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]

@@ -17,7 +17,7 @@ mappings:
   WasteContainer:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/medioambiente/recurso/residuos/wasteContainer/$(Orden)
+    s: https://example.org/recurso/wasteContainer/$(Orden)
     po:
       - [a, edintres:WasteContainer]
       - [edintres:order, $(Orden), xsd:int]
@@ -25,23 +25,23 @@ mappings:
       - [edintres:containerBatch, $(Lote), xsd:int]
       - [edintres:loadingType, $(Carga), xsd:string]
       - [edintres:containerLocationCode, $(Código de localización), xsd:string]
-      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Código de localización)~iri]
-      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)~iri]
-      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
-      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/container/$(Código de localización)~iri]
+      - [schema:address, https://example.org/recurso/address/$(Código de localización)~iri]
+      - [edintres:belongsTo, https://example.org/recurso/neighborhood/$(Barrio)~iri]
+      - [edintres:belongsTo, https://example.org/recurso/district/$(Distrito)~iri]
+      - [gsp:hasGeometry, https://example.org/recurso/geometry/container/$(Código de localización)~iri]
       - [edintres:acceptsWasteType, wastetype:$(Tipo de contenedor normalizado)~iri]
 
   DireccionPostal:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Código de localización)
+    s: https://example.org/recurso/address/$(Código de localización)
     po:
       - [a, esdir:DireccionPostal]
 
   Neighborhood:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/medioambiente/recurso/residuos/neighborhood/$(Barrio)
+    s: https://example.org/recurso/neighborhood/$(Barrio)
     po:
       - [a, esadm:Barrio]
       - [rdfs:label, $(Barrio), es~lang]
@@ -49,7 +49,7 @@ mappings:
   District:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
+    s: https://example.org/recurso/district/$(Distrito)
     po:
       - [a, esadm:Distrito]
       - [rdfs:label, $(Distrito), es~lang]
@@ -57,7 +57,7 @@ mappings:
   Geometry:
     sources:
       - wasteContainer-source
-    s: https://w3id.org/medioambiente/recurso/residuos/geometry/container/$(Código de localización)
+    s: https://example.org/recurso/geometry/container/$(Código de localización)
     po:
       - [a, gsp:Geometry]
       - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]

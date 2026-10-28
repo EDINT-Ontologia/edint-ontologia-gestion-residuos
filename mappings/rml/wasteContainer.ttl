@@ -88,19 +88,19 @@ map:om_005 rml:reference "Código de localización" ;
 	rr:termType rr:Literal .
 
 map:om_006 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Código de localización}" ;
+	rr:template "https://example.org/recurso/address/{Código de localización}" ;
 	rr:termType rr:IRI .
 
 map:om_007 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/neighborhood/{Barrio}" ;
+	rr:template "https://example.org/recurso/neighborhood/{Barrio}" ;
 	rr:termType rr:IRI .
 
 map:om_008 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" ;
+	rr:template "https://example.org/recurso/district/{Distrito}" ;
 	rr:termType rr:IRI .
 
 map:om_009 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/container/{Código de localización}" ;
+	rr:template "https://example.org/recurso/geometry/container/{Código de localización}" ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
@@ -302,19 +302,19 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_DireccionPostal_
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/wasteContainer/{Orden}" .
+	rr:template "https://example.org/recurso/wasteContainer/{Orden}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Código de localización}" .
+	rr:template "https://example.org/recurso/address/{Código de localización}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/neighborhood/{Barrio}" .
+	rr:template "https://example.org/recurso/neighborhood/{Barrio}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" .
+	rr:template "https://example.org/recurso/district/{Distrito}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/container/{Código de localización}" .
+	rr:template "https://example.org/recurso/geometry/container/{Código de localización}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
 	rr:template "https://edint.es/kos/WasteType/{Tipo de contenedor normalizado}" .
