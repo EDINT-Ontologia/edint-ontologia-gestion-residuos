@@ -59,15 +59,15 @@ map:om_003 rml:reference "Google Maps" ;
 	rr:termType rr:Literal .
 
 map:om_004 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Ubicación normalizada}" ;
+	rr:template "https://example.org/recurso/address/{Ubicación normalizada}" ;
 	rr:termType rr:IRI .
 
 map:om_005 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" ;
+	rr:template "https://example.org/recurso/district/{Distrito}" ;
 	rr:termType rr:IRI .
 
 map:om_006 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/{Ubicación normalizada}" ;
+	rr:template "https://example.org/recurso/geometry/collectionPoint/mobile/{Ubicación normalizada}" ;
 	rr:termType rr:IRI .
 
 map:om_007 rdf:type rr:ObjectMap ;
@@ -180,16 +180,16 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_DireccionPostal_
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/{Identificador normalizado}" .
+	rr:template "https://example.org/recurso/collectionPoint/mobile/{Identificador normalizado}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Ubicación normalizada}" .
+	rr:template "https://example.org/recurso/address/{Ubicación normalizada}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" .
+	rr:template "https://example.org/recurso/district/{Distrito}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/{Ubicación normalizada}" .
+	rr:template "https://example.org/recurso/geometry/collectionPoint/mobile/{Ubicación normalizada}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "dataset-enriquecido-2.csv" ;

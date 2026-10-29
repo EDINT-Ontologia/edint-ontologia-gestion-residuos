@@ -10,7 +10,7 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix schema: <https://schema.org/> .
 @prefix edintres: <https://edint.es/def/gestion-residuos#> .
-@prefix wastekos: <https://edint.es/kos/> .
+@prefix edintkos: <https://edint.es/kos/> .
 @prefix managementscope: <https://edint.es/kos/WasteManagementScope/> .
 @prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
 @prefix wastetype: <https://edint.es/kos/WasteType/> .
@@ -110,7 +110,7 @@ map:om_006 rml:reference "Residuos de Construcción y Demolición" ;
 	rr:termType rr:Literal .
 
 map:om_007 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Número de registro}" ;
+	rr:template "https://example.org/recurso/contactPoint/{Número de registro}" ;
 	rr:termType rr:IRI .
 
 map:om_008 rdf:type rr:ObjectMap ;
@@ -122,11 +122,11 @@ map:om_009 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Número de registro}" ;
+	rr:template "https://example.org/recurso/address/{Número de registro}" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/municipality/{Municipio}" ;
+	rr:template "https://example.org/recurso/municipality/{Municipio}" ;
 	rr:termType rr:IRI .
 
 map:om_012 rdf:type rr:ObjectMap ;
@@ -152,7 +152,7 @@ map:om_016 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_017 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteManagementScope ;
+	rr:constant edintkos:WasteManagementScope ;
 	rr:termType rr:IRI .
 
 map:om_018 rml:languageMap map:language_000 ;
@@ -165,7 +165,7 @@ map:om_019 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_020 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteTreatmentProcess ;
+	rr:constant edintkos:WasteTreatmentProcess ;
 	rr:termType rr:IRI .
 
 map:om_021 rml:languageMap map:language_001 ;
@@ -182,7 +182,7 @@ map:om_023 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_024 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/province/{Provincia}" ;
+	rr:template "https://example.org/recurso/province/{Provincia}" ;
 	rr:termType rr:IRI .
 
 map:om_025 rml:languageMap map:language_002 ;
@@ -204,7 +204,7 @@ map:om_028 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_029 rdf:type rr:ObjectMap ;
-	rr:constant wastekos:WasteType ;
+	rr:constant edintkos:WasteType ;
 	rr:termType rr:IRI .
 
 map:om_030 rml:languageMap map:language_004 ;
@@ -445,10 +445,10 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_ContactPoint_000
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/wasteManagementFacility/{Número de registro}" .
+	rr:template "https://example.org/recurso/wasteManagementFacility/{Número de registro}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Número de registro}" .
+	rr:template "https://example.org/recurso/contactPoint/{Número de registro}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
 	rr:template "https://edint.es/kos/WasteManagementScope/{Alcance de la gestión normalizado}" .
@@ -457,13 +457,13 @@ map:s_003 rdf:type rr:SubjectMap ;
 	rr:template "https://edint.es/kos/WasteTreatmentProcess/{Proceso de tratamiento normalizado}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Número de registro}" .
+	rr:template "https://example.org/recurso/address/{Número de registro}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/municipality/{Municipio}" .
+	rr:template "https://example.org/recurso/municipality/{Municipio}" .
 
 map:s_006 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/province/{Provincia}" .
+	rr:template "https://example.org/recurso/province/{Provincia}" .
 
 map:s_007 rdf:type rr:SubjectMap ;
 	rr:template "https://edint.es/kos/WasteType/{Tipo de residuo normalizado}" .
