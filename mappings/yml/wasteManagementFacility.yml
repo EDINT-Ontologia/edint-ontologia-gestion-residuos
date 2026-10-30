@@ -1,6 +1,6 @@
 prefixes:
   edintres: "https://edint.es/def/gestion-residuos#"
-  wastekos: "https://edint.es/kos/"
+  edintkos: "https://edint.es/kos/"
   managementscope: "https://edint.es/kos/WasteManagementScope/"
   treatmentprocess: "https://edint.es/kos/WasteTreatmentProcess/"
   wastetype: "https://edint.es/kos/WasteType/"
@@ -18,7 +18,7 @@ mappings:
   WasteManagementFacility:
     sources:
       - wasteManagementFacility-source
-    s: https://w3id.org/medioambiente/recurso/residuos/wasteManagementFacility/$(Número de registro)
+    s: https://example.org/recurso/wasteManagementFacility/$(Número de registro)
     po:
       - [a, edintres:WasteManagementFacility]
       - [edintres:registrationNumber, $(Número de registro), xsd:string]
@@ -27,17 +27,17 @@ mappings:
       - [edintres:nif, $(NIF), xsd:string]
       - [edintres:nima, $(NIMA), xsd:string]
       - [edintres:isConstructionDemolitionWasteManager, $(Residuos de Construcción y Demolición), xsd:boolean]
-      - [schema:contactPoint, https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Número de registro)~iri]
+      - [schema:contactPoint, https://example.org/recurso/contactPoint/$(Número de registro)~iri]
       - [edintres:hasManagementScope, managementscope:$(Alcance de la gestión normalizado)~iri]
       - [edintres:hasTreatmentProcess, treatmentprocess:$(Proceso de tratamiento normalizado)~iri]
-      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Número de registro)~iri]
-      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)~iri]
+      - [schema:address, https://example.org/recurso/address/$(Número de registro)~iri]
+      - [edintres:belongsTo, https://example.org/recurso/municipality/$(Municipio)~iri]
       - [edintres:managesWasteType, wastetype:$(Tipo de residuo normalizado)~iri]
 
   ContactPoint:
     sources:
       - wasteManagementFacility-source
-    s: https://w3id.org/medioambiente/recurso/residuos/contactPoint/$(Número de registro)
+    s: https://example.org/recurso/contactPoint/$(Número de registro)
     po:
       - [a, schema:ContactPoint]
       - [schema:telephone, $(Teléfono), xsd:string]
@@ -49,7 +49,7 @@ mappings:
     s: managementscope:$(Alcance de la gestión normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:WasteManagementScope~iri]
+      - [skos:inScheme, edintkos:WasteManagementScope~iri]
       - [skos:prefLabel, $(Alcance de la gestión), es~lang]
 
   TreatmentProcessConcept:
@@ -58,29 +58,29 @@ mappings:
     s: treatmentprocess:$(Proceso de tratamiento normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:WasteTreatmentProcess~iri]
+      - [skos:inScheme, edintkos:WasteTreatmentProcess~iri]
       - [skos:prefLabel, $(Descripción del proceso), es~lang]
 
   DireccionPostal:
     sources:
       - wasteManagementFacility-source
-    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Número de registro)
+    s: https://example.org/recurso/address/$(Número de registro)
     po:
       - [a, esdir:DireccionPostal]
 
   Municipality:
     sources:
       - wasteManagementFacility-source
-    s: https://w3id.org/medioambiente/recurso/residuos/municipality/$(Municipio)
+    s: https://example.org/recurso/municipality/$(Municipio)
     po:
       - [a, esadm:Municipio]
-      - [esadm:perteneceAProvincia, https://w3id.org/medioambiente/recurso/residuos/province/$(Provincia)~iri]
+      - [esadm:perteneceAProvincia, https://example.org/recurso/province/$(Provincia)~iri]
       - [rdfs:label, $(Municipio), es~lang]
 
   Province:
     sources:
       - wasteManagementFacility-source
-    s: https://w3id.org/medioambiente/recurso/residuos/province/$(Provincia)
+    s: https://example.org/recurso/province/$(Provincia)
     po:
       - [a, esadm:Provincia]
       - [rdfs:label, $(Provincia), es~lang]
@@ -91,6 +91,6 @@ mappings:
     s: wastetype:$(Tipo de residuo normalizado)
     po:
       - [a, skos:Concept]
-      - [skos:inScheme, wastekos:WasteType~iri]
+      - [skos:inScheme, edintkos:WasteType~iri]
       - [skos:prefLabel, $(Descripción del residuo), es~lang]
       - [skos:notation, $(Código LER de residuo), xsd:string]

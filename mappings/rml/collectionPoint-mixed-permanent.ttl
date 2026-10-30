@@ -86,19 +86,19 @@ map:om_007 rml:reference "Fecha de última actualización" ;
 	rr:termType rr:Literal .
 
 map:om_008 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Identificador}" ;
+	rr:template "https://example.org/recurso/contactPoint/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_009 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Identificador}" ;
+	rr:template "https://example.org/recurso/address/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_010 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" ;
+	rr:template "https://example.org/recurso/district/{Distrito}" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/permanent/{Identificador}" ;
+	rr:template "https://example.org/recurso/geometry/collectionPoint/permanent/{Identificador}" ;
 	rr:termType rr:IRI .
 
 map:om_012 rdf:type rr:ObjectMap ;
@@ -269,19 +269,19 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_ContactPoint_000
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/collectionPoint/permanent/{Identificador}" .
+	rr:template "https://example.org/recurso/collectionPoint/permanent/{Identificador}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/contactPoint/{Identificador}" .
+	rr:template "https://example.org/recurso/contactPoint/{Identificador}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/address/{Identificador}" .
+	rr:template "https://example.org/recurso/address/{Identificador}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/district/{Distrito}" .
+	rr:template "https://example.org/recurso/district/{Distrito}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/permanent/{Identificador}" .
+	rr:template "https://example.org/recurso/geometry/collectionPoint/permanent/{Identificador}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "dataset-enriquecido-3-p.csv" ;
