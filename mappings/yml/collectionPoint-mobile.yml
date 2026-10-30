@@ -14,27 +14,27 @@ mappings:
   MobileCollectionPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/collectionPoint/mobile/$(Identificador normalizado)
+    s: https://example.org/recurso/collectionPoint/mobile/$(Identificador normalizado)
     po:
       - [a, edintres:MobileCollectionPoint]
       - [schema:openingHours, $(Día de la semana) $(Turno) $(Hora de inicio)-$(Hora de fin), xsd:string]
       - [edintres:admissibleWasteURL, $(Residuos admisibles), xsd:anyURI]
       - [schema:map, $(Google Maps), xsd:anyURI]
-      - [schema:address, https://w3id.org/medioambiente/recurso/residuos/address/$(Ubicación normalizada)~iri]
-      - [edintres:belongsTo, https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)~iri]
-      - [gsp:hasGeometry, https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Ubicación normalizada)~iri]
+      - [schema:address, https://example.org/recurso/address/$(Ubicación normalizada)~iri]
+      - [edintres:belongsTo, https://example.org/recurso/district/$(Distrito)~iri]
+      - [gsp:hasGeometry, https://example.org/recurso/geometry/collectionPoint/mobile/$(Ubicación normalizada)~iri]
 
   DireccionPostal:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/address/$(Ubicación normalizada)
+    s: https://example.org/recurso/address/$(Ubicación normalizada)
     po:
       - [a, esdir:DireccionPostal]
 
   District:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/district/$(Distrito)
+    s: https://example.org/recurso/district/$(Distrito)
     po:
       - [a, esadm:Distrito]
       - [rdfs:label, $(Distrito), es~lang]
@@ -42,7 +42,7 @@ mappings:
   GeometryMobileCollectionPoint:
     sources:
       - mobileCollectionPoint-source
-    s: https://w3id.org/medioambiente/recurso/residuos/geometry/collectionPoint/mobile/$(Ubicación normalizada)
+    s: https://example.org/recurso/geometry/collectionPoint/mobile/$(Ubicación normalizada)
     po:
       - [a, gsp:Geometry]
       - [gsp:asWKT, "POINT($(Longitud) $(Latitud))", gsp:wktLiteral]
