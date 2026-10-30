@@ -17,7 +17,7 @@
                                           <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en ,
                                                                                  "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."@es ;
                                           <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
-                                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                           <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                           <http://purl.org/dc/terms/publisher> _:genid2 ;
                                           <http://purl.org/dc/terms/title> "EDINT Waste Management Ontology"@en ,
