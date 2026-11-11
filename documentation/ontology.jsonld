@@ -109,13 +109,13 @@
   "@id" : "_:genid3",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Postal Address (esdir)"
+    "@value" : "Infrastructure (edintinf)"
   }, {
     "@language" : "es",
-    "@value" : "Dirección Postal (esdir)"
+    "@value" : "Infraestructura (edintinf)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
   } ]
 }, {
   "@id" : "_:genid30",
@@ -187,14 +187,14 @@
 }, {
   "@id" : "_:genid4",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Territory (esadm)"
-  }, {
     "@language" : "es",
-    "@value" : "Territorio (esadm)"
+    "@value" : "GeoSPARQL"
+  }, {
+    "@language" : "en",
+    "@value" : "GeoSPARQL"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+    "@id" : "http://www.opengis.net/ont/geosparql"
   } ]
 }, {
   "@id" : "_:genid40",
@@ -219,26 +219,26 @@
 }, {
   "@id" : "_:genid5",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "GeoSPARQL"
-  }, {
     "@language" : "en",
-    "@value" : "GeoSPARQL"
+    "@value" : "Territory (esadm)"
+  }, {
+    "@language" : "es",
+    "@value" : "Territorio (esadm)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql"
+    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ]
 }, {
   "@id" : "_:genid6",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Infrastructure (edintinf)"
+    "@value" : "Postal Address (esdir)"
   }, {
     "@language" : "es",
-    "@value" : "Infraestructura (edintinf)"
+    "@value" : "Dirección Postal (esdir)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
+    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -378,7 +378,7 @@
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://edint.es/def/gestion-residuos#",
+  "@id" : "https://edint.es/def/gestion-residuos",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "es",
@@ -429,7 +429,7 @@
     "@value" : "edintres"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://edint.es/def/gestion-residuos#"
+    "@value" : "https://edint.es/def/gestion-residuos#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",

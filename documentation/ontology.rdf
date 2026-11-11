@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos#">
+    <owl:Ontology rdf:about="https://edint.es/def/gestion-residuos">
         <owl:versionIRI rdf:resource="https://edint.es/def/gestion-residuos/0.1.1"/>
         <terms:abstract xml:lang="es">El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de los elementos asociados a la gestión de residuos, incluyendo su tipología, su depósito en contenedores y puntos de recogida, su tratamiento en instalaciones y su localización. Su alcance se limita a los datos de carácter administrativo y estructural: quedan fuera del modelo los aspectos relativos a la gestión operativa o al funcionamiento detallado de los servicios, que podrían ser incorporados en futuras extensiones de la ontología.</terms:abstract>
         <terms:abstract xml:lang="en">The purpose of this ontology is to provide a common vocabulary for representing the elements associated with waste management, including waste types, their deposit in containers and collection points, their treatment in facilities and their location. Its scope is limited to administrative and structural data; aspects related to operational management or the detailed operation of the services fall outside the model, although they could be addressed through future extensions of the ontology.</terms:abstract>
@@ -28,7 +28,7 @@
         <terms:title xml:lang="en">EDINT Waste Management Ontology</terms:title>
         <terms:title xml:lang="es">Ontología EDINT de Gestión de Residuos</terms:title>
         <vann:preferredNamespacePrefix>edintres</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/gestion-residuos#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/gestion-residuos#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="es">Gestión de Residuos</rdfs:label>
         <rdfs:label xml:lang="en">Waste Management</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-gestion-residuos/releases/tag/v0.1.0"/>
@@ -56,24 +56,24 @@
         <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
-        <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
-        <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+        <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+        <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid4">
-        <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
-        <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid5">
         <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
         <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
         <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
     </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
+        <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+    </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
-        <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
-        <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"/>
+        <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+        <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
     </rdf:Description>
     
 
