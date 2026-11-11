@@ -9,6 +9,25 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://edint.es/kos/WasteType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
@@ -19,23 +38,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://edint.es/def/gestion-residuos#CollectionPoint"
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
-    }, {
-      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+      "@id" : "_:genid20"
     } ]
   } ]
 }, {
@@ -50,31 +59,133 @@
     "@value" : "Federación Española de Municipios y Provincias"
   } ]
 }, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://edint.es/kos/WasteManagementScope"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid24"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://edint.es/kos/WasteTreatmentProcess"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid28"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://edint.es/kos/WasteType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
   "@id" : "_:genid3",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Infrastructure (edintinf)"
+    "@value" : "Postal Address (esdir)"
   }, {
     "@language" : "es",
+    "@value" : "Dirección Postal (esdir)"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://edint.es/def/gestion-residuos#CollectionPoint"
+    }, {
+      "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
+    }, {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.femp.es/"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "FEMP"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@value" : "Federación Española de Municipios y Provincias"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
     "@value" : "Infraestructura (edintinf)"
+  }, {
+    "@language" : "en",
+    "@value" : "Infrastructure (edintinf)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid38",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
+    "@language" : "en",
     "@value" : "GeoSPARQL"
   }, {
-    "@language" : "en",
+    "@language" : "es",
     "@value" : "GeoSPARQL"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid39",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Territorio (esadm)"
+  }, {
+    "@language" : "en",
+    "@value" : "Territory (esadm)"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ]
+}, {
+  "@id" : "_:genid4",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Territory (esadm)"
@@ -86,16 +197,48 @@
     "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid40",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Postal Address (esdir)"
-  }, {
     "@language" : "es",
     "@value" : "Dirección Postal (esdir)"
+  }, {
+    "@language" : "en",
+    "@value" : "Postal Address (esdir)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
     "@id" : "https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Laura Gilgado Romero"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "GeoSPARQL"
+  }, {
+    "@language" : "en",
+    "@value" : "GeoSPARQL"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Infrastructure (edintinf)"
+  }, {
+    "@language" : "es",
+    "@value" : "Infraestructura (edintinf)"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -129,14 +272,12 @@
     "@id" : "https://edint.es/def/gestion-residuos#CollectionPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
-}, {
-  "@id" : "http://purl.org/dc/terms/issued",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -155,12 +296,6 @@
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Facility"
-  } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -234,6 +369,9 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
   } ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -270,12 +408,8 @@
     "@language" : "es",
     "@value" : "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."
   } ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-17"
-  } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+    "@id" : "https://creativecommons.org/licenses/by-sa/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -350,7 +484,18 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#CollectionPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Es una instalación donde se recogen y almacenan temporalmente y de forma gratuita los residuos domésticos que, por su gran volumen o peligrosidad, no deben arrojarse a la bolsa de la basura ni depositarse en los contenedores de la calle."
+  }, {
+    "@language" : "en",
+    "@value" : "It is a facility where household waste is collected and temporarily stored free of charge—waste that, due to its large volume or hazardous nature, should not be thrown into regular trash bags or deposited in street-side bins."
+  }, {
+    "@language" : "de",
+    "@value" : "Punto limpio"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Collection Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -377,7 +522,18 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#WasteContainer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Contenedor de residuos"
+  }, {
+    "@language" : "es",
+    "@value" : "Es un recipiente usado para almacenamiento temporal de basuras que está normalmente hecho de metal o plástico."
+  }, {
+    "@language" : "en",
+    "@value" : "It is a container used for the temporary storage of waste, typically made of metal or plastic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Waste Container"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -386,18 +542,40 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#WasteFacility",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A facility intended for the collection, treatment, transport, or storage of garbage and other waste."
+  }, {
+    "@language" : "es",
+    "@value" : "Equipamiento destinado a la  recogida, tratamiento, transporte o almacenamiento de la basura y otros desechos."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Equipamiento de Residuos"
+  }, {
+    "@language" : "en",
     "@value" : "Waste Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  }, {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A designated site or structure equipped to handle, process, treat, store, or dispose of various types of waste. For example, a landfill or a recycling and processing center."
+  }, {
+    "@language" : "es",
+    "@value" : "Equipamiento para la gestión de residuos"
+  }, {
+    "@language" : "es",
+    "@value" : "Un sitio o estructura designada y equipada para gestionar, procesar, tratar, almacenar o eliminar diversos tipos de residuos. Por ejemplo, un vertedero o un centro de reciclaje y procesamiento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Waste Management Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -406,14 +584,25 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#acceptsWasteType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A container or a collection point accepts specific types of waste."
+  }, {
+    "@language" : "es",
+    "@value" : "Un contenedor o un punto limpio aceptan determinados tipos de residuos."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "accepts waste type"
+  }, {
+    "@language" : "es",
+    "@value" : "acepta tipo de residuo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#admissibleWasteURL",
@@ -422,6 +611,10 @@
     "@id" : "https://edint.es/def/gestion-residuos#MobileCollectionPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "URL de residuos admisibles."
+  }, {
+    "@language" : "en",
     "@value" : "admissible waste url"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -430,23 +623,45 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A waste management facility belongs to a neighborhood, district, or municipality."
+  }, {
+    "@language" : "es",
+    "@value" : "Un equipamiento para residuos pertenece a un barrio, distrito o municipio."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "belongs to"
+  }, {
+    "@language" : "es",
+    "@value" : "pertenece a"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#containerBatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specific, grouped quantity of waste units."
+  }, {
+    "@language" : "es",
+    "@value" : "Una cantidad específica y agrupada de unidades de residuos."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteContainer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "container batch"
+  }, {
+    "@language" : "es",
+    "@value" : "grupo de contenedores"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -454,11 +669,22 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#containerLocationCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Identificador específico utilizado en los sistemas de gestión de residuos."
+  }, {
+    "@language" : "en",
+    "@value" : "Specific identifier used in waste management systems."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteContainer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "container location code"
+  }, {
+    "@language" : "es",
+    "@value" : "código de ubicación del contenedor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -470,7 +696,11 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteContainer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "container type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de contenedor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -478,26 +708,48 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#hasManagementScope",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Alcance de gestión asociados a centros de gestión de residuos, por ejemplo el almacenamiento de residuos metálicos de plomo."
+  }, {
+    "@language" : "en",
+    "@value" : "Management scope associated with waste management facilities, for example, the storage of lead-based metal waste."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has management scope"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene ámbito de gestión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#hasTreatmentProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of physical, chemical, or biological operations designed to modify the characteristics of waste in order to reduce its hazardousness, recover the materials it contains, or facilitate its safe disposal."
+  }, {
+    "@language" : "es",
+    "@value" : "Conjunto de operaciones físicas, químicas o biológicas destinadas a modificar las características de los desechos para reducir su peligrosidad, aprovechar los materiales que contienen o facilitar su eliminación segura."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has treatment process"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene proceso de tratamiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager",
@@ -506,6 +758,10 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es gestor de residuos de demolición de construcción"
+  }, {
+    "@language" : "en",
     "@value" : "is construction demolition waste manager"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -518,6 +774,10 @@
     "@id" : "https://edint.es/def/gestion-residuos#CollectionPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es de propiedad pública"
+  }, {
+    "@language" : "en",
     "@value" : "is publicly owned"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -530,7 +790,11 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteContainer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "loading type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de carga"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -538,14 +802,25 @@
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#managesWasteType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el equipamiento para gestión de residuos y el tipo de residuos que gestiona."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between waste management equipment and the type of waste managed."
+  }, {
+    "@language" : "es",
+    "@value" : "gestiona tipo de residuo"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "manages waste type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "https://edint.es/def/gestion-residuos#nif",
@@ -554,7 +829,11 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "nif"
+    "@language" : "es",
+    "@value" : "Número de identificación fiscal (NIF)"
+  }, {
+    "@language" : "en",
+    "@value" : "Tax Identification Number (NIF)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -566,7 +845,11 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "nima"
+    "@language" : "en",
+    "@value" : "Environmental Identification Number (NIMA)"
+  }, {
+    "@language" : "es",
+    "@value" : "Número de Identificación Medioambiental (NIMA)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -578,6 +861,10 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteContainer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "orden"
+  }, {
+    "@language" : "en",
     "@value" : "order"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -590,6 +877,10 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "número de registro"
+  }, {
+    "@language" : "en",
     "@value" : "registration number"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -602,10 +893,20 @@
     "@id" : "https://edint.es/def/gestion-residuos#WasteManagementFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "registration type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de registro"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Facility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Facility"
   } ]
 }, {
   "@id" : "https://edint.es/kos/WasteManagementScope",
@@ -627,6 +928,7 @@
   } ]
 }, {
   "@id" : "https://oeg.fi.upm.es/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Ontology Engineering Group, UPM"
   } ]
@@ -658,7 +960,7 @@
   "@id" : "https://schema.org/contactPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid30"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contact point"
@@ -832,7 +1134,7 @@
   "@id" : "https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#perteneceAlMunicipio",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid33"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "pertenece al municipio"

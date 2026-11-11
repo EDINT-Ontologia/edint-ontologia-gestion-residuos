@@ -16,7 +16,6 @@
                                           <http://purl.org/dc/terms/creator> _:genid1 ;
                                           <http://purl.org/dc/terms/description> "Ontology that describes the elements associated with waste management, including facilities, containers and collection points."@en ,
                                                                                  "Ontología que describe los elementos asociados a la gestión de residuos, incluyendo centros, contenedores y puntos limpios."@es ;
-                                          <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                           <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                           <http://purl.org/dc/terms/publisher> _:genid2 ;
@@ -48,21 +47,21 @@ _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
           <http://xmlns.com/foaf/0.1/name> "FEMP" ;
           <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 
-_:genid3 rdfs:label "Infraestructura (edintinf)"@es ,
-                     "Infrastructure (edintinf)"@en ;
-          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura> .
+_:genid3 rdfs:label "Dirección Postal (esdir)"@es ,
+                     "Postal Address (esdir)"@en ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
 
-_:genid4 rdfs:label "GeoSPARQL"@en ,
-                     "GeoSPARQL"@es ;
-          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
-
-_:genid5 rdfs:label "Territorio (esadm)"@es ,
+_:genid4 rdfs:label "Territorio (esadm)"@es ,
                      "Territory (esadm)"@en ;
           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
 
-_:genid6 rdfs:label "Dirección Postal (esdir)"@es ,
-                     "Postal Address (esdir)"@en ;
-          <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+_:genid5 rdfs:label "GeoSPARQL"@en ,
+                     "GeoSPARQL"@es ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+
+_:genid6 rdfs:label "Infraestructura (edintinf)"@es ,
+                     "Infrastructure (edintinf)"@en ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura> .
 
 #################################################################
 #    Annotation properties
@@ -86,10 +85,6 @@ _:genid6 rdfs:label "Dirección Postal (esdir)"@es ,
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -213,8 +208,18 @@ xsd:date rdf:type rdfs:Datatype .
                                               :WasteContainer
                                             )
                               ] ;
-                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                  rdfs:label "accepts waste type" .
+                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:hasValue <https://edint.es/kos/WasteType>
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+                  rdfs:comment "A container or a collection point accepts specific types of waste."@en ,
+                               "Un contenedor o un punto limpio aceptan determinados tipos de residuos."@es ;
+                  rdfs:label "accepts waste type"@en ,
+                             "acepta tipo de residuo"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#belongsTo
@@ -226,28 +231,61 @@ xsd:date rdf:type rdfs:Datatype .
                                       <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio>
                                     )
                       ] ;
-           rdfs:label "belongs to" .
+           rdfs:comment "A waste management facility belongs to a neighborhood, district, or municipality."@en ,
+                        "Un equipamiento para residuos pertenece a un barrio, distrito o municipio."@es ;
+           rdfs:label "belongs to"@en ,
+                      "pertenece a"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#hasManagementScope
 :hasManagementScope rdf:type owl:ObjectProperty ;
                     rdfs:domain :WasteManagementFacility ;
-                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                    rdfs:label "has management scope" .
+                    rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                        owl:hasValue <https://edint.es/kos/WasteManagementScope>
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                    rdfs:comment "Alcance de gestión asociados a centros de gestión de residuos, por ejemplo el almacenamiento de residuos metálicos de plomo."@es ,
+                                 "Management scope associated with waste management facilities, for example, the storage of lead-based metal waste."@en ;
+                    rdfs:label "has management scope"@en ,
+                               "tiene ámbito de gestión"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#hasTreatmentProcess
 :hasTreatmentProcess rdf:type owl:ObjectProperty ;
                      rdfs:domain :WasteManagementFacility ;
-                     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                     rdfs:label "has treatment process" .
+                     rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                         owl:hasValue <https://edint.es/kos/WasteTreatmentProcess>
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                     rdfs:comment "A set of physical, chemical, or biological operations designed to modify the characteristics of waste in order to reduce its hazardousness, recover the materials it contains, or facilitate its safe disposal."@en ,
+                                  "Conjunto de operaciones físicas, químicas o biológicas destinadas a modificar las características de los desechos para reducir su peligrosidad, aprovechar los materiales que contienen o facilitar su eliminación segura."@es ;
+                     rdfs:label "has treatment process"@en ,
+                                "tiene proceso de tratamiento"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#managesWasteType
 :managesWasteType rdf:type owl:ObjectProperty ;
                   rdfs:domain :WasteManagementFacility ;
-                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                  rdfs:label "manages waste type" .
+                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:hasValue <https://edint.es/kos/WasteType>
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+                  rdfs:comment "Relación entre el equipamiento para gestión de residuos y el tipo de residuos que gestiona."@es ,
+                               "Relationship between waste management equipment and the type of waste managed."@en ,
+                               "gestiona tipo de residuo"@es ;
+                  rdfs:label "manages waste type"@en .
 
 
 ###  https://schema.org/address
@@ -294,7 +332,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain :CollectionPoint ;
                                       rdfs:range xsd:string ;
-                                      rdfs:label "identifier" .
+                                      rdfs:label "identifier"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#asWKT
@@ -308,84 +346,100 @@ xsd:date rdf:type rdfs:Datatype .
 :admissibleWasteURL rdf:type owl:DatatypeProperty ;
                     rdfs:domain :MobileCollectionPoint ;
                     rdfs:range xsd:anyURI ;
-                    rdfs:label "admissible waste url" .
+                    rdfs:label "URL de residuos admisibles."@en ,
+                               "admissible waste url"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#containerBatch
 :containerBatch rdf:type owl:DatatypeProperty ;
                 rdfs:domain :WasteContainer ;
                 rdfs:range xsd:int ;
-                rdfs:label "container batch" .
+                rdfs:comment "A specific, grouped quantity of waste units."@en ,
+                             "Una cantidad específica y agrupada de unidades de residuos."@es ;
+                rdfs:label "container batch"@en ,
+                           "grupo de contenedores"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#containerLocationCode
 :containerLocationCode rdf:type owl:DatatypeProperty ;
                        rdfs:domain :WasteContainer ;
                        rdfs:range xsd:string ;
-                       rdfs:label "container location code" .
+                       rdfs:comment "Identificador específico utilizado en los sistemas de gestión de residuos."@es ,
+                                    "Specific identifier used in waste management systems."@en ;
+                       rdfs:label "container location code"@en ,
+                                  "código de ubicación del contenedor."@es .
 
 
 ###  https://edint.es/def/gestion-residuos#containerType
 :containerType rdf:type owl:DatatypeProperty ;
                rdfs:domain :WasteContainer ;
                rdfs:range xsd:string ;
-               rdfs:label "container type" .
+               rdfs:label "container type"@en ,
+                          "tipo de contenedor"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager
 :isConstructionDemolitionWasteManager rdf:type owl:DatatypeProperty ;
                                       rdfs:domain :WasteManagementFacility ;
                                       rdfs:range xsd:boolean ;
-                                      rdfs:label "is construction demolition waste manager" .
+                                      rdfs:label "es gestor de residuos de demolición de construcción"@es ,
+                                                 "is construction demolition waste manager"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#isPubliclyOwned
 :isPubliclyOwned rdf:type owl:DatatypeProperty ;
                  rdfs:domain :CollectionPoint ;
                  rdfs:range xsd:boolean ;
-                 rdfs:label "is publicly owned" .
+                 rdfs:label "es de propiedad pública"@es ,
+                            "is publicly owned"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#loadingType
 :loadingType rdf:type owl:DatatypeProperty ;
              rdfs:domain :WasteContainer ;
              rdfs:range xsd:string ;
-             rdfs:label "loading type" .
+             rdfs:label "loading type"@en ,
+                        "tipo de carga"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#nif
 :nif rdf:type owl:DatatypeProperty ;
      rdfs:domain :WasteManagementFacility ;
      rdfs:range xsd:string ;
-     rdfs:label "nif" .
+     rdfs:label "Número de identificación fiscal (NIF)"@es ,
+                "Tax Identification Number (NIF)"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#nima
 :nima rdf:type owl:DatatypeProperty ;
       rdfs:domain :WasteManagementFacility ;
       rdfs:range xsd:string ;
-      rdfs:label "nima" .
+      rdfs:label "Environmental Identification Number (NIMA)"@en ,
+                 "Número de Identificación Medioambiental (NIMA)"@es .
 
 
 ###  https://edint.es/def/gestion-residuos#order
 :order rdf:type owl:DatatypeProperty ;
        rdfs:domain :WasteContainer ;
        rdfs:range xsd:int ;
-       rdfs:label "order" .
+       rdfs:label "orden"@es ,
+                  "order"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#registrationNumber
 :registrationNumber rdf:type owl:DatatypeProperty ;
                     rdfs:domain :WasteManagementFacility ;
                     rdfs:range xsd:string ;
-                    rdfs:label "registration number" .
+                    rdfs:label "número de registro"@es ,
+                               "registration number"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#registrationType
 :registrationType rdf:type owl:DatatypeProperty ;
                   rdfs:domain :WasteManagementFacility ;
                   rdfs:range xsd:string ;
-                  rdfs:label "registration type" .
+                  rdfs:label "registration type"@en ,
+                             "tipo de registro"@es .
 
 
 ###  https://schema.org/dateCreated
@@ -462,11 +516,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> rdf:type owl:Class ;
-                                                                                                   rdfs:label "Facility" .
-
-
 ###  http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
                                                rdfs:label "Feature" .
@@ -487,10 +536,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                     rdfs:label "Concept Scheme" .
 
 
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
 ###  https://edint.es/def/gestion-residuos#CollectionPoint
 :CollectionPoint rdf:type owl:Class ;
                  rdfs:subClassOf :WasteFacility ;
-                 rdfs:label "Collection Point" .
+                 rdfs:comment "Es una instalación donde se recogen y almacenan temporalmente y de forma gratuita los residuos domésticos que, por su gran volumen o peligrosidad, no deben arrojarse a la bolsa de la basura ni depositarse en los contenedores de la calle."@es ,
+                              "It is a facility where household waste is collected and temporarily stored free of charge—waste that, due to its large volume or hazardous nature, should not be thrown into regular trash bags or deposited in street-side bins."@en ,
+                              "Punto limpio"@de ;
+                 rdfs:label "Collection Point"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#MobileCollectionPoint
@@ -508,20 +564,34 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://edint.es/def/gestion-residuos#WasteContainer
 :WasteContainer rdf:type owl:Class ;
                 rdfs:subClassOf :WasteFacility ;
-                rdfs:label "Waste Container" .
+                rdfs:comment "Contenedor de residuos"@es ,
+                             "Es un recipiente usado para almacenamiento temporal de basuras que está normalmente hecho de metal o plástico."@es ,
+                             "It is a container used for the temporary storage of waste, typically made of metal or plastic."@en ;
+                rdfs:label "Waste Container"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#WasteFacility
 :WasteFacility rdf:type owl:Class ;
-               rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> ,
-                               <http://www.opengis.net/ont/geosparql#Feature> ;
-               rdfs:label "Waste Facility" .
+               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                               <https://edint.es/def/infraestructura#Facility> ;
+               rdfs:comment "A facility intended for the collection, treatment, transport, or storage of garbage and other waste."@en ,
+                            "Equipamiento destinado a la  recogida, tratamiento, transporte o almacenamiento de la basura y otros desechos."@es ;
+               rdfs:label "Equipamiento de Residuos"@es ,
+                          "Waste Facility"@en .
 
 
 ###  https://edint.es/def/gestion-residuos#WasteManagementFacility
 :WasteManagementFacility rdf:type owl:Class ;
                          rdfs:subClassOf :WasteFacility ;
-                         rdfs:label "Waste Management Facility" .
+                         rdfs:comment "A designated site or structure equipped to handle, process, treat, store, or dispose of various types of waste. For example, a landfill or a recycling and processing center."@en ,
+                                      "Equipamiento para la gestión de residuos"@es ,
+                                      "Un sitio o estructura designada y equipada para gestionar, procesar, tratar, almacenar o eliminar diversos tipos de residuos. Por ejemplo, un vertedero o un centro de reciclaje y procesamiento."@es ;
+                         rdfs:label "Waste Management Facility"@en .
+
+
+###  https://edint.es/def/infraestructura#Facility
+<https://edint.es/def/infraestructura#Facility> rdf:type owl:Class ;
+                                                rdfs:label "Facility" .
 
 
 ###  https://schema.org/ContactPoint
@@ -573,11 +643,32 @@ xsd:date rdf:type rdfs:Datatype .
                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
-#################################################################
-#    Annotations
-#################################################################
+###  https://oeg.fi.upm.es/
+<https://oeg.fi.upm.es/> rdf:type owl:NamedIndividual ;
+                         <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 
-<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 
+_:genid36 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "FEMP" ;
+          <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
+
+_:genid37 rdfs:label "Infraestructura (edintinf)"@es ,
+                      "Infrastructure (edintinf)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura> .
+
+_:genid38 rdfs:label "GeoSPARQL"@en ,
+                      "GeoSPARQL"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+
+_:genid39 rdfs:label "Territorio (esadm)"@es ,
+                      "Territory (esadm)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+
+_:genid40 rdfs:label "Dirección Postal (esdir)"@es ,
+                      "Postal Address (esdir)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+
+_:genid41 <http://xmlns.com/foaf/0.1/name> "Laura Gilgado Romero" ;
+           <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
