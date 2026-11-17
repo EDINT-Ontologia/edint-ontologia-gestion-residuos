@@ -10,7 +10,7 @@ This section provides details for each class and property defined by Waste Manag
   <li><a href="#https://schema.org/ContactPoint" title="https://schema.org/ContactPoint">Contact Point</a></li>
   <li><a href="#https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal" title="https://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">Direccion Postal</a></li>
   <li><a href="#https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito" title="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">Distrito</a></li>
-  <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Facility</a></li>
+  <li><a href="#https://edint.es/def/infraestructura#Facility" title="https://edint.es/def/infraestructura#Facility">Facility</a></li>
   <li><a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a></li>
   <li><a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a></li>
   <li><a href="#MobileCollectionPoint" title="https://edint.es/def/gestion-residuos#MobileCollectionPoint">Mobile Collection Point</a></li>
@@ -38,6 +38,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="CollectionPoint">
   <h3>Collection Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#CollectionPoint</p>
+  <div class="comment">
+   <span class="markdown">It is a facility where household waste is collected and temporarily stored free of charge—waste that, due to its large volume or hazardous nature, should not be thrown into regular trash bags or deposited in street-side bins.</span>
+  </div>
   <dl class="description">
    <dt>has super-classes</dt>
    <dd>
@@ -60,10 +63,6 @@ This section provides details for each class and property defined by Waste Manag
    <dt>is in domain of</dt>
    <dd>
     <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>is in range of</dt>
-   <dd>
-    <a href="#acceptsWasteType" title="https://edint.es/def/gestion-residuos#acceptsWasteType">accepts waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManagementScope" title="https://edint.es/def/gestion-residuos#hasManagementScope">has management scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTreatmentProcess" title="https://edint.es/def/gestion-residuos#hasTreatmentProcess">has treatment process</a> <sup class="type-op" title="object property">op</sup>, <a href="#managesWasteType" title="https://edint.es/def/gestion-residuos#managesWasteType">manages waste type</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -119,9 +118,9 @@ This section provides details for each class and property defined by Waste Manag
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">
+ <div class="entity" id="https://edint.es/def/infraestructura#Facility">
   <h3>Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility</p>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#Facility</p>
   <dl class="description">
    <dt>has sub-classes</dt>
    <dd>
@@ -167,7 +166,7 @@ This section provides details for each class and property defined by Waste Manag
    </dd>
    <dt>is in domain of</dt>
    <dd>
-    <a href="#admissibleWasteURL" title="https://edint.es/def/gestion-residuos#admissibleWasteURL">admissible waste url</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/map" title="https://schema.org/map">map</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#admissibleWasteURL" title="https://edint.es/def/gestion-residuos#admissibleWasteURL">URL de residuos admisibles.</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/map" title="https://schema.org/map">map</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -208,6 +207,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="WasteContainer">
   <h3>Waste Container<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#WasteContainer</p>
+  <div class="comment">
+   <span class="markdown">It is a container used for the temporary storage of waste, typically made of metal or plastic.</span>
+  </div>
   <dl class="description">
    <dt>has super-classes</dt>
    <dd>
@@ -222,10 +224,13 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="WasteFacility">
   <h3>Waste Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#WasteFacility</p>
+  <div class="comment">
+   <span class="markdown">A facility intended for the collection, treatment, transport, or storage of garbage and other waste.</span>
+  </div>
   <dl class="description">
    <dt>has super-classes</dt>
    <dd>
-    <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility">Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://edint.es/def/infraestructura#Facility" title="https://edint.es/def/infraestructura#Facility">Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>has sub-classes</dt>
    <dd>
@@ -240,6 +245,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="WasteManagementFacility">
   <h3>Waste Management Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#WasteManagementFacility</p>
+  <div class="comment">
+   <span class="markdown">A designated site or structure equipped to handle, process, treat, store, or dispose of various types of waste. For example, a landfill or a recycling and processing center.</span>
+  </div>
   <dl class="description">
    <dt>has super-classes</dt>
    <dd>
@@ -247,7 +255,7 @@ This section provides details for each class and property defined by Waste Manag
    </dd>
    <dt>is in domain of</dt>
    <dd>
-    <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManagementScope" title="https://edint.es/def/gestion-residuos#hasManagementScope">has management scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTreatmentProcess" title="https://edint.es/def/gestion-residuos#hasTreatmentProcess">has treatment process</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConstructionDemolitionWasteManager" title="https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager">is construction demolition waste manager</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/legalName" title="https://schema.org/legalName">legal name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#managesWasteType" title="https://edint.es/def/gestion-residuos#managesWasteType">manages waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#nif" title="https://edint.es/def/gestion-residuos#nif">nif</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#nima" title="https://edint.es/def/gestion-residuos#nima">nima</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationNumber" title="https://edint.es/def/gestion-residuos#registrationNumber">registration number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationType" title="https://edint.es/def/gestion-residuos#registrationType">registration type</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#nima" title="https://edint.es/def/gestion-residuos#nima">Environmental Identification Number (NIMA)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#nif" title="https://edint.es/def/gestion-residuos#nif">Tax Identification Number (NIF)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">contact point</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManagementScope" title="https://edint.es/def/gestion-residuos#hasManagementScope">has management scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTreatmentProcess" title="https://edint.es/def/gestion-residuos#hasTreatmentProcess">has treatment process</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConstructionDemolitionWasteManager" title="https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager">is construction demolition waste manager</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/legalName" title="https://schema.org/legalName">legal name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#managesWasteType" title="https://edint.es/def/gestion-residuos#managesWasteType">manages waste type</a> <sup class="type-op" title="object property">op</sup>, <a href="#registrationNumber" title="https://edint.es/def/gestion-residuos#registrationNumber">registration number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationType" title="https://edint.es/def/gestion-residuos#registrationType">registration type</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -269,6 +277,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="acceptsWasteType">
   <h3>accepts waste type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#acceptsWasteType</p>
+  <div class="comment">
+   <span class="markdown">A container or a collection point accepts specific types of waste.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -277,7 +288,7 @@ This section provides details for each class and property defined by Waste Manag
     </dd>
     <dt>has range</dt>
     <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/WasteType" title="https://edint.es/kos/WasteType">Waste Type</a> <sup class="type-ni" title="named individual">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -301,6 +312,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="belongsTo">
   <h3>belongs to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#belongsTo</p>
+  <div class="comment">
+   <span class="markdown">A waste management facility belongs to a neighborhood, district, or municipality.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -349,6 +363,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="hasManagementScope">
   <h3>has management scope<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#hasManagementScope</p>
+  <div class="comment">
+   <span class="markdown">Management scope associated with waste management facilities, for example, the storage of lead-based metal waste.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -357,7 +374,7 @@ This section provides details for each class and property defined by Waste Manag
     </dd>
     <dt>has range</dt>
     <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/WasteManagementScope" title="https://edint.es/kos/WasteManagementScope">Waste Management Scope</a> <sup class="type-ni" title="named individual">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -365,6 +382,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="hasTreatmentProcess">
   <h3>has treatment process<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#hasTreatmentProcess</p>
+  <div class="comment">
+   <span class="markdown">A set of physical, chemical, or biological operations designed to modify the characteristics of waste in order to reduce its hazardousness, recover the materials it contains, or facilitate its safe disposal.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -373,7 +393,7 @@ This section provides details for each class and property defined by Waste Manag
     </dd>
     <dt>has range</dt>
     <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/WasteTreatmentProcess" title="https://edint.es/kos/WasteTreatmentProcess">Waste Treatment Process</a> <sup class="type-ni" title="named individual">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -397,6 +417,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="managesWasteType">
   <h3>manages waste type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#managesWasteType</p>
+  <div class="comment">
+   <span class="markdown">Relationship between waste management equipment and the type of waste managed.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -405,7 +428,7 @@ This section provides details for each class and property defined by Waste Manag
     </dd>
     <dt>has range</dt>
     <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/WasteType" title="https://edint.es/kos/WasteType">Waste Type</a> <sup class="type-ni" title="named individual">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -445,7 +468,6 @@ This section provides details for each class and property defined by Waste Manag
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#admissibleWasteURL" title="https://edint.es/def/gestion-residuos#admissibleWasteURL">admissible waste url</a></li>
   <li><a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">as wkt</a></li>
   <li><a href="#containerBatch" title="https://edint.es/def/gestion-residuos#containerBatch">container batch</a></li>
   <li><a href="#containerLocationCode" title="https://edint.es/def/gestion-residuos#containerLocationCode">container location code</a></li>
@@ -453,6 +475,7 @@ This section provides details for each class and property defined by Waste Manag
   <li><a href="#https://schema.org/dateCreated" title="https://schema.org/dateCreated">date created</a></li>
   <li><a href="#https://schema.org/dateModified" title="https://schema.org/dateModified">date modified</a></li>
   <li><a href="#https://schema.org/description" title="https://schema.org/description">description</a></li>
+  <li><a href="#nima" title="https://edint.es/def/gestion-residuos#nima">Environmental Identification Number (NIMA)</a></li>
   <li><a href="#https://schema.org/faxNumber" title="https://schema.org/faxNumber">fax number</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#isConstructionDemolitionWasteManager" title="https://edint.es/def/gestion-residuos#isConstructionDemolitionWasteManager">is construction demolition waste manager</a></li>
@@ -462,30 +485,14 @@ This section provides details for each class and property defined by Waste Manag
   <li><a href="#https://schema.org/map" title="https://schema.org/map">map</a></li>
   <li><a href="#https://schema.org/model" title="https://schema.org/model">model</a></li>
   <li><a href="#https://schema.org/name" title="https://schema.org/name">name</a></li>
-  <li><a href="#nif" title="https://edint.es/def/gestion-residuos#nif">nif</a></li>
-  <li><a href="#nima" title="https://edint.es/def/gestion-residuos#nima">nima</a></li>
   <li><a href="#https://schema.org/openingHours" title="https://schema.org/openingHours">opening hours</a></li>
   <li><a href="#order" title="https://edint.es/def/gestion-residuos#order">order</a></li>
   <li><a href="#registrationNumber" title="https://edint.es/def/gestion-residuos#registrationNumber">registration number</a></li>
   <li><a href="#registrationType" title="https://edint.es/def/gestion-residuos#registrationType">registration type</a></li>
+  <li><a href="#nif" title="https://edint.es/def/gestion-residuos#nif">Tax Identification Number (NIF)</a></li>
   <li><a href="#https://schema.org/telephone" title="https://schema.org/telephone">telephone</a></li>
+  <li><a href="#admissibleWasteURL" title="https://edint.es/def/gestion-residuos#admissibleWasteURL">URL de residuos admisibles.</a></li>
  </ul>
- <div class="entity" id="admissibleWasteURL">
-  <h3>admissible waste url<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#admissibleWasteURL</p>
-  <div class="description">
-   <dl>
-    <dt>has domain</dt>
-    <dd>
-     <a href="#MobileCollectionPoint" title="https://edint.es/def/gestion-residuos#MobileCollectionPoint">Mobile Collection Point</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>has range</dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://www.opengis.net/ont/geosparql#asWKT">
   <h3>as wkt<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#asWKT</p>
@@ -505,6 +512,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="containerBatch">
   <h3>container batch<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#containerBatch</p>
+  <div class="comment">
+   <span class="markdown">A specific, grouped quantity of waste units.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -521,6 +531,9 @@ This section provides details for each class and property defined by Waste Manag
  <div class="entity" id="containerLocationCode">
   <h3>container location code<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#containerLocationCode</p>
+  <div class="comment">
+   <span class="markdown">Specific identifier used in waste management systems.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
@@ -590,6 +603,22 @@ This section provides details for each class and property defined by Waste Manag
     <dt>has domain</dt>
     <dd>
      <a href="#CollectionPoint" title="https://edint.es/def/gestion-residuos#CollectionPoint">Collection Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="nima">
+  <h3>Environmental Identification Number (NIMA)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#nima</p>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#WasteManagementFacility" title="https://edint.es/def/gestion-residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>has range</dt>
     <dd>
@@ -742,38 +771,6 @@ This section provides details for each class and property defined by Waste Manag
    </dl>
   </div>
  </div>
- <div class="entity" id="nif">
-  <h3>nif<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#nif</p>
-  <div class="description">
-   <dl>
-    <dt>has domain</dt>
-    <dd>
-     <a href="#WasteManagementFacility" title="https://edint.es/def/gestion-residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>has range</dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="nima">
-  <h3>nima<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#nima</p>
-  <div class="description">
-   <dl>
-    <dt>has domain</dt>
-    <dd>
-     <a href="#WasteManagementFacility" title="https://edint.es/def/gestion-residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>has range</dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="https://schema.org/openingHours">
   <h3>opening hours<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/openingHours</p>
@@ -838,6 +835,22 @@ This section provides details for each class and property defined by Waste Manag
    </dl>
   </div>
  </div>
+ <div class="entity" id="nif">
+  <h3>Tax Identification Number (NIF)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#nif</p>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#WasteManagementFacility" title="https://edint.es/def/gestion-residuos#WasteManagementFacility">Waste Management Facility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://schema.org/telephone">
   <h3>telephone<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/telephone</p>
@@ -854,13 +867,34 @@ This section provides details for each class and property defined by Waste Manag
    </dl>
   </div>
  </div>
+ <div class="entity" id="admissibleWasteURL">
+  <h3>URL de residuos admisibles.<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/gestion-residuos#admissibleWasteURL</p>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#MobileCollectionPoint" title="https://edint.es/def/gestion-residuos#MobileCollectionPoint">Mobile Collection Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
- <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <h3 id="namedindividuals-headline" class="list">Named Individuals</h3>
  <ul class="hlist">
+  <li><a href="#https://oeg.fi.upm.es/" title="https://oeg.fi.upm.es/"> <span>https://oeg.fi.upm.es/</span> </a></li>
   <li><a href="#https://edint.es/kos/WasteManagementScope" title="https://edint.es/kos/WasteManagementScope"> <span>Waste Management Scope</span> </a></li>
   <li><a href="#https://edint.es/kos/WasteTreatmentProcess" title="https://edint.es/kos/WasteTreatmentProcess"> <span>Waste Treatment Process</span> </a></li>
   <li><a href="#https://edint.es/kos/WasteType" title="https://edint.es/kos/WasteType"> <span>Waste Type</span> </a></li>
  </ul>
+ <div class="entity" id="https://oeg.fi.upm.es/">
+  <h3>https://oeg.fi.upm.es/<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://oeg.fi.upm.es/</p>
+ </div>
  <div class="entity" id="https://edint.es/kos/WasteManagementScope">
   <h3>Waste Management Scope<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/kos/WasteManagementScope</p>

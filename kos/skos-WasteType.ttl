@@ -18,7 +18,7 @@
 edintkos:WasteType a skos:ConceptScheme ;
     dct:issued "2026-04-21"^^xsd:date ;
     dct:modified "2026-04-24"^^xsd:date ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    cc:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     rdfs:comment "Esquema de conceptos para los tipos de residuos gestionados, aceptados o recogidos."@es ;
     rdfs:comment "Concept scheme for the types of waste managed, accepted or collected."@en ;
     rdfs:label "Tipos de residuos"@es ;
