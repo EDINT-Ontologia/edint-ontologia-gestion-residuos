@@ -9,7 +9,7 @@
 @prefix treatmentprocess: <https://edint.es/kos/WasteTreatmentProcess/> .
 @prefix wastetype: <https://edint.es/kos/WasteType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/recurso/> .
+@prefix ex: <https://example.org/recurso/> .
 
 ex:addressMobileCollectionPointCalleCobre
   a esdir:DireccionPostal .
